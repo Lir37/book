@@ -81,6 +81,22 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('В игре погиб. Первый раз.', self.chapters[25])
         self.assertIn('целыми', self.chapters[24] + self.chapters[25])
 
+    def test_post_death_experience_is_not_shown(self):
+        # 1075/1200 is the last observed number (chapter 16), not a verified
+        # value after the first death and unread penalty window in 25-26.
+        self.assertIn('1075/1200', self.chapters[15])
+        self.assertNotIn('1075/1200', self.chapters[24])
+        self.assertNotIn('1075/1200', self.chapters[25])
+        self.assertIn('Я не стал этого делать.', self.chapters[25])
+        self.assertIn('не дочитав', self.chapters[24])
+
+    def test_lost_knife_is_borrowed(self):
+        self.assertIn('Запасного ножа не было', self.chapters[24])
+        self.assertIn('Эльвира дала мне нож для зелени', self.chapters[25])
+
+    def test_unapproved_mana_cap_not_in_book(self):
+        self.assertNotIn('125 маны', self.book)
+
     def test_research_project_separation(self):
         self.assertIn('ПРОЕКТ', self.spec)
         self.assertIn('125 маны', self.spec)

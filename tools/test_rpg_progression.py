@@ -78,7 +78,7 @@ class RPGRegression(unittest.TestCase):
 
     def test_death_stays_final(self):
         self.assertIn('сообщение о возрождении', self.chapters[24])
-        self.assertIn('после смерти', self.chapters[25])
+        self.assertIn('В игре погиб. Первый раз.', self.chapters[25])
         self.assertIn('целыми', self.chapters[24] + self.chapters[25])
 
     def test_research_project_separation(self):

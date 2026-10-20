@@ -120,7 +120,7 @@ class RPGRegression(unittest.TestCase):
     def test_research_project_separation(self):
         self.assertIn('ПРОЕКТ', self.spec)
         self.assertIn('125 маны', self.spec)
-        self.assertIn('125 маны', self.spec)  # hypothetical old mana maximum, not the approved form cost
+        self.assertIn('v0.5', self.spec)  # newer rule explicitly overrides archived 5 mana/sec
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

@@ -30,7 +30,7 @@ def run(root: Path, xsd_dir: Path | None) -> None:
         st = header.start()
         en = headers[i + 1].start() if i + 1 < 26 else len(txt)
         expect = norm(txt[st:en])
-        found = norm(' '.join(section.itertext()))
+        found = norm(''.join(section.itertext()))
         if expect != found:
             j = next((k for k in range(min(len(expect), len(found))) if expect[k] != found[k]), min(len(expect), len(found)))
             raise ValueError(f'TXT/FB2 mismatch in chapter {i+1}, near normalized offset {j}')

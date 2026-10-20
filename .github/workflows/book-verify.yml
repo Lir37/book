@@ -1,0 +1,30 @@
+name: FictionBook 26-chapter validation
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Книга про всякое, попытка 90123... (2).txt'
+      - 'Фон эпоса.fb2'
+      - 'tools/verify_book.py'
+      - '.github/workflows/book-verify.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check-fb2:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python -m pip install 'lxml==6.0.2'
+      - name: Load pinned FictionBook 2.1 schema and imports
+        run: |
+          mkdir -p /tmp/fb2xsd
+          for name in FictionBook2.1.xsd FictionBookGenres.xsd FictionBookLang.xsd FictionBookLinks.xsd; do
+            curl --fail --silent --show-error --location --retry 3 "https://raw.githubusercontent.com/ImageProcessing-ElectronicPublications/fb2-perl-tools/61c4ccc631f888e660c90c454f90d55f0a89abcb/scripts/XSD/FB2.1/$name" --output "/tmp/fb2xsd/$name"
+          done
+      - name: Validate 26 chapters and FictionBook 2.1 XSD
+        run: python tools/verify_book.py --xsd-dir /tmp/fb2xsd

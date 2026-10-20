@@ -64,11 +64,31 @@ class RPGRegression(unittest.TestCase):
         self.assertEqual(sum([8, 14, 11, 11, 13, 17]), 74)
 
     def test_form_costs_and_mastery(self):
-        self.assertIn('5 единиц в секунду', self.chapters[4])
+        self.assertIn('Расход маны: при смене формы.', self.chapters[4])
+        self.assertIn('Поддержание формы не расходует ману.', self.chapters[4])
+        self.assertNotIn('5 единиц в секунду', self.book)
         self.assertIn('1,00 → 1,05', self.chapters[4])
         self.assertIn('на переключение форм снижен на 30%', self.chapters[5])
         self.assertIn('Мягкая смена', self.chapters[15])
         self.assertIn('Урсалон и Скайрэйвен снова стали серыми значками', self.chapters[5])
+
+    def test_no_form_upkeep_or_automatic_timeout(self):
+        self.assertIn('Форма активна до отмены.', self.chapters[4])
+        self.assertNotIn('Форма активна до отмены или исчерпания маны.', self.book)
+        self.assertNotIn('Мана убывала даже здесь.', self.book)
+        self.assertNotIn('форма рассеется сама', self.book)
+        self.assertNotIn('пока не кончилась мана', self.book)
+
+    def test_potion_still_has_a_reason(self):
+        self.assertIn('Два превращения отняли ману, а погоня — силы.', self.chapters[4])
+        self.assertIn('после обратного превращения', self.chapters[7])
+        self.assertIn('полученного вчера зелья маны', self.chapters[7])
+        self.assertIn('Мягкая смена', self.chapters[15])
+
+    def test_new_author_decision_recorded(self):
+        reference = (ROOT / 'RPG_ЭЙДОС_ПРЕВРАЩЕНИЯ_БЕЗ_РАСХОДА_ПОДДЕРЖАНИЯ_v0.5_2026-10-21.md').read_text('utf-8')
+        self.assertIn('Само пребывание в форме не расходует ману', reference)
+        self.assertIn('Открытые вопросы', reference)
 
     def test_xp_in_book_not_recalculated(self):
         for token in ('150 / 300', '300/600', '450/600', '550/600',
@@ -100,7 +120,7 @@ class RPGRegression(unittest.TestCase):
     def test_research_project_separation(self):
         self.assertIn('ПРОЕКТ', self.spec)
         self.assertIn('125 маны', self.spec)
-        self.assertIn('5 маны/сек', self.spec)
+        self.assertIn('125 маны', self.spec)  # hypothetical old mana maximum, not the approved form cost
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

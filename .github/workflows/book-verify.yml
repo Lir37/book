@@ -6,6 +6,7 @@ on:
       - 'Книга про всякое, попытка 90123... (2).txt'
       - 'Фон эпоса.fb2'
       - 'tools/verify_book.py'
+      - 'tools/test_rpg_progression.py'
       - '.github/workflows/book-verify.yml'
   workflow_dispatch:
 permissions:
@@ -28,3 +29,5 @@ jobs:
           done
       - name: Validate 26 chapters and FictionBook 2.1 XSD
         run: python tools/verify_book.py --xsd-dir /tmp/fb2xsd
+      - name: Check RPG curve and continuity
+        run: python tools/test_rpg_progression.py

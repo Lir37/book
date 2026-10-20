@@ -2,8 +2,7 @@
 <FictionBook xmlns="http://www.gribuser.ru/xml/fictionbook/2.0" xmlns:l="http://www.w3.org/1999/xlink">
   <description>
     <title-info>
-      <genre>popadanec</genre>
-      <genre>humor_fantasy</genre>
+      <genre>sf_humor</genre>
       <genre>sf_fantasy</genre>
       <book-title>Фон эпоса</book-title>
       <lang>ru</lang>

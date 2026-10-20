@@ -4,16 +4,18 @@
     <title-info>
       <genre>sf_humor</genre>
       <genre>sf_fantasy</genre>
+      <author><nickname>Lir</nickname></author>
       <book-title>Фон эпоса</book-title>
       <lang>ru</lang>
       <sequence name="Побочные эффекты" number="1"/>
     </title-info>
     <document-info>
+      <author><nickname>Codex</nickname></author>
       <program-used>FB2 conversion for the book repository</program-used>
-      <date value="2026-10-12">12 октября 2026 года</date>
+      <date value="2026-10-20">20 октября 2026 года</date>
       <src-url>https://github.com/Lir37/book/blob/main/%D0%9A%D0%BD%D0%B8%D0%B3%D0%B0%20%D0%BF%D1%80%D0%BE%20%D0%B2%D1%81%D1%8F%D0%BA%D0%BE%D0%B5%2C%20%D0%BF%D0%BE%D0%BF%D1%8B%D1%82%D0%BA%D0%B0%2090123...%20(2).txt</src-url>
       <id>https://github.com/Lir37/book/blob/main/%D0%A4%D0%BE%D0%BD%20%D1%8D%D0%BF%D0%BE%D1%81%D0%B0.fb2</id>
-      <version>2.2</version>
+      <version>2.3</version>
     </document-info>
   </description>
   <body>

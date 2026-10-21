@@ -777,7 +777,7 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('монтаж коротких записей', chapter)
         self.assertIn('защёлку закусило', chapter)
         self.assertNotIn('кривой палец зацепился', chapter)
-        self.assertIn('охрану и Феррон', chapter)
+        self.assertIn('охрана и Феррон', chapter)
 
     def test_uber_rare_component_does_not_turn_into_universal_weapon(self):
         epilogue = self.chapters[25]

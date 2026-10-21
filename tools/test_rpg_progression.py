@@ -193,7 +193,8 @@ class RPGRegression(unittest.TestCase):
 
     def test_novice_ubers_and_lir_level_six_continuity(self):
         self.assertIn('Феррон сам начал играть недавно', self.chapters[9])
-        self.assertIn('Велариона обсуждали', self.chapters[10])
+        self.assertIn('наставница пока обучила его только малому плетению', self.chapters[10])
+        self.assertIn('Он прошёл стартовое подземелье один', self.chapters[11])
         self.assertIn('Опыт: 975/1200', self.chapters[8])
         self.assertIn('Общий опыт: 1275. Уровень 4', self.chapters[11])
         self.assertIn('Общий опыт: 2225. Уровень 5', self.chapters[12])
@@ -767,7 +768,7 @@ class RPGRegression(unittest.TestCase):
         self.assertNotIn('световым захватом', self.chapters[13].lower())
         self.assertIn('Защитный заслон тоже отрабатывал', self.chapters[7])
         self.assertIn('всех', self.chapters[22].lower())
-        self.assertIn('Опыт достался не одному', self.chapters[22])
+        self.assertIn('машинист, мастера по тормозам, смена Миры, охрана и Феррон', self.chapters[22])
         self.assertIn('малому плетению', self.chapters[10])
 
 

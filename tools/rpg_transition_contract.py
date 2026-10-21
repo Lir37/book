@@ -1,20 +1,21 @@
 #!/usr/bin/env python3
 """Symbolic regression model for the approved Eidos shapeshift rules.
 
-Only the *structure* of the transition cost is canon:
+The approved entry rule is proportional to maximum mana:
 - beast form upkeep is free;
 - every voluntary beast-to-human return costs zero mana, even at zero mana;
-- entering another beast form can have a positive one-time mana cost;
+- every paid entry into a beast form costs 20% of calculated maximum mana;
 - Balance of Chimeras reduces positive transition costs by 30%.
 
-The entry cost is always supplied externally. This module DOES NOT choose
-mana maximums, numerical entry prices, rounding, spell availability, or
-whether injury/unconsciousness permits a voluntary transition.
+The formula for maximum mana, fractional/integer rounding, regeneration,
+injury and unconsciousness rules are still open. Legacy entry_cost remains
+available for explicit counterfactual 15% and other tests.
 """
 
 from fractions import Fraction
 
 HUMAN = "human"
+APPROVED_ENTRY_FRACTION = Fraction(1, 5)  # author-approved 20%
 
 
 class NotEnoughMana(ValueError):
@@ -38,6 +39,20 @@ def transition_cost(source: str, target: str, entry_cost: int | Fraction,
     if price <= 0:
         raise ValueError("Entry into a different beast form must have a paid cost")
     return price * (Fraction(7, 10) if balance_of_chimeras else Fraction(1))
+
+
+def proportional_entry_cost(max_mana: int | Fraction,
+                            balance_of_chimeras: bool = False) -> Fraction:
+    """Approved 20% of maximum, minus 30% if Balance of Chimeras applies.
+
+    Exact rational arithmetic avoids silently deciding integer rounding.
+    """
+    cap = Fraction(max_mana)
+    if cap <= 0:
+        raise ValueError("Calculated maximum mana must be positive")
+    return cap * APPROVED_ENTRY_FRACTION * (
+        Fraction(7, 10) if balance_of_chimeras else Fraction(1)
+    )
 
 
 def mana_after(source: str, target: str, mana: int | Fraction,

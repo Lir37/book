@@ -260,7 +260,7 @@ class RPGRegression(unittest.TestCase):
         body, mana, _ = trace_mana(
             100, 100, (('form', 'fellur'), ('form_skill', 4),
                        ('hold', 3600), ('form', HUMAN)))
-        self.assertEqual((body, mana), (HUMAN, Fraction(76)))
+        self.assertEqual((body, mana), (HUMAN, Fraction(100)))  # 3600 game seconds restore full mana
 
     def test_potions_and_active_items_require_human(self):
         with self.assertRaises(FormActionUnavailable):
@@ -454,7 +454,8 @@ class RPGRegression(unittest.TestCase):
 
     def test_v08_fractional_regen_is_accumulated_not_zeroed(self):
         body, mana, _ = trace_mana(125, 125,
-                                  (("form", "fellur"), ("hold", 1)))
+                                  (("form", "fellur"), ("hold", 1)),
+                                  balance_of_chimeras=True)
         self.assertEqual((body, mana), ("fellur", Fraction(107) + Fraction(125, 2400)))
         self.assertGreater(mana, 107)
         self.assertLess(mana, 108)

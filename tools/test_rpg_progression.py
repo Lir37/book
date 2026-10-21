@@ -230,13 +230,13 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('В игре погиб. Первый раз.', self.chapters[25])
         self.assertIn('целыми', self.chapters[24] + self.chapters[25])
 
-    def test_post_death_experience_is_not_shown(self):
-        # 2525 is the observed chapter-16 milestone, not a verified
-        # value after the first death and unread penalty window in 25-26.
+    def test_post_death_exact_total_is_not_shown(self):
+        # The current-level XP is lost, but the numeric post-death total
+        # is not displayed; chapter 26 keeps its attention on friends.
         self.assertIn('Общий опыт: 2525.', self.chapters[15])
         self.assertNotIn('Общий опыт: 2525.', self.chapters[24])
         self.assertNotIn('Общий опыт: 2525.', self.chapters[25])
-        self.assertIn('Я не стал этого делать.', self.chapters[25])
+        self.assertIn('но не открыл инвентарь.', self.chapters[25])
         self.assertIn('не дочитав', self.chapters[24])
 
     def test_lost_knife_is_borrowed(self):

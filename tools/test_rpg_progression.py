@@ -7,6 +7,9 @@ from pathlib import Path
 from fractions import Fraction
 from rpg_transition_contract import HUMAN, NotEnoughMana, transition_cost, mana_after, proportional_entry_cost
 from rpg_mana_scenarios import trace_mana, compare_percentage_scenarios, FormActionUnavailable
+from rpg_resource_model import (BEAST_REGEN_DIVISOR, proposed_mana_cap,
+    candidate_human_regen_rate, effective_regen_rate, regenerated_mana,
+    rounded_entry_cost, unassisted_entries_at_full_cap)
 
 ROOT = Path(__file__).resolve().parents[1]
 BOOK = ROOT / 'Книга про всякое, попытка 90123... (2).txt'
@@ -278,6 +281,101 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('20% расчётного максимума маны', decision)
         self.assertIn('14%', decision)
         self.assertIn('только в человеческом облике', decision)
+
+
+    def test_author_approved_four_times_slower_recovery(self):
+        self.assertEqual(BEAST_REGEN_DIVISOR, 4)
+        self.assertEqual(effective_regen_rate(Fraction(5, 4), HUMAN), Fraction(5, 4))
+        self.assertEqual(effective_regen_rate(Fraction(5, 4), 'fellur'), Fraction(5, 16))
+        self.assertEqual(effective_regen_rate(Fraction(5, 4), 'ursalon'), Fraction(5, 16))
+
+    def test_elapsed_time_recovers_mana_but_no_form_upkeep(self):
+        # Cap 100, entry 20; an illustrative 0.25 mana/s HUMAN rate.
+        body, mana, _ = trace_mana(
+            100, 100, (('form', 'fellur'), ('hold', 20)),
+            human_regen_per_second=Fraction(1, 4))
+        self.assertEqual((body, mana), ('fellur', Fraction(325, 4)))  # 80 + 1.25
+        body, human_mana, _ = trace_mana(
+            100, 100, (('form', 'fellur'), ('form', HUMAN), ('hold', 20)),
+            human_regen_per_second=Fraction(1, 4))
+        self.assertEqual((body, human_mana), (HUMAN, Fraction(85)))
+
+    def test_regeneration_only_depends_on_elapsed_time_not_upkeep(self):
+        # The physical effort cost belongs to STAMINA, not the mana ledger.
+        beast, remaining, _ = trace_mana(
+            100, 30, (('form', 'fellur'), ('hold', 80)),
+            human_regen_per_second=Fraction(1, 4))
+        self.assertEqual((beast, remaining), ('fellur', Fraction(15)))
+        self.assertEqual(regenerated_mana(100, 0, 80, Fraction(1, 4), HUMAN), 20)
+        self.assertEqual(regenerated_mana(100, 0, 80, Fraction(1, 4), 'fellur'), 5)
+
+    def test_zero_mana_free_return_then_human_recovery(self):
+        body, remaining, _ = trace_mana(
+            100, 20, (('form', 'fellur'), ('form', HUMAN), ('hold', 80),
+                      ('form', 'fellur')),
+            human_regen_per_second=Fraction(1, 4))
+        self.assertEqual((body, remaining), ('fellur', Fraction(0)))
+
+    def test_regeneration_never_exceeds_cap(self):
+        self.assertEqual(regenerated_mana(125, 124, 9999, 3, HUMAN), 125)
+        self.assertEqual(regenerated_mana(125, 124, 9999, 3, 'fellur'), 125)
+        with self.assertRaises(ValueError):
+            regenerated_mana(125, 126, 1, 1, HUMAN)
+        with self.assertRaises(ValueError):
+            regenerated_mana(125, 20, -1, 1, HUMAN)
+        with self.assertRaises(ValueError):
+            effective_regen_rate(0, 'fellur')
+
+    def test_project_caps_spirit_and_level_are_explicit(self):
+        self.assertEqual([proposed_mana_cap(s, lvl) for s, lvl in
+                          ((15, 1), (16, 2), (17, 3))], [125, 132, 139])
+        self.assertEqual(proposed_mana_cap(15, 1, 'flat'), 125)
+        self.assertEqual(proposed_mana_cap(15, 1, 'spirit_heavy'), 130)
+        self.assertEqual(proposed_mana_cap(17, 100, 'hybrid'), 333)
+        with self.assertRaises(ValueError):
+            proposed_mana_cap(15, 101)
+        with self.assertRaises(ValueError):
+            proposed_mana_cap(0, 1)
+
+    def test_project_regen_ten_minutes_human_forty_beast(self):
+        cap = proposed_mana_cap(15)
+        rate = candidate_human_regen_rate(cap)
+        self.assertEqual(regenerated_mana(cap, 0, 600, rate, HUMAN), cap)
+        self.assertEqual(regenerated_mana(cap, 0, 600, rate, 'fellur'), cap / 4)
+        self.assertEqual(regenerated_mana(cap, 0, 2400, rate, 'fellur'), cap)
+        # Regenerate a 14%-of-cap entry in human vs beast
+        price = rounded_entry_cost(cap, True)
+        self.assertEqual(regenerated_mana(cap, 0, 84, rate, HUMAN), price)
+        self.assertEqual(regenerated_mana(cap, 0, 336, rate, 'fellur'), price)
+
+    def test_rounding_is_applied_once_to_discounted_cost(self):
+        self.assertEqual(rounded_entry_cost(125, True, 'exact'), Fraction(35, 2))
+        self.assertEqual(rounded_entry_cost(125, True, 'ceil'), 18)
+        self.assertEqual(rounded_entry_cost(125, True, 'half_up'), 18)
+        self.assertEqual(rounded_entry_cost(106, True, 'ceil'), 15)
+        self.assertEqual(rounded_entry_cost(106, False, 'ceil'), 22)
+        self.assertEqual(unassisted_entries_at_full_cap(125, False), 5)
+        self.assertEqual(unassisted_entries_at_full_cap(125, True), 7)
+        with self.assertRaises(ValueError):
+            rounded_entry_cost(125, True, 'bankers')
+
+    def test_ratio_is_canonical_but_absolute_speed_remains_project(self):
+        ratios = [effective_regen_rate(1, 'fellur') /
+                  effective_regen_rate(1, HUMAN) for _ in (3, 4, 5)]
+        self.assertEqual(ratios, [Fraction(1, 4)] * 3)
+        # Changing the numerical base human rate does not change 1:4.
+        for rate in (Fraction(1, 10), 1, 100):
+            self.assertEqual(effective_regen_rate(rate, HUMAN),
+                             4 * effective_regen_rate(rate, 'fellur'))
+
+    def test_new_regen_rule_is_in_book_and_project_docs(self):
+        chapter = self.chapters[4]
+        self.assertIn('20% максимального запаса маны', chapter)
+        self.assertIn('в четыре раза медленнее', chapter)
+        self.assertIn('Поддержание формы и возврат в человеческий облик бесплатны.', chapter)
+        document = (ROOT / 'RPG_ЭЙДОС_РЕГЕНЕРАЦИЯ_v0.7_2026-10-21.md').read_text('utf8')
+        self.assertIn('в четыре раза медленнее', document)
+        self.assertIn('ПРОЕКТ', document)
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

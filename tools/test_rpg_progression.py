@@ -614,5 +614,43 @@ class RPGRegression(unittest.TestCase):
         self.assertNotIn('Я оставил себе запас для развития', self.book)
         self.assertIn('Я и не рассчитывал поумнеть. Мне бы игру запустить.', self.chapters[1])
 
+
+    def test_v10_all_140_skill_designs_are_author_approved(self):
+        source = json.loads((ROOT / 'RPG_ЭЙДОС_КАТАЛОГ_140_КАНДИДАТОВ_НАВЫКОВ_v0.9_2026-10-21.json').read_text('utf8'))
+        approved = json.loads((ROOT / 'RPG_ЭЙДОС_УТВЕРЖДЁННЫЙ_КАТАЛОГ_140_НАВЫКОВ_v1.0_2026-10-21.json').read_text('utf8'))
+        old = {r['id']: r for r in source['records']}
+        new = {r['id']: r for r in approved['records']}
+        self.assertEqual(len(new), 140)
+        self.assertEqual(set(new), set(old))
+        self.assertEqual(approved['status'], 'ALL_140_SKILL_DESIGNS_AUTHOR_APPROVED_TRAINING_PRICES_COOLDOWNS_NOT_APPROVED')
+        for skill_id, record in new.items():
+            original = old[skill_id]
+            for field in ('id','name','branch','level_gate','category','access','limitation',
+                          'training_proposal','balance_proposal'):
+                self.assertEqual(record[field], original[field], (skill_id,field))
+            self.assertEqual(record['design_status'], 'author_approved_skill_design_not_granted')
+            self.assertEqual(record['status'], 'APPROVED_DESIGN_NOT_LEARNED')
+            self.assertFalse(record['automatic_unlock'])
+            self.assertTrue(record['requires_training'])
+            self.assertTrue(record['requires_manual_unlock'])
+
+    def test_v10_approved_skills_are_seven_20_level_branches(self):
+        approved = json.loads((ROOT / 'RPG_ЭЙДОС_УТВЕРЖДЁННЫЙ_КАТАЛОГ_140_НАВЫКОВ_v1.0_2026-10-21.json').read_text('utf8'))
+        branches = {}
+        for r in approved['records']:
+            branches.setdefault(r['branch'], set()).add(r['level_gate'])
+        self.assertEqual(set(branches), {'druid_form','druid_nature','druid_craft',
+                                        'healer','tracker','fighter','engineer'})
+        for levels in branches.values():
+            self.assertEqual(levels, set(range(5,101,5)))
+
+    def test_v10_approval_does_not_grant_trial_beasts(self):
+        approved = json.loads((ROOT / 'RPG_ЭЙДОС_УТВЕРЖДЁННЫЙ_КАТАЛОГ_140_НАВЫКОВ_v1.0_2026-10-21.json').read_text('utf8'))
+        by = {r['id']: r for r in approved['records']}
+        for key in ('druid_form_030','druid_form_050'):
+            self.assertEqual(by[key]['category'], 'form_unlock_proposal')
+            self.assertFalse(by[key]['automatic_unlock'])
+            self.assertTrue(by[key]['requires_manual_unlock'])
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

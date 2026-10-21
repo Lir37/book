@@ -785,5 +785,15 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('вместо Феррона', epilogue)
         self.assertIn('не сделал раненого мага неуязвимым', epilogue)
 
+
+    def test_growth_spell_has_real_cost_and_no_instant_harvest(self):
+        chapter = self.chapters[10]
+        self.assertIn('применил «Росток жизни»', chapter)
+        self.assertIn('Мана ушла', chapter)
+        self.assertIn('не перескакивала через дни', chapter)
+        later = self.chapters[19]
+        self.assertIn('«Чувство природы» указывало на живые растения', later)
+        self.assertIn('Остальные стебли я перебрал сам', later)
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

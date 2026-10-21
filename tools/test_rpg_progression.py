@@ -5,8 +5,8 @@ import re
 import unittest
 from pathlib import Path
 from fractions import Fraction
-from rpg_transition_contract import HUMAN, NotEnoughMana, transition_cost, mana_after
-from rpg_mana_scenarios import trace_mana, compare_percentage_scenarios
+from rpg_transition_contract import HUMAN, NotEnoughMana, transition_cost, mana_after, proportional_entry_cost
+from rpg_mana_scenarios import trace_mana, compare_percentage_scenarios, FormActionUnavailable
 
 ROOT = Path(__file__).resolve().parents[1]
 BOOK = ROOT / 'Книга про всякое, попытка 90123... (2).txt'
@@ -176,8 +176,8 @@ class RPGRegression(unittest.TestCase):
     def test_spells_consume_mana_without_drain_from_waiting(self):
         body, mana, _ = trace_mana(
             125, 125, (('form', 'fellur'), ('hold', 1000),
-                       ('cast', 10), ('form', HUMAN)), 20)
-        # This is a symbolic ledger; it does not approve casting while beast.
+                       ('form', HUMAN), ('cast', 10)), 20)
+        # Return to human is mandatory before general druid spellcasting.
         self.assertEqual((body, mana), (HUMAN, Fraction(95)))
 
     def test_xp_in_book_not_recalculated(self):
@@ -211,6 +211,73 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('ПРОЕКТ', self.spec)
         self.assertIn('125 маны', self.spec)
         self.assertIn('v0.5', self.spec)  # newer rule explicitly overrides archived 5 mana/sec
+
+
+    def test_approved_twenty_percent_maximum(self):
+        self.assertEqual(proportional_entry_cost(125), Fraction(25))
+        self.assertEqual(proportional_entry_cost(125, True), Fraction(35, 2))
+        self.assertEqual(proportional_entry_cost(80, True), Fraction(56, 5))
+        with self.assertRaises(ValueError):
+            proportional_entry_cost(0)
+
+    def test_discount_is_thirty_percent_of_paid_twenty_percent(self):
+        self.assertEqual(proportional_entry_cost(100), 20)
+        self.assertEqual(proportional_entry_cost(100, True), 14)
+        self.assertEqual(transition_cost('fellur', HUMAN, 20, True), 0)
+
+    def test_default_ledger_is_canonical_twenty_percent(self):
+        beast, mana, _ = trace_mana(
+            125, 125, (('form', 'fellur'), ('form', HUMAN),
+                       ('form', 'fellur')), balance_of_chimeras=True)
+        self.assertEqual((beast, mana), ('fellur', Fraction(90)))
+
+    def test_historical_fifteen_versus_approved_twenty(self):
+        cap = Fraction(125)
+        fifteen = cap * Fraction(15, 100) * Fraction(7, 10)
+        twenty = proportional_entry_cost(cap, True)
+        self.assertEqual((fifteen, twenty), (Fraction(105, 8), Fraction(35, 2)))
+        self.assertEqual((cap // fifteen, cap // twenty), (9, 7))
+
+    def test_different_mana_caps_without_inventing_spirit_formula(self):
+        self.assertEqual(proportional_entry_cost(100), 20)
+        self.assertEqual(proportional_entry_cost(160), 32)
+        self.assertEqual(proportional_entry_cost(160, True), Fraction(112, 5))
+
+    def test_general_druid_spell_is_human_only(self):
+        with self.assertRaises(FormActionUnavailable):
+            trace_mana(125, 125, (('form', 'fellur'), ('cast', 10)))
+        body, mana, _ = trace_mana(
+            125, 125, (('form', 'fellur'), ('form', HUMAN), ('cast', 10)))
+        self.assertEqual((body, mana), (HUMAN, Fraction(90)))
+
+    def test_form_specific_skill_must_match_beast_anatomy(self):
+        with self.assertRaises(FormActionUnavailable):
+            trace_mana(100, 100, (('form_skill', 4),))
+        body, mana, _ = trace_mana(
+            100, 100, (('form', 'fellur'), ('form_skill', 4),
+                       ('hold', 3600), ('form', HUMAN)))
+        self.assertEqual((body, mana), (HUMAN, Fraction(76)))
+
+    def test_potions_and_active_items_require_human(self):
+        with self.assertRaises(FormActionUnavailable):
+            trace_mana(125, 125, (('form', 'fellur'), ('restore', 30)))
+        body, mana, _ = trace_mana(
+            125, 25, (('form', 'fellur'), ('form', HUMAN),
+                      ('restore', 30), ('form', 'fellur')))
+        self.assertEqual((body, mana), ('fellur', Fraction(5)))
+
+    def test_regeneration_must_be_supplied_not_assumed(self):
+        _, original, _ = trace_mana(100, 100, (('form', 'fellur'), ('hold', 9999)))
+        _, hypothetical, _ = trace_mana(
+            100, 100, (('form', 'fellur'), ('regen', 7), ('hold', 9999)))
+        self.assertEqual((original, hypothetical), (Fraction(80), Fraction(87)))
+
+    def test_latest_author_decision_document_exists(self):
+        p = ROOT / 'RPG_ЭЙДОС_РЕШЕНИЕ_20_ПРОЦЕНТОВ_И_ДОСТУП_В_ФОРМЕ_v0.6_2026-10-21.md'
+        decision = p.read_text('utf-8')
+        self.assertIn('20% расчётного максимума маны', decision)
+        self.assertIn('14%', decision)
+        self.assertIn('только в человеческом облике', decision)
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

@@ -124,6 +124,26 @@ class NewRPGAbilities(unittest.TestCase):
         actor["form"]="human"
         self.assertTrue(usable_now(actor,item["id"],self.data)[0])
 
+    def test_beast_technique_requires_real_active_learned_form(self):
+        src=self.fixtures["builds"][0]
+        item=next(s for s in self.new if s["class_id"]=="druid" and s["specialization"]=="Звериные тела" and s["level_gate"]==20)
+        chain=[]
+        cursor=item
+        while True:
+            chain.append(cursor)
+            if not cursor["prerequisites"]:break
+            cursor=self.data["new"][cursor["prerequisites"][0]]
+        chain.reverse()
+        actor={**src,"level":20,"specialization":"Звериные тела","learned_skill_ids":[s["id"] for s in chain],
+               "training_evidence":{s["id"]:"practiced with a qualified mentor" for s in chain},
+               "physical_conditions_ready":True,"known_beast_forms":["fellur"],"form":"human"}
+        self.assertEqual(validate_actor(actor,self.data),[])
+        self.assertFalse(usable_now(actor,item["id"],self.data)[0])
+        actor["form"]="unknown_form"
+        self.assertFalse(usable_now(actor,item["id"],self.data)[0])
+        actor["form"]="fellur"
+        self.assertTrue(usable_now(actor,item["id"],self.data)[0])
+
     def test_protocol_no_technomana_in_actor(self):
         src=self.fixtures["builds"][24]
         bad={**src,"tech_mana":10}

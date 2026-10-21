@@ -10,6 +10,8 @@ on:
       - 'tools/rpg_mana_scenarios.py'
       - 'tools/rpg_transition_contract.py'
       - 'tools/rpg_resource_model.py'
+      - 'tools/rpg_pending_mechanics.py'
+      - 'RPG_ЭЙДОС_КАТАЛОГ_140_КАНДИДАТОВ_НАВЫКОВ_v0.9_2026-10-21.json'
       - 'RPG_ЭЙДОС_КАТАЛОГ_140_КАНДИДАТОВ_НАВЫКОВ_v0.8_2026-10-21.json'
       - '.github/workflows/book-verify.yml'
   workflow_dispatch:

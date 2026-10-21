@@ -544,5 +544,75 @@ class RPGRegression(unittest.TestCase):
                              'author_accepted_candidate_not_granted')
 
 
+    def test_v09_cap_change_has_three_explicit_uncanonized_policies(self):
+        from rpg_pending_mechanics import candidate_mana_after_cap_change as change
+        self.assertEqual(change(125, 60, 132, "preserve_absolute"), 60)
+        self.assertEqual(change(125, 60, 132, "preserve_fraction"), Fraction(1584, 25))
+        self.assertEqual(change(125, 60, 132, "grant_delta"), 67)
+        self.assertEqual(change(132, 130, 125, "preserve_absolute"), 125)
+        self.assertEqual(change(132, 130, 125, "grant_delta"), 123)
+        with self.assertRaises(ValueError):
+            change(125, 60, 132, "guess")
+
+    def test_v09_precise_recovery_time_uses_approved_v08_rates(self):
+        from rpg_pending_mechanics import recovery_seconds_to_target as seconds
+        self.assertEqual(seconds(125, 0, 125, HUMAN), 600)
+        self.assertEqual(seconds(125, 0, 125, "fellur"), 2400)
+        self.assertEqual(seconds(125, 0, 18, HUMAN), Fraction(432, 5))
+        self.assertEqual(seconds(125, 0, 18, "fellur"), Fraction(1728, 5))
+        self.assertEqual(seconds(125, 10, 10, HUMAN), 0)
+        self.assertEqual(seconds(125, 0, 125, HUMAN, Fraction(11, 10)),
+                         Fraction(6000, 11))
+        with self.assertRaises(ValueError):
+            seconds(125, 0, 126, HUMAN)
+
+    def test_v09_skill_enrichment_preserves_all_v08_design_fields(self):
+        old = json.loads((ROOT / 'RPG_ЭЙДОС_КАТАЛОГ_140_КАНДИДАТОВ_НАВЫКОВ_v0.8_2026-10-21.json').read_text('utf8'))
+        new = json.loads((ROOT / 'RPG_ЭЙДОС_КАТАЛОГ_140_КАНДИДАТОВ_НАВЫКОВ_v0.9_2026-10-21.json').read_text('utf8'))
+        self.assertEqual(new['version'], '0.9')
+        self.assertEqual(len(new['records']), 140)
+        for a, b in zip(old['records'], new['records']):
+            for key in a:
+                self.assertEqual(b[key], a[key])
+            self.assertIn(b['name'], b['training_proposal']['exercise'])
+            self.assertTrue(b['requires_training'])
+            self.assertTrue(b['requires_manual_unlock'])
+            self.assertIn('НЕ УТВЕРЖДЕНО', b['balance_proposal']['resource'])
+            self.assertEqual(b['status'], 'PROPOSAL_NOT_LEARNED')
+
+    def test_v09_candidate_skill_requires_teaching_and_specific_body(self):
+        from rpg_pending_mechanics import candidate_skill_access as eligible
+        catalog = json.loads((ROOT / 'RPG_ЭЙДОС_КАТАЛОГ_140_КАНДИДАТОВ_НАВЫКОВ_v0.9_2026-10-21.json').read_text('utf8'))
+        by = {x['id']: x for x in catalog['records']}
+        fur = by['druid_form_005']
+        self.assertFalse(eligible(fur, level=100, actor_class='druid',
+                         learned_ids=set(), form='fellur', unlocked_forms={'fellur'}))
+        self.assertTrue(eligible(fur, level=5, actor_class='druid',
+                        learned_ids={fur['id']}, form='fellur', unlocked_forms={'fellur'}))
+        self.assertFalse(eligible(fur, level=5, actor_class='druid',
+                         learned_ids={fur['id']}, form='ursalon', unlocked_forms={'fellur'}))
+        self.assertFalse(eligible(fur, level=5, actor_class='druid',
+                         learned_ids={fur['id']}, form='human', unlocked_forms={'fellur'}))
+        nature = by['druid_nature_005']
+        self.assertTrue(eligible(nature, level=5, actor_class='druid',
+                        learned_ids={nature['id']}, form='human'))
+        self.assertFalse(eligible(nature, level=5, actor_class='druid',
+                         learned_ids={nature['id']}, form='fellur', unlocked_forms={'fellur'}))
+        ursalon = by['druid_form_030']
+        self.assertFalse(eligible(ursalon, level=100, actor_class='druid',
+                         learned_ids={ursalon['id']}, form='ursalon',
+                         unlocked_forms={'ursalon'}, specialization_confirmed=True))
+        fighter = by['fighter_060']
+        self.assertFalse(eligible(fighter, level=60, actor_class='fighter',
+                         learned_ids={fighter['id']}))
+        self.assertTrue(eligible(fighter, level=60, actor_class='fighter',
+                        learned_ids={fighter['id']}, specialization_confirmed=True))
+        self.assertFalse(eligible(fighter, level=60, actor_class='healer',
+                         learned_ids={fighter['id']}, specialization_confirmed=True))
+
+    def test_v09_chapter_2_line_is_human_not_abstract(self):
+        self.assertNotIn('Я оставил себе запас для развития', self.book)
+        self.assertIn('Я и не рассчитывал поумнеть. Мне бы игру запустить.', self.chapters[1])
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

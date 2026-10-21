@@ -5,13 +5,16 @@ Canon: 20% of calculated max mana on paid entry, minus 30% when unlocked;
 no charge for holding a form or returning to human, including at zero mana.
 General druid spells and active items require human anatomy. Only an
 explicitly form-specific skill can be activated in an animal body.
-Mana-cap formula, integer rounding, restoration and natural regeneration
-are unapproved. No automatic regeneration is simulated.
+Author-approved beast regeneration is 1/4 the human rate. Absolute human
+rate, mana-cap formula, rounding and potion amount are unapproved.
+When no positive human rate is provided, hold simulates a ZERO-REGEN TEST
+scenario only; do not interpret the zero-rate diagnostic as game canon.
 """
 from __future__ import annotations
 from fractions import Fraction
 from typing import Iterable
 from rpg_transition_contract import HUMAN, NotEnoughMana, transition_cost, proportional_entry_cost
+from rpg_resource_model import regenerated_mana
 
 
 class FormActionUnavailable(ValueError):
@@ -20,19 +23,24 @@ class FormActionUnavailable(ValueError):
 def trace_mana(max_mana: int | Fraction, initial_mana: int | Fraction,
                actions: Iterable[tuple[str, object]],
                entry_cost: int | Fraction | None = None,
-               balance_of_chimeras: bool = False) -> tuple[str, Fraction, tuple[tuple[str, Fraction], ...]]:
+               balance_of_chimeras: bool = False,
+               human_regen_per_second: int | Fraction | None = None) -> tuple[str, Fraction, tuple[tuple[str, Fraction], ...]]:
     """Run actions, preserving exact fractional mana for project comparisons.
 
     Actions: form (unlocked beast or human), cast (human druid spell),
     restore (human item/potion), form_skill (beast-specific action),
     regen (hypothetical explicitly supplied mana gain), hold (duration).
-    No automatic regeneration or upkeep. Skill unlocks, physical injuries,
-    cooldowns and consciousness remain outside this mana-only ledger.
+    On hold: if human_regen_per_second is supplied, a human gains that rate
+    and any beast gains exactly one quarter of it. If omitted, this is the
+    explicit NO-REGEN comparison scenario. Form upkeep is always zero.
+    Skill unlocks, physical injuries, cooldowns and consciousness are external.
     """
     ceiling, mana = Fraction(max_mana), Fraction(initial_mana)
     if ceiling <= 0 or not 0 <= mana <= ceiling:
         raise ValueError("Mana cap must be positive; starting mana must be within cap")
     base_entry = proportional_entry_cost(ceiling) if entry_cost is None else Fraction(entry_cost)
+    if human_regen_per_second is not None and Fraction(human_regen_per_second) <= 0:
+        raise ValueError('A supplied human recovery rate must be positive')
     body, ledger = HUMAN, []
     for action, arg in actions:
         if action == "form":
@@ -78,7 +86,10 @@ def trace_mana(max_mana: int | Fraction, initial_mana: int | Fraction,
             duration = Fraction(arg)
             if duration < 0:
                 raise ValueError("Duration cannot be negative")
-            # No upkeep. Optional regeneration is a separate explicit event.
+            if human_regen_per_second is not None:
+                mana = regenerated_mana(ceiling, mana, duration,
+                                        human_regen_per_second, body)
+            # Always zero mana UPKEEP; recovery uses an explicit rate input.
         else:
             raise ValueError(f"Unknown action {action!r}")
         ledger.append((body, mana))

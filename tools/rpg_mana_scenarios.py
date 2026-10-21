@@ -1,20 +1,17 @@
 #!/usr/bin/env python3
-"""What-if Eidos mana ledger. NOT a source of canonical RPG prices.
+"""Eidos v0.8 approved mana ledger plus explicitly selected what-if modes.
 
-Canon: 20% of calculated max mana on paid entry, minus 30% when unlocked;
-no charge for holding a form or returning to human, including at zero mana.
-General druid spells and active items require human anatomy. Only an
-explicitly form-specific skill can be activated in an animal body.
-Author-approved beast regeneration is 1/4 the human rate. Absolute human
-rate, mana-cap formula, rounding and potion amount are unapproved.
-When no positive human rate is provided, hold simulates a ZERO-REGEN TEST
-scenario only; do not interpret the zero-rate diagnostic as game canon.
+Defaults: one paid entry ceil(20% max) or ceil(14% with Balance);
+free beast upkeep/return; human restores full cap in 600 in-game
+seconds, beast in 2400. Fractional recovery accumulates exactly.
+Exposing override parameters permits counterfactual tests but does
+not change the canonical DEFAULT.
 """
 from __future__ import annotations
 from fractions import Fraction
 from typing import Iterable
 from rpg_transition_contract import HUMAN, NotEnoughMana, transition_cost, proportional_entry_cost
-from rpg_resource_model import regenerated_mana
+from rpg_resource_model import regenerated_mana, canonical_human_regen_rate
 
 
 class FormActionUnavailable(ValueError):
@@ -24,29 +21,48 @@ def trace_mana(max_mana: int | Fraction, initial_mana: int | Fraction,
                actions: Iterable[tuple[str, object]],
                entry_cost: int | Fraction | None = None,
                balance_of_chimeras: bool = False,
-               human_regen_per_second: int | Fraction | None = None) -> tuple[str, Fraction, tuple[tuple[str, Fraction], ...]]:
+               human_regen_per_second: int | Fraction | None = None,
+               rounding_mode: str = "ceil",
+               regen_multiplier: int | Fraction = 1) -> tuple[str, Fraction, tuple[tuple[str, Fraction], ...]]:
     """Run actions, preserving exact fractional mana for project comparisons.
 
     Actions: form (unlocked beast or human), cast (human druid spell),
     restore (human item/potion), form_skill (beast-specific action),
     regen (hypothetical explicitly supplied mana gain), hold (duration).
-    On hold: if human_regen_per_second is supplied, a human gains that rate
-    and any beast gains exactly one quarter of it. If omitted, this is the
-    explicit NO-REGEN comparison scenario. Form upkeep is always zero.
+    On hold: default M/600 for human and M/2400 for beast per game second.
+    A supplied rate overrides that for what-if comparison; supply 0 only
+    for explicit zero-recovery tests. Regen multiplier permits faction +10%
+    while maintaining 1:4. Form upkeep always costs ZERO mana.
+    Billed form entry is ceil of final discounted raw cost, by default.
     Skill unlocks, physical injuries, cooldowns and consciousness are external.
     """
     ceiling, mana = Fraction(max_mana), Fraction(initial_mana)
     if ceiling <= 0 or not 0 <= mana <= ceiling:
         raise ValueError("Mana cap must be positive; starting mana must be within cap")
     base_entry = proportional_entry_cost(ceiling) if entry_cost is None else Fraction(entry_cost)
-    if human_regen_per_second is not None and Fraction(human_regen_per_second) <= 0:
-        raise ValueError('A supplied human recovery rate must be positive')
+    if base_entry <= 0:
+        raise ValueError("Paid form entry base must be positive")
+    rate = (canonical_human_regen_rate(ceiling) if human_regen_per_second is None
+            else Fraction(human_regen_per_second))
+    multiplier = Fraction(regen_multiplier)
+    if rate < 0 or multiplier <= 0:
+        raise ValueError("Recovery rate cannot be negative; multiplier must be positive")
+    if rounding_mode not in ("ceil", "exact", "half_up"):
+        raise ValueError("Unsupported mana entry rounding")
     body, ledger = HUMAN, []
     for action, arg in actions:
         if action == "form":
             if not isinstance(arg, str):
                 raise ValueError("Target form must be a name")
-            price = transition_cost(body, arg, base_entry, balance_of_chimeras)
+            raw_price = transition_cost(body, arg, base_entry, balance_of_chimeras)
+            if rounding_mode == "exact":
+                price = raw_price
+            elif rounding_mode == "ceil":
+                price = Fraction((raw_price.numerator + raw_price.denominator - 1)
+                                 // raw_price.denominator)
+            else:
+                price = Fraction((2 * raw_price.numerator + raw_price.denominator)
+                                 // (2 * raw_price.denominator))
             if mana < price:
                 raise NotEnoughMana(f"Target {arg} costs {price} with only {mana} available")
             mana -= price
@@ -86,10 +102,9 @@ def trace_mana(max_mana: int | Fraction, initial_mana: int | Fraction,
             duration = Fraction(arg)
             if duration < 0:
                 raise ValueError("Duration cannot be negative")
-            if human_regen_per_second is not None:
-                mana = regenerated_mana(ceiling, mana, duration,
-                                        human_regen_per_second, body)
-            # Always zero mana UPKEEP; recovery uses an explicit rate input.
+            if rate > 0:
+                mana = regenerated_mana(ceiling, mana, duration, rate * multiplier, body)
+            # Zero-cost form upkeep; rate 0 exists only for explicit test override.
         else:
             raise ValueError(f"Unknown action {action!r}")
         ledger.append((body, mana))
@@ -105,10 +120,12 @@ def compare_percentage_scenarios(cap: int | Fraction = 125) -> tuple[dict, ...]:
         price = reserve * fraction
         without = trace_mana(reserve, reserve,
                              (("form", "fellur"), ("form", HUMAN),
-                              ("form", "fellur")), price, False)
+                              ("form", "fellur")), price, False,
+                             human_regen_per_second=0, rounding_mode="exact")
         with_skill = trace_mana(reserve, reserve,
                                 (("form", "fellur"), ("form", HUMAN),
-                                 ("form", "fellur")), price, True)
+                                 ("form", "fellur")), price, True,
+                                human_regen_per_second=0, rounding_mode="exact")
         scenarios.append({"fraction": fraction, "price": price,
                           "after_two_entries": without[1],
                           "after_two_discounted_entries": with_skill[1]})

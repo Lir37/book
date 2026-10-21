@@ -1,20 +1,19 @@
 #!/usr/bin/env python3
-"""Canonical regen RATIO and author-unapproved numeric economy experiments.
+"""Eidos v0.8 canonical base mana economy, plus labeled archival comparisons.
 
-CANON (2026-10-21): beast mana recovery is FOUR TIMES SLOWER than human.
-Entering an unlocked beast form costs 20% of calculated max mana or 14% after
-Balance of Chimeras. Form upkeep and voluntary return to human cost zero.
-
-NOT CANON: absolute mana cap from Spirit/level, absolute recovery speed,
-rounding to integer or fractional displayed mana, regeneration interruptions.
-All proposed functions are explicitly experimental.
+APPROVED: maximum = 50 + 5*Spirit + 2*(Level-1); human recovers a
+full reserve in 600 IN-GAME seconds and beast in 2400 in-game seconds.
+Beast upkeep costs zero. Paid form entry costs ceil(20% of maximum),
+or ceil(14% with Balance of Chimeras): discount BEFORE a single ceil.
+Internal regeneration accumulates as Fraction without per-second rounding.
+UNKNOWN: equipment cap bonuses, statuses, death penalty, new skill costs.
 """
 from __future__ import annotations
 
 from fractions import Fraction
 
 BEAST_REGEN_DIVISOR = 4  # AUTHOR APPROVED: not a scenario default
-EXPERIMENTAL_FULL_HUMAN_REFILL_SECONDS = 600  # PROJECT: 10 min, not canon
+APPROVED_FULL_HUMAN_REFILL_SECONDS = 600  # IN-GAME seconds; author-approved
 
 
 def _positive(value: int | Fraction, name: str) -> Fraction:
@@ -26,12 +25,10 @@ def _positive(value: int | Fraction, name: str) -> Fraction:
 
 def proposed_mana_cap(spirit: int, level: int = 1,
                       variant: str = "hybrid") -> Fraction:
-    """Compare candidate mana-cap formulas. No one variant is canonical.
+    """'hybrid' is now CANON; flat/spirit_heavy are archival what-ifs.
 
-    flat = 50 + 5*Spirit, matching the earlier research's 125 at Spirit=15.
-    hybrid = 50 + 5*Spirit + 2*(level-1), starting at the same 125.
-    spirit_heavy = 40 + 6*Spirit + (level-1), starting at 130.
-    Growth in available stats at level 100 remains unknown and is NOT modeled.
+    Starting at Spirit 15, level 1: canonical maximum is 125.
+    Character stats at level 100 are unknown; do not extrapolate them.
     """
     if not isinstance(spirit, int) or not isinstance(level, int):
         raise TypeError("Spirit and level must be integer")
@@ -48,11 +45,26 @@ def proposed_mana_cap(spirit: int, level: int = 1,
 
 def candidate_human_regen_rate(max_mana: int | Fraction,
                                full_refill_seconds: int | Fraction =
-                               EXPERIMENTAL_FULL_HUMAN_REFILL_SECONDS) -> Fraction:
-    """Experimental constant rate; true base recovery is not approved."""
+                               APPROVED_FULL_HUMAN_REFILL_SECONDS) -> Fraction:
+    """Canonical base rate at default 600 game seconds; override = what-if."""
     return _positive(max_mana, "maximum mana") / _positive(
         full_refill_seconds, "full refill seconds"
     )
+
+
+def canonical_mana_cap(spirit: int, level: int) -> Fraction:
+    """Approved base cap, excluding any future item/status cap modifiers."""
+    return proposed_mana_cap(spirit, level, "hybrid")
+
+
+def canonical_human_regen_rate(max_mana: int | Fraction) -> Fraction:
+    """Approved natural human recovery, per IN-GAME second."""
+    return candidate_human_regen_rate(max_mana)
+
+
+def canonical_beast_regen_rate(max_mana: int | Fraction) -> Fraction:
+    """Approved natural beast recovery, per IN-GAME second."""
+    return canonical_human_regen_rate(max_mana) / BEAST_REGEN_DIVISOR
 
 
 def effective_regen_rate(human_rate: int | Fraction, form: str) -> Fraction:
@@ -81,12 +93,11 @@ def regenerated_mana(max_mana: int | Fraction, current: int | Fraction,
 
 
 def rounded_entry_cost(max_mana: int | Fraction, with_balance: bool,
-                       mode: str = "exact") -> Fraction:
-    """Project comparison; apply the discount BEFORE rounding, only once.
+                       mode: str = "ceil") -> Fraction:
+    """Canonical default = SINGLE CEIL after full discount, not two ceils.
 
-    'exact': internal fractional mana; 'ceil': smallest integer >= cost;
-    'half_up': nearest integer, ties away from zero.
-    None of these display/rounding conventions has been approved.
+    'exact' and 'half_up' remain archive-only counterfactual choices.
+    Do not round fractional regeneration each second.
     """
     cap = _positive(max_mana, "maximum mana")
     raw = cap * (Fraction(7, 50) if with_balance else Fraction(1, 5))
@@ -101,7 +112,7 @@ def rounded_entry_cost(max_mana: int | Fraction, with_balance: bool,
 
 def unassisted_entries_at_full_cap(max_mana: int | Fraction,
                                    with_balance: bool,
-                                   mode: str = "exact") -> int:
-    """Count zero-regeneration entries (each exit to human is free)."""
+                                   mode: str = "ceil") -> int:
+    """Count no-regeneration entries using canonical rounded prices."""
     price = rounded_entry_cost(max_mana, with_balance, mode)
     return int(_positive(max_mana, "maximum mana") // price)

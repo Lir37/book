@@ -6,6 +6,7 @@ import unittest
 from pathlib import Path
 from fractions import Fraction
 from rpg_transition_contract import HUMAN, NotEnoughMana, transition_cost, mana_after
+from rpg_mana_scenarios import trace_mana, compare_percentage_scenarios
 
 ROOT = Path(__file__).resolve().parents[1]
 BOOK = ROOT / 'Книга про всякое, попытка 90123... (2).txt'
@@ -83,7 +84,8 @@ class RPGRegression(unittest.TestCase):
 
     def test_potion_still_has_a_reason(self):
         self.assertIn('Ману потратил на два превращения в Феллур, а силы — на погоню.', self.chapters[4])
-        self.assertIn('Маны на ещё одно превращение в Феллур уже не хватало.', self.chapters[7])
+        self.assertIn('Я не знал, хватит ли маны на ещё одно превращение', self.chapters[7])
+        self.assertNotIn('Маны на ещё одно превращение в Феллур уже не хватало.', self.book)
         self.assertIn('полученного вчера зелья маны', self.chapters[7])
         self.assertIn('Мягкая смена', self.chapters[15])
 
@@ -132,6 +134,51 @@ class RPGRegression(unittest.TestCase):
         # A different beast target still requires an independently priced entry.
         with self.assertRaises(NotEnoughMana):
             mana_after('fellur', 'skyraven', 0, 17)
+
+    def test_symbolic_potion_can_be_precautionary_not_a_forced_price(self):
+        # At hypothetical full reserve, two entries for 5/10/15/20% of cap
+        # never REQUIRE a potion. The scene must not claim an unknown price.
+        for variant in compare_percentage_scenarios():
+            self.assertGreater(variant['after_two_discounted_entries'], 0)
+            self.assertGreater(variant['after_two_entries'], 0)
+        self.assertIn('не собирался проверять это посреди схватки', self.chapters[7])
+
+    def test_no_upkeep_even_after_long_beast_hold(self):
+        before = trace_mana(125, 125, (('form', 'fellur'), ('hold', 30),
+                                       ('form', HUMAN)), 20, True)
+        later = trace_mana(125, 125, (('form', 'fellur'), ('hold', 3600),
+                                        ('form', HUMAN)), 20, True)
+        self.assertEqual(before[1], later[1])
+        self.assertEqual(before[0], HUMAN)
+
+    def test_empty_mana_return_is_possible(self):
+        form, amount, _ = trace_mana(125, 25, (('form', 'fellur'),
+                                                ('hold', 3600),
+                                                ('form', HUMAN)), 25)
+        self.assertEqual((form, amount), (HUMAN, Fraction(0)))
+
+    def test_free_intermediary_cannot_bypass_second_entry(self):
+        with self.assertRaises(NotEnoughMana):
+            trace_mana(125, 25, (('form', 'fellur'), ('form', HUMAN),
+                                 ('form', 'fellur')), 25)
+
+    def test_potion_restores_entry_without_requiring_upkeep(self):
+        with self.assertRaises(NotEnoughMana):
+            trace_mana(125, 20, (('form', 'fellur'), ('form', HUMAN),
+                                 ('form', 'fellur')), 20, True)
+        body, mana, ledger = trace_mana(
+            125, 20, (('form', 'fellur'), ('form', HUMAN),
+                      ('restore', 30), ('form', 'fellur')), 20, True)
+        self.assertEqual(body, 'fellur')
+        self.assertEqual(mana, Fraction(22))
+        self.assertEqual(len(ledger), 4)
+
+    def test_spells_consume_mana_without_drain_from_waiting(self):
+        body, mana, _ = trace_mana(
+            125, 125, (('form', 'fellur'), ('hold', 1000),
+                       ('cast', 10), ('form', HUMAN)), 20)
+        # This is a symbolic ledger; it does not approve casting while beast.
+        self.assertEqual((body, mana), (HUMAN, Fraction(95)))
 
     def test_xp_in_book_not_recalculated(self):
         for token in ('150 / 300', '300/600', '450/600', '550/600',

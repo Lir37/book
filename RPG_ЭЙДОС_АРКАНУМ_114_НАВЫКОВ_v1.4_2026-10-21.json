@@ -1,0 +1,3219 @@
+{
+  "version": "1.4",
+  "date": "2026-10-21",
+  "status": "AUTHOR_PREAPPROVED_CLASS_ABILITY_DESIGNS_NOT_GRANTED",
+  "description": "114 новых обучаемых приёмов Арканума: 6 классов, 18 специализаций. Автор заранее утвердил самостоятельную разработку. Старые 140 утверждённых навыков не меняются. Выбор специализации с 20; данные силы не ретконируют роман.",
+  "mana_rule": "Базовая экономика v0.8 неизменна; новый процент относится только к явно магическим приёмам этого нового каталога",
+  "entries": [
+    {
+      "id": "eidos.v14.arcanum.druid.core.001",
+      "name": "Привычка тела",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "узнаёт физический предел уже освоенной формы",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.core.005",
+      "name": "Лесной маршрут",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "выбирает проход по доступной местности",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.core.010",
+      "name": "Человеческое равновесие",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "после возврата адаптируется к прежнему телу, не леча травмы",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.core.015",
+      "name": "Расчёт смен",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "учитывает канонический остаток маны перед переходом",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.звериные_тела.020",
+      "name": "Проверенный прыжок",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Звериные тела",
+      "level_gate": 20,
+      "effect": "выбирает безопасную дистанцию в изученном теле",
+      "resource": {
+        "kind": "physiology",
+        "rule": "только освоенное тело, вход по v0.8; поддержание/выход бесплатны; не новая форма"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.звериные_тела.030",
+      "name": "Мягкий поворот",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Звериные тела",
+      "level_gate": 30,
+      "effect": "меняет направление без потери равновесия",
+      "resource": {
+        "kind": "physiology",
+        "rule": "только освоенное тело, вход по v0.8; поддержание/выход бесплатны; не новая форма"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.звериные_тела.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.звериные_тела.050",
+      "name": "Один обход",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Звериные тела",
+      "level_gate": 50,
+      "effect": "выполняет сложный обход доступным зверем",
+      "resource": {
+        "kind": "physiology",
+        "rule": "только освоенное тело, вход по v0.8; поддержание/выход бесплатны; не новая форма"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.звериные_тела.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.звериные_тела.075",
+      "name": "Согласованное движение",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Звериные тела",
+      "level_gate": 75,
+      "effect": "помогает группе следовать за наблюдаемой формой без телепатии",
+      "resource": {
+        "kind": "physiology",
+        "rule": "только освоенное тело, вход по v0.8; поддержание/выход бесплатны; не новая форма"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.звериные_тела.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.звериные_тела.100",
+      "name": "Мастер анатомии",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Звериные тела",
+      "level_gate": 100,
+      "effect": "применяет все освоенные ограничения конкретного тела, не получая новых форм",
+      "resource": {
+        "kind": "physiology",
+        "rule": "только освоенное тело, вход по v0.8; поддержание/выход бесплатны; не новая форма"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.звериные_тела.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.живая_природа.020",
+      "name": "Точка роста",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Живая природа",
+      "level_gate": 20,
+      "effect": "находит реально живую основу для природных чар",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 4,
+        "formula": "ceil(M*4/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": true
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "отсутствие живой среды, высыхание и потеря времени",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.живая_природа.030",
+      "name": "Направление побега",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Живая природа",
+      "level_gate": 30,
+      "effect": "поддерживает управляемый рост существующего растения",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 7,
+        "formula": "ceil(M*7/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": true
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.живая_природа.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "отсутствие живой среды, высыхание и потеря времени",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.живая_природа.050",
+      "name": "Зелёный участок",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Живая природа",
+      "level_gate": 50,
+      "effect": "формирует небольшую подготовленную естественную преграду",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 10,
+        "formula": "ceil(M*10/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": true
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.живая_природа.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "отсутствие живой среды, высыхание и потеря времени",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.живая_природа.075",
+      "name": "Двойная опора",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Живая природа",
+      "level_gate": 75,
+      "effect": "распределяет живой рост между двумя точками",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 15,
+        "formula": "ceil(M*15/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": true
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.живая_природа.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "отсутствие живой среды, высыхание и потеря времени",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.живая_природа.100",
+      "name": "Укрытая роща",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Живая природа",
+      "level_gate": 100,
+      "effect": "создаёт долговременный природный участок при наличии воды, сезона и времени",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 22,
+        "formula": "ceil(M*22/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": true
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.живая_природа.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "отсутствие живой среды, высыхание и потеря времени",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.природное_ремесло.020",
+      "name": "Разделение сырья",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Природное ремесло",
+      "level_gate": 20,
+      "effect": "распознаёт несовместимые ингредиенты по изученному рецепту",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.природное_ремесло.030",
+      "name": "Сохранённый урожай",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Природное ремесло",
+      "level_gate": 30,
+      "effect": "снижает порчу ограниченной партии",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.природное_ремесло.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.природное_ремесло.050",
+      "name": "Расход без остатка",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Природное ремесло",
+      "level_gate": 50,
+      "effect": "выбирает, на какой состав уйдёт дефицитный ингредиент",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.природное_ремесло.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.природное_ремесло.075",
+      "name": "Походная ступка",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Природное ремесло",
+      "level_gate": 75,
+      "effect": "организует переносную обработку реального сырья",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.природное_ремесло.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.druid.природное_ремесло.100",
+      "name": "Сад рецептов",
+      "faction": "arcanum",
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Природное ремесло",
+      "level_gate": 100,
+      "effect": "налаживает воспроизводимое ремесло при поддержке поселения",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.druid.природное_ремесло.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизученная форма, травма, истощение или отсутствие сырья",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.core.001",
+      "name": "Щит спутника",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "прикрывает союзника от одного видимого направления",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.core.005",
+      "name": "Тяжёлая опора",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "удерживает равновесие в доспехе",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.core.010",
+      "name": "Смена заслона",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "передаёт прикрытие подготовленному товарищу",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.core.015",
+      "name": "Выдержка прохода",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "удерживает конкретный участок ценой усталости",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.бастион.020",
+      "name": "Узкий сектор",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Бастион",
+      "level_gate": 20,
+      "effect": "занимает позицию, защищающую проход",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.бастион.030",
+      "name": "Шаг стены",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Бастион",
+      "level_gate": 30,
+      "effect": "перестраивает линию щитов с обученными союзниками",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.бастион.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.бастион.050",
+      "name": "Трудная нагрузка",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Бастион",
+      "level_gate": 50,
+      "effect": "принимает короткое силовое давление на исправную броню",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.бастион.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.бастион.075",
+      "name": "Коридор отхода",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Бастион",
+      "level_gate": 75,
+      "effect": "поддерживает защиту группы при отступлении",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.бастион.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.бастион.100",
+      "name": "Последний рубеж",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Бастион",
+      "level_gate": 100,
+      "effect": "держит подготовленную оборону ценой опасного износа защиты",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.бастион.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.хранитель_обета.020",
+      "name": "Выбранный спутник",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Хранитель обета",
+      "level_gate": 20,
+      "effect": "привязывает защитную задачу к конкретному человеку",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.хранитель_обета.030",
+      "name": "Перехват рядом",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Хранитель обета",
+      "level_gate": 30,
+      "effect": "своевременно занимает защитное положение",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.хранитель_обета.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.хранитель_обета.050",
+      "name": "Маршрут выхода",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Хранитель обета",
+      "level_gate": 50,
+      "effect": "выбирает безопасный путь сопровождения",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.хранитель_обета.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.хранитель_обета.075",
+      "name": "Двое под защитой",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Хранитель обета",
+      "level_gate": 75,
+      "effect": "организует взаимное прикрытие небольшой группы",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.хранитель_обета.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.хранитель_обета.100",
+      "name": "Не оставить",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Хранитель обета",
+      "level_gate": 100,
+      "effect": "завершает эвакуацию ценой личного безопасного выхода",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.хранитель_обета.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.страж_чар.020",
+      "name": "Знакомая школа",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Страж чар",
+      "level_gate": 20,
+      "effect": "различает изученный вид защитных или атакующих чар",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 4,
+        "formula": "ceil(M*4/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.страж_чар.030",
+      "name": "Оберег направления",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Страж чар",
+      "level_gate": 30,
+      "effect": "применяет малую известную защиту",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 7,
+        "formula": "ceil(M*7/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.страж_чар.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.страж_чар.050",
+      "name": "Граница узора",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Страж чар",
+      "level_gate": 50,
+      "effect": "распознаёт предел конкретного известного эффекта",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 10,
+        "formula": "ceil(M*10/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.страж_чар.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.страж_чар.075",
+      "name": "Покров участка",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Страж чар",
+      "level_gate": 75,
+      "effect": "ограниченно защищает подготовленную область от одного типа чар",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 15,
+        "formula": "ceil(M*15/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.страж_чар.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.paladin.страж_чар.100",
+      "name": "Последняя печать",
+      "faction": "arcanum",
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Страж чар",
+      "level_gate": 100,
+      "effect": "ценой значительного запаса маны выдерживает один известный сильный эффект",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 22,
+        "formula": "ceil(M*22/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.paladin.страж_чар.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.core.001",
+      "name": "Малое плетение",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "воспроизводит только изученный базовый эффект",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 1,
+        "formula": "ceil(M*1/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.core.005",
+      "name": "Путь заклинания",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "сверяет линию действия со своими союзниками",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 2,
+        "formula": "ceil(M*2/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.core.010",
+      "name": "Безопасная остановка",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "прекращает неудачный собственный приём с потерей ресурса",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 3,
+        "formula": "ceil(M*3/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.core.015",
+      "name": "Якорь внимания",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "удерживает одну освоенную технику под умеренной помехой",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 3,
+        "formula": "ceil(M*3/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.стихийник.020",
+      "name": "Точная стихия",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Стихийник",
+      "level_gate": 20,
+      "effect": "ограниченно направляет известный природный эффект",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 4,
+        "formula": "ceil(M*4/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.стихийник.030",
+      "name": "Локальный жар",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Стихийник",
+      "level_gate": 30,
+      "effect": "дозирует тепло в малом секторе",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 7,
+        "formula": "ceil(M*7/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.стихийник.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.стихийник.050",
+      "name": "Связка двух",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Стихийник",
+      "level_gate": 50,
+      "effect": "выполняет два изученных эффекта последовательно",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 10,
+        "formula": "ceil(M*10/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.стихийник.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.стихийник.075",
+      "name": "Рельеф в помощь",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Стихийник",
+      "level_gate": 75,
+      "effect": "использует присутствующую воду или ветер",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 15,
+        "formula": "ceil(M*15/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.стихийник.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.стихийник.100",
+      "name": "Стихийная перемена",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Стихийник",
+      "level_gate": 100,
+      "effect": "меняет условия ограниченного участка после подготовки, затрагивая и союзников",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 22,
+        "formula": "ceil(M*22/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.стихийник.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.узорник.020",
+      "name": "Узнать связку",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Узорник",
+      "level_gate": 20,
+      "effect": "распознаёт пересечение знакомых магических структур",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 4,
+        "formula": "ceil(M*4/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.узорник.030",
+      "name": "Знак-опора",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Узорник",
+      "level_gate": 30,
+      "effect": "закрепляет один эффект на подготовленной метке",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 7,
+        "formula": "ceil(M*7/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.узорник.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.узорник.050",
+      "name": "Два контура",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Узорник",
+      "level_gate": 50,
+      "effect": "синхронизирует последовательность известных эффектов",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 10,
+        "formula": "ceil(M*10/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.узорник.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.узорник.075",
+      "name": "Смена опор",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Узорник",
+      "level_gate": 75,
+      "effect": "меняет подготовленную схему только через её доступные узлы",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 15,
+        "formula": "ceil(M*15/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.узорник.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.узорник.100",
+      "name": "Большое плетение",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Узорник",
+      "level_gate": 100,
+      "effect": "поддерживает сложное подготовленное поле с уязвимыми якорями",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 22,
+        "formula": "ceil(M*22/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.узорник.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.оградитель.020",
+      "name": "Узкий заслон",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Оградитель",
+      "level_gate": 20,
+      "effect": "защищает один определённый сектор",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 4,
+        "formula": "ceil(M*4/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.оградитель.030",
+      "name": "Кромка рядом",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Оградитель",
+      "level_gate": 30,
+      "effect": "медленно смещает защиту со спутником",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 7,
+        "formula": "ceil(M*7/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.оградитель.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.оградитель.050",
+      "name": "Раздвоенный щит",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Оградитель",
+      "level_gate": 50,
+      "effect": "удерживает две малые преграды вместо одной сильной",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 10,
+        "formula": "ceil(M*10/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.оградитель.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.оградитель.075",
+      "name": "Второй рубеж",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Оградитель",
+      "level_gate": 75,
+      "effect": "разворачивает последовательную оборону",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 15,
+        "formula": "ceil(M*15/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.оградитель.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.mage.оградитель.100",
+      "name": "Купол уходящих",
+      "faction": "arcanum",
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Оградитель",
+      "level_gate": 100,
+      "effect": "ненадолго прикрывает подготовленную группу ценой высокого расхода маны",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 22,
+        "formula": "ceil(M*22/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.mage.оградитель.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.core.001",
+      "name": "Первый осмотр",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "отличает видимую травму от безопасного повреждения",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 1,
+        "formula": "ceil(M*1/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.core.005",
+      "name": "Чистая повязка",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "готовит материалы первой помощи",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 2,
+        "formula": "ceil(M*2/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.core.010",
+      "name": "Спокойное дыхание",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "поддерживает пострадавшего при наличии времени",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 3,
+        "formula": "ceil(M*3/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.core.015",
+      "name": "Признание границ",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "узнаёт ситуацию, требующую специалиста",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 3,
+        "formula": "ceil(M*3/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.целитель.020",
+      "name": "Явная угроза",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Целитель",
+      "level_gate": 20,
+      "effect": "распознаёт один изученный признак ухудшения",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 4,
+        "formula": "ceil(M*4/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.целитель.030",
+      "name": "Удержать состояние",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Целитель",
+      "level_gate": 30,
+      "effect": "стабилизирует известный тип травмы в пределах подготовки",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 7,
+        "formula": "ceil(M*7/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.целитель.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.целитель.050",
+      "name": "Два нуждающихся",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Целитель",
+      "level_gate": 50,
+      "effect": "распределяет ограниченную помощь между двумя людьми",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 10,
+        "formula": "ceil(M*10/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.целитель.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.целитель.075",
+      "name": "Рядом с хирургом",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Целитель",
+      "level_gate": 75,
+      "effect": "усиливает конкретную известную медицинскую процедуру",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 15,
+        "formula": "ceil(M*15/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.целитель.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.целитель.100",
+      "name": "Время на эвакуацию",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Целитель",
+      "level_gate": 100,
+      "effect": "выигрывает ограниченное окно для помощи без восстановления уничтоженных органов",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 22,
+        "formula": "ceil(M*22/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.целитель.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.очиститель.020",
+      "name": "Узнать природу",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Очиститель",
+      "level_gate": 20,
+      "effect": "распознаёт изученный вид скверны",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 4,
+        "formula": "ceil(M*4/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.очиститель.030",
+      "name": "Малое очищение",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Очиститель",
+      "level_gate": 30,
+      "effect": "устраняет один знакомый поверхностный эффект",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 7,
+        "formula": "ceil(M*7/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.очиститель.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.очиститель.050",
+      "name": "Чистая граница",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Очиститель",
+      "level_gate": 50,
+      "effect": "ограничивает распространение известного влияния",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 10,
+        "formula": "ceil(M*10/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.очиститель.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.очиститель.075",
+      "name": "Найти связь",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Очиститель",
+      "level_gate": 75,
+      "effect": "отслеживает известный путь распространения после исследования",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 15,
+        "formula": "ceil(M*15/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.очиститель.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.очиститель.100",
+      "name": "Очищение узла",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Очиститель",
+      "level_gate": 100,
+      "effect": "после подготовки останавливает один известный источник с помощью команды",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 22,
+        "formula": "ceil(M*22/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.очиститель.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.служитель_общины.020",
+      "name": "Место поддержки",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Служитель общины",
+      "level_gate": 20,
+      "effect": "готовит точку добровольной помощи",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 4,
+        "formula": "ceil(M*4/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.служитель_общины.030",
+      "name": "Общий обряд",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Служитель общины",
+      "level_gate": 30,
+      "effect": "организует небольшой совместный ритуал",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 7,
+        "formula": "ceil(M*7/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.служитель_общины.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.служитель_общины.050",
+      "name": "Руки сообща",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Служитель общины",
+      "level_gate": 50,
+      "effect": "распределяет уход и дежурства внутри группы",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 10,
+        "formula": "ceil(M*10/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.служитель_общины.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.служитель_общины.075",
+      "name": "Община в беде",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Служитель общины",
+      "level_gate": 75,
+      "effect": "поддерживает человеческое доверие через знакомую традицию",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 15,
+        "formula": "ceil(M*15/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.служитель_общины.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.priest.служитель_общины.100",
+      "name": "Долгое убежище",
+      "faction": "arcanum",
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Служитель общины",
+      "level_gate": 100,
+      "effect": "укрепляет устойчивую добровольную общину, зависящую от жителей и снабжения",
+      "resource": {
+        "kind": "mana",
+        "percent_max": 22,
+        "formula": "ceil(M*22/100)",
+        "applies_only_to_new_skill": true,
+        "human_only": false
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.priest.служитель_общины.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "неизвестная задача, потеря концентрации, нехватка маны или подготовленных условий",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.core.001",
+      "name": "Линия выстрела",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "оценивает видимый сектор с учётом своих",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.core.005",
+      "name": "Экономный колчан",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "соотносит стрелы с будущими задачами",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.core.010",
+      "name": "Запасная тропа",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "заранее выбирает маршрут ухода",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.core.015",
+      "name": "Позиция после выстрела",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "умеет вовремя изменить укрытие",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.меткий_стрелок.020",
+      "name": "Первая поправка",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Меткий стрелок",
+      "level_gate": 20,
+      "effect": "учитывает проверенную дистанцию",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.меткий_стрелок.030",
+      "name": "Чистое окно",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Меткий стрелок",
+      "level_gate": 30,
+      "effect": "ждёт открывшуюся видимую цель",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.меткий_стрелок.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.меткий_стрелок.050",
+      "name": "Сложная дуга",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Меткий стрелок",
+      "level_gate": 50,
+      "effect": "использует заранее изученную траекторию",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.меткий_стрелок.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.меткий_стрелок.075",
+      "name": "Дальний ориентир",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Меткий стрелок",
+      "level_gate": 75,
+      "effect": "выполняет подготовленную редкую дальнюю попытку",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.меткий_стрелок.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.меткий_стрелок.100",
+      "name": "Единственный шанс",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Меткий стрелок",
+      "level_gate": 100,
+      "effect": "использует трудный прицельный момент без гарантии успеха",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.меткий_стрелок.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.застрельщик.020",
+      "name": "Стрела и шаг",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Застрельщик",
+      "level_gate": 20,
+      "effect": "меняет укрытие после выстрела",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.застрельщик.030",
+      "name": "Уход по склону",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Застрельщик",
+      "level_gate": 30,
+      "effect": "использует выгодную пересечённую местность",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.застрельщик.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.застрельщик.050",
+      "name": "Охрана отхода",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Застрельщик",
+      "level_gate": 50,
+      "effect": "поддерживает товарищей во время движения",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.застрельщик.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.застрельщик.075",
+      "name": "Долгий обход",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Застрельщик",
+      "level_gate": 75,
+      "effect": "ведёт преследование с конечным запасом стрел",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.застрельщик.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.застрельщик.100",
+      "name": "Вывести своих",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Застрельщик",
+      "level_gate": 100,
+      "effect": "организует подвижный отход малой группы через известную местность",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.застрельщик.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.стрелковый_вожак.020",
+      "name": "Общая цель",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Стрелковый вожак",
+      "level_gate": 20,
+      "effect": "согласует направление внимания группы",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.стрелковый_вожак.030",
+      "name": "Разные сектора",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Стрелковый вожак",
+      "level_gate": 30,
+      "effect": "распределяет линии огня без помех союзникам",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.стрелковый_вожак.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.стрелковый_вожак.050",
+      "name": "Единый знак",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Стрелковый вожак",
+      "level_gate": 50,
+      "effect": "передаёт понятный сигнал согласованного действия",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.стрелковый_вожак.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.стрелковый_вожак.075",
+      "name": "Смена рубежа",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Стрелковый вожак",
+      "level_gate": 75,
+      "effect": "согласует последовательную работу двух групп",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.стрелковый_вожак.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.archer.стрелковый_вожак.100",
+      "name": "Одна возможность",
+      "faction": "arcanum",
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Стрелковый вожак",
+      "level_gate": 100,
+      "effect": "подготавливает общее действие опытных стрелков, зависящее от дисциплины",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.archer.стрелковый_вожак.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.core.001",
+      "name": "Привычка стража",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "замечает предсказуемые повторы наблюдения",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.core.005",
+      "name": "Тихая опора",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "пользуется заранее проверенной поверхностью",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.core.010",
+      "name": "Ложный жест",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "кратко отвлекает одного соперника",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.core.015",
+      "name": "Вторая дверь",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "заранее отмечает выход",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.проникатель.020",
+      "name": "Пауза наблюдения",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Проникатель",
+      "level_gate": 20,
+      "effect": "выбирает подходящий момент движения",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.проникатель.030",
+      "name": "Знакомый замок",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Проникатель",
+      "level_gate": 30,
+      "effect": "работает с изученным видом простого механизма",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.проникатель.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.проникатель.050",
+      "name": "Точка возврата",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Проникатель",
+      "level_gate": 50,
+      "effect": "сохраняет доступный путь назад",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.проникатель.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.проникатель.075",
+      "name": "Тихая группа",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Проникатель",
+      "level_gate": 75,
+      "effect": "координирует обученных спутников в обходе",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.проникатель.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.проникатель.100",
+      "name": "Чужая крепость",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Проникатель",
+      "level_gate": 100,
+      "effect": "планирует многоэтапное проникновение на основе фактической разведки",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.проникатель.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.дуэлянт.020",
+      "name": "Первый финт",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Дуэлянт",
+      "level_gate": 20,
+      "effect": "предлагает противнику ложный момент для решения",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.дуэлянт.030",
+      "name": "Контроль дистанции",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Дуэлянт",
+      "level_gate": 30,
+      "effect": "использует ошибку соперника в движении",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.дуэлянт.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.дуэлянт.050",
+      "name": "Короткое окно",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Дуэлянт",
+      "level_gate": 50,
+      "effect": "применяет освоенный ответ на известный приём",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.дуэлянт.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.дуэлянт.075",
+      "name": "Выход из тесноты",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Дуэлянт",
+      "level_gate": 75,
+      "effect": "освобождает место для движения среди нескольких угроз",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.дуэлянт.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.дуэлянт.100",
+      "name": "Мастер секунды",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Дуэлянт",
+      "level_gate": 100,
+      "effect": "соединяет несколько освоенных движений в короткую последовательность с реальным риском травмы",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.дуэлянт.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.делец.020",
+      "name": "Узнать интерес",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Делец",
+      "level_gate": 20,
+      "effect": "выявляет реальную потребность собеседника",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.делец.030",
+      "name": "Старая рекомендация",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Делец",
+      "level_gate": 30,
+      "effect": "получает возможность встречи благодаря репутации",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.делец.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.делец.050",
+      "name": "Взаимный обмен",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Делец",
+      "level_gate": 50,
+      "effect": "меняет условия сделки по взаимному согласию",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.делец.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.делец.075",
+      "name": "Сеть посредников",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Делец",
+      "level_gate": 75,
+      "effect": "организует устойчивые контакты",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.делец.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    },
+    {
+      "id": "eidos.v14.arcanum.rogue.делец.100",
+      "name": "Договорный проход",
+      "faction": "arcanum",
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Делец",
+      "level_gate": 100,
+      "effect": "обеспечивает доступ через длительную организационную работу без магического подчинения",
+      "resource": {
+        "kind": "physical_or_material",
+        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+      },
+      "prerequisites": [
+        "eidos.v14.arcanum.rogue.делец.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "Освоение с наставником либо подтверждённая практика; одного уровня недостаточно",
+      "countermeasures": "срыв подготовки, травма, плохой обзор или утрата снаряжения",
+      "limitations": [
+        "никогда не гарантирует успех при подходящей контрмере",
+        "не заменяет старые 140 навыков",
+        "не был автоматически выдан героям романа"
+      ]
+    }
+  ]
+}

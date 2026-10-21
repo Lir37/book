@@ -202,6 +202,16 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('Общий опыт: 2775. Уровень 6', self.chapters[16])
         self.assertIn('Три свободных очка характеристик', self.chapters[16])
 
+    def test_levels_seven_and_eight_before_death(self):
+        self.assertIn('Общий опыт: 3225. Уровень 6', self.chapters[19])
+        self.assertIn('Общий опыт: 3975. Уровень 7', self.chapters[21])
+        self.assertIn('Общий опыт: 4575. Уровень 7', self.chapters[22])
+        self.assertIn('Общий опыт: 5175. Уровень 8', self.chapters[23])
+        self.assertNotIn('Общий опыт:', self.chapters[24])
+        self.assertNotIn('Общий опыт:', self.chapters[25])
+        self.assertIn('Шесть очков оставались свободными', self.chapters[23])
+        self.assertIn('дух стал 19', self.chapters[21])
+
     def test_death_stays_final(self):
         self.assertIn('сообщение о возрождении', self.chapters[24])
         self.assertIn('В игре погиб. Первый раз.', self.chapters[25])

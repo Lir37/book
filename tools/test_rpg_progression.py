@@ -744,5 +744,24 @@ class RPGRegression(unittest.TestCase):
         self.assertNotIn('Штраф за смерть:', self.chapters[24] + self.chapters[25])
 
 
+
+    def test_route_training_not_level_grant(self):
+        chapter17 = self.chapters[16]
+        chapter18 = self.chapters[17]
+        chapter22 = self.chapters[21]
+        self.assertIn('Лесного маршрута', chapter17)
+        self.assertIn('Допуск к нему у меня уже был с пятого уровня', chapter17)
+        self.assertIn('систем', chapter17.lower())
+        self.assertIn('мокрый наклон', chapter18)
+        self.assertIn('Лесной маршрут', chapter22)
+        self.assertIn('не обещал, что под дерном есть опора', chapter22)
+
+    def test_uber_progression_without_invented_level_and_untrained_light_grab(self):
+        self.assertNotIn('световым захватом', self.chapters[13].lower())
+        self.assertIn('Защитный заслон тоже отрабатывал', self.chapters[7])
+        self.assertIn('всех', self.chapters[22].lower())
+        self.assertIn('Опыт достался не одному', self.chapters[22])
+        self.assertIn('малому плетению', self.chapters[10])
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

@@ -1,0 +1,3050 @@
+{
+  "version": "1.4",
+  "date": "2026-10-21",
+  "status": "AUTHOR_PREAPPROVED_CLASS_ABILITY_DESIGNS_NOT_GRANTED",
+  "description": "109 новых обучаемых навыков Протокола: 6 классов и 17 специализаций; без техноманы; оснащение и связь ограничены",
+  "technology_document": "RPG_ЭЙДОС_ТЕХНОЛОГИЧЕСКИЙ_КАНОН_ПРОТОКОЛА_v1.4_2026-10-21.md",
+  "rules": "Выбор специализации от 20 уровня; уровень означает лишь допуск к обучению. Прошлые 140 навыков и текст романа не меняются.",
+  "entries": [
+    {
+      "id": "eidos.v14.protocol.assault.core.001",
+      "name": "Опора веса",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "осознаёт распределение нагрузки штатного комплекта",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.core.005",
+      "name": "Щит сектора",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "прикрывает одну опасную линию без полной неуязвимости",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.core.010",
+      "name": "Продвижение рядом",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "перемещается вместе с прикрывающим товарищем",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.core.015",
+      "name": "Сохранить отход",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "удерживает доступную дорогу назад ценой темпа",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.бастион.020",
+      "name": "Щит перед нами",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Бастион",
+      "level_gate": 20,
+      "effect": "укрывает один подготовленный сектор",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.бастион.030",
+      "name": "Переход опоры",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Бастион",
+      "level_gate": 30,
+      "effect": "переносит оборону к соседнему укреплению",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.бастион.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.бастион.050",
+      "name": "Стойкость защиты",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Бастион",
+      "level_gate": 50,
+      "effect": "справляется с коротким ударным давлением при исправной броне",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.бастион.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.бастион.075",
+      "name": "Коридор эвакуации",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Бастион",
+      "level_gate": 75,
+      "effect": "обеспечивает группе временный защищённый путь",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.бастион.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.бастион.100",
+      "name": "Предел бастиона",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Бастион",
+      "level_gate": 100,
+      "effect": "удерживает рубеж ценой износа и личного риска, но не бесконечно",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.бастион.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.проломщик.020",
+      "name": "Оценка преграды",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Проломщик",
+      "level_gate": 20,
+      "effect": "определяет, есть ли доступный штатному инструменту проход",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.проломщик.030",
+      "name": "Оснастка прохода",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Проломщик",
+      "level_gate": 30,
+      "effect": "готовит совместимые средства для физического открытия пути",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.проломщик.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.проломщик.050",
+      "name": "Переход первым",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Проломщик",
+      "level_gate": 50,
+      "effect": "помогает команде пересечь уже созданный проход",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.проломщик.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.проломщик.075",
+      "name": "Запасной путь",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Проломщик",
+      "level_gate": 75,
+      "effect": "планирует безопасное возвращение до тяжёлого перехода",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.проломщик.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.проломщик.100",
+      "name": "Последний выход",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Проломщик",
+      "level_gate": 100,
+      "effect": "поддерживает сложную эвакуацию через подготовленную преграду с риском повреждения оборудования",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.проломщик.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.рейдер.020",
+      "name": "Лёгкий шаг",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Рейдер",
+      "level_gate": 20,
+      "effect": "использует выигрыш подвижности от отказа от тяжёлой брони",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.рейдер.030",
+      "name": "Переход укрытий",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Рейдер",
+      "level_gate": 30,
+      "effect": "быстро меняет наблюдаемую позицию",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.рейдер.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.рейдер.050",
+      "name": "Смена высоты",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Рейдер",
+      "level_gate": 50,
+      "effect": "использует заранее известный рельеф в движении",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.рейдер.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.рейдер.075",
+      "name": "Ложное отступление",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Рейдер",
+      "level_gate": 75,
+      "effect": "заставляет преследователя выбирать, не гарантируя погоню",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.рейдер.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.assault.рейдер.100",
+      "name": "Кольцо движения",
+      "faction": "protocol",
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Рейдер",
+      "level_gate": 100,
+      "effect": "поддерживает серию быстрых манёвров ценой усталости",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "нагрузка тела, исправная защита, время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.assault.рейдер.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обход, усталость, поломка защиты",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.core.001",
+      "name": "Знакомое оружие",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "проверяет штатное состояние механизма",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.core.005",
+      "name": "Чистая линия",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "оценивает возможность безопасного огня",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.core.010",
+      "name": "Бережный боезапас",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "не тратит запас без цели",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.core.015",
+      "name": "Смена позиции",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "переходит к заранее разведанному укрытию",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.меткий_стрелок.020",
+      "name": "Известная дистанция",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Меткий стрелок",
+      "level_gate": 20,
+      "effect": "использует проверенную точность конкретного оружия",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.меткий_стрелок.030",
+      "name": "Решение не стрелять",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Меткий стрелок",
+      "level_gate": 30,
+      "effect": "сохраняет шанс при недостаточном обзоре",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.меткий_стрелок.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.меткий_стрелок.050",
+      "name": "Погодная поправка",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Меткий стрелок",
+      "level_gate": 50,
+      "effect": "учитывает замеченное изменение условий",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.меткий_стрелок.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.меткий_стрелок.075",
+      "name": "Дальняя подготовка",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Меткий стрелок",
+      "level_gate": 75,
+      "effect": "организует редкую дальнюю стрелковую задачу с наблюдением",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.меткий_стрелок.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.меткий_стрелок.100",
+      "name": "Один выстрел",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Меткий стрелок",
+      "level_gate": 100,
+      "effect": "реализует короткую возможность без гарантированного попадания",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.меткий_стрелок.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.подавитель.020",
+      "name": "Плотность присутствия",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Подавитель",
+      "level_gate": 20,
+      "effect": "ограничивает перемещение противника расходом конечного боезапаса",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.подавитель.030",
+      "name": "Пауза перезарядки",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Подавитель",
+      "level_gate": 30,
+      "effect": "согласует безопасную смену магазина с группой",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.подавитель.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.подавитель.050",
+      "name": "Развести сектора",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Подавитель",
+      "level_gate": 50,
+      "effect": "исключает пересечение линий своих стрелков",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.подавитель.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.подавитель.075",
+      "name": "Бережный ствол",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Подавитель",
+      "level_gate": 75,
+      "effect": "прекращает опасный для механизма темп работы",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.подавитель.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.подавитель.100",
+      "name": "Открытый коридор",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Подавитель",
+      "level_gate": 100,
+      "effect": "кратковременно прикрывает проход при реальной материальной цене",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.подавитель.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.осадник.020",
+      "name": "Место станины",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Осадник",
+      "level_gate": 20,
+      "effect": "выбирает пригодную для тяжёлого станка поверхность",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.осадник.030",
+      "name": "Согласование расчёта",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Осадник",
+      "level_gate": 30,
+      "effect": "организует развёртывание с нужными людьми",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.осадник.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.осадник.050",
+      "name": "Цена поворота",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Осадник",
+      "level_gate": 50,
+      "effect": "учитывает ограничение угла и скорость тяжёлой установки",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.осадник.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.осадник.075",
+      "name": "Прикрытый рубеж",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Осадник",
+      "level_gate": 75,
+      "effect": "ведёт подготовленную позиционную задачу, пока группа сохраняет фланги",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.осадник.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.shooter.осадник.100",
+      "name": "Последняя задача",
+      "faction": "protocol",
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Осадник",
+      "level_gate": 100,
+      "effect": "исполняет сложный подготовленный эпизод без сверхмобильности и бесконечных снарядов",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "оружие, конечный боекомплект, видимость, состояние ствола"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.shooter.осадник.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие обзора и боеприпасов, поломка оружия",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.core.001",
+      "name": "Карта рисков",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "различает заметные способы наблюдения на пути",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.core.005",
+      "name": "Согласованный знак",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "передаёт простой условный сигнал без радио",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.core.010",
+      "name": "Путь без шума",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "выбирает укрытия с учётом действительной среды",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.core.015",
+      "name": "Контроль выхода",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "планирует запасной путь и время возвращения",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.разведчик.020",
+      "name": "Видимое и скрытое",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Разведчик",
+      "level_gate": 20,
+      "effect": "записывает, что действительно можно узнать наблюдением",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.разведчик.030",
+      "name": "Два источника",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Разведчик",
+      "level_gate": 30,
+      "effect": "сверяет независимые сообщения",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.разведчик.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.разведчик.050",
+      "name": "Длинный обход",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Разведчик",
+      "level_gate": 50,
+      "effect": "предпочитает безопасный маршрут быстрому",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.разведчик.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.разведчик.075",
+      "name": "Старые сведения",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Разведчик",
+      "level_gate": 75,
+      "effect": "отмечает ухудшение качества разведданных со временем",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.разведчик.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.разведчик.100",
+      "name": "Вернуться со знанием",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Разведчик",
+      "level_gate": 100,
+      "effect": "ведёт подготовленную группу обратно по проверенным маршрутам",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.разведчик.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.диверсант.020",
+      "name": "Инвентаризация объекта",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Диверсант",
+      "level_gate": 20,
+      "effect": "отличает знакомые узлы технического устройства от неизвестных",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.диверсант.030",
+      "name": "Безопасная остановка",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Диверсант",
+      "level_gate": 30,
+      "effect": "переводит знакомый механизм в штатную паузу при наличии прав и доступа",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.диверсант.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.диверсант.050",
+      "name": "План снижения риска",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Диверсант",
+      "level_gate": 50,
+      "effect": "готовит альтернативное ненасильственное прекращение работы объекта",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.диверсант.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.диверсант.075",
+      "name": "Возврат к режиму",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Диверсант",
+      "level_gate": 75,
+      "effect": "умеет оставить безопасное состояние после вмешательства",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.диверсант.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.диверсант.100",
+      "name": "Остановка угрозы",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Диверсант",
+      "level_gate": 100,
+      "effect": "с подготовленной группой изолирует опасный производственный процесс без разрушения объекта",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.диверсант.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.охотник.020",
+      "name": "След перемещения",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Охотник",
+      "level_gate": 20,
+      "effect": "замечает явно нарушенные физические признаки",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.охотник.030",
+      "name": "Контроль наблюдения",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Охотник",
+      "level_gate": 30,
+      "effect": "создаёт ненавязчивую отметку известного маршрута",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.охотник.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.охотник.050",
+      "name": "Сверка свидетельств",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Охотник",
+      "level_gate": 50,
+      "effect": "проверяет рассказ по независимым фактам",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.охотник.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.охотник.075",
+      "name": "Известный выход",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Охотник",
+      "level_gate": 75,
+      "effect": "наблюдает один подтверждённый маршрут",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.охотник.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.operative.охотник.100",
+      "name": "Сеть наблюдателей",
+      "faction": "protocol",
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Охотник",
+      "level_gate": 100,
+      "effect": "строит проверяемую картину событий без угадывания мыслей",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "достоверная информация, доступ, время, риск раскрытия"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.operative.охотник.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "ложные данные, смена обстановки, обнаружение",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.core.001",
+      "name": "Первый модуль",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "разворачивает принесённый совместимый узел",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.core.005",
+      "name": "Проба работы",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "проверяет реальную нагрузку до использования",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.core.010",
+      "name": "Снятие блока",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "демонтирует исправный модуль без магического исчезновения",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.core.015",
+      "name": "Причина отказа",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "различает несколько знакомых физических неисправностей",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.фортификатор.020",
+      "name": "Опора на месте",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Фортификатор",
+      "level_gate": 20,
+      "effect": "закрепляет совместимый элемент на проверенной поверхности",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.фортификатор.030",
+      "name": "Связка секций",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Фортификатор",
+      "level_gate": 30,
+      "effect": "соединяет два подходящих модуля",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.фортификатор.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.фортификатор.050",
+      "name": "Временное укрытие",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Фортификатор",
+      "level_gate": 50,
+      "effect": "организует малую безопасную физическую защиту",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.фортификатор.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.фортификатор.075",
+      "name": "Переправа ограниченной нагрузки",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Фортификатор",
+      "level_gate": 75,
+      "effect": "обеспечивает переход после инженерной оценки и доставки деталей",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.фортификатор.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.фортификатор.100",
+      "name": "Подготовленный сектор",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Фортификатор",
+      "level_gate": 100,
+      "effect": "с командой разворачивает крупный физический комплекс с уязвимыми узлами",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.фортификатор.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.контрсистемы.020",
+      "name": "Знакомый привод",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Контрсистемы",
+      "level_gate": 20,
+      "effect": "распознаёт признаки износа изученной передачи",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.контрсистемы.030",
+      "name": "Путь ремонта",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Контрсистемы",
+      "level_gate": 30,
+      "effect": "выбирает безопасную последовательность обслуживания",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.контрсистемы.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.контрсистемы.050",
+      "name": "Штатный стоп",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Контрсистемы",
+      "level_gate": 50,
+      "effect": "останавливает знакомую опасную машину предусмотренным механизмом",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.контрсистемы.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.контрсистемы.075",
+      "name": "Резервная линия",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Контрсистемы",
+      "level_gate": 75,
+      "effect": "переводит технический узел на заранее предусмотренное снабжение",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.контрсистемы.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.контрсистемы.100",
+      "name": "Обрыв аварии",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Контрсистемы",
+      "level_gate": 100,
+      "effect": "с профессиональной командой локализует каскад известного технического отказа",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.контрсистемы.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.мобильные_устройства.020",
+      "name": "Короткая сборка",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Мобильные устройства",
+      "level_gate": 20,
+      "effect": "быстро устанавливает заранее упакованный переносной модуль",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.мобильные_устройства.030",
+      "name": "Вторая точка",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Мобильные устройства",
+      "level_gate": 30,
+      "effect": "перемещает небольшое устройство на совместимую опору",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.мобильные_устройства.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.мобильные_устройства.050",
+      "name": "Смена назначения",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Мобильные устройства",
+      "level_gate": 50,
+      "effect": "перестраивает пару модулей между известными режимами",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.мобильные_устройства.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.мобильные_устройства.075",
+      "name": "Полевой комплект",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Мобильные устройства",
+      "level_gate": 75,
+      "effect": "координирует краткую работу нескольких переносных изделий",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.мобильные_устройства.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.engineer.мобильные_устройства.100",
+      "name": "Собрать и уйти",
+      "faction": "protocol",
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Мобильные устройства",
+      "level_gate": 100,
+      "effect": "разворачивает полноценный переносимый набор, оставаясь слабее стационарной мастерской",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "совместимые физические модули, материалы, реальный доступ"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.engineer.мобильные_устройства.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "отсутствие деталей, невозможность доступа, несущая нагрузка",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.core.001",
+      "name": "Один приказ",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "отдаёт простой понятный сигнал исправному автоматону",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.core.005",
+      "name": "Остановка привода",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "использует штатный аварийный останов",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.core.010",
+      "name": "Два задания",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "составляет простую очередь действий без самостоятельного интеллекта механизма",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.core.015",
+      "name": "Уход за механизмом",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "замечает внешние признаки неисправности своего автомата",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.куратор.020",
+      "name": "Личное устройство",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Куратор",
+      "level_gate": 20,
+      "effect": "тщательно отслеживает единственного известного автоматона",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.куратор.030",
+      "name": "Память пути",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Куратор",
+      "level_gate": 30,
+      "effect": "настраивает простой повторяемый маршрут",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.куратор.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.куратор.050",
+      "name": "Сберечь привод",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Куратор",
+      "level_gate": 50,
+      "effect": "снижает нагрузку на знакомый механизм",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.куратор.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.куратор.075",
+      "name": "Продолжить цикл",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Куратор",
+      "level_gate": 75,
+      "effect": "разбивает большую задачу на простые команды",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.куратор.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.куратор.100",
+      "name": "Надёжный спутник",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Куратор",
+      "level_gate": 100,
+      "effect": "выполняет сложную длительную работу одним заранее подготовленным автоматоном без превращения его в разумное существо",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.куратор.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.звеньевой.020",
+      "name": "Второй помощник",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Звеньевой",
+      "level_gate": 20,
+      "effect": "распределяет простую работу между двумя механизмами",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.звеньевой.030",
+      "name": "Очередь машин",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Звеньевой",
+      "level_gate": 30,
+      "effect": "согласует независимые программы на одном участке",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.звеньевой.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.звеньевой.050",
+      "name": "Развести маршруты",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Звеньевой",
+      "level_gate": 50,
+      "effect": "учитывает пересечения движения нескольких автоматов",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.звеньевой.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.звеньевой.075",
+      "name": "Резерв звена",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Звеньевой",
+      "level_gate": 75,
+      "effect": "заменяет одну задачу подходящим исправным механизмом",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.звеньевой.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.звеньевой.100",
+      "name": "Группа помощников",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Звеньевой",
+      "level_gate": 100,
+      "effect": "координирует до шести простых единиц на подготовленной площадке с работающей связью",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.звеньевой.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.интегратор.020",
+      "name": "Узел сочленения",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Интегратор",
+      "level_gate": 20,
+      "effect": "соединяет совместимую машину и полевую опору",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.интегратор.030",
+      "name": "Разметка площадки",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Интегратор",
+      "level_gate": 30,
+      "effect": "создаёт проверенный маршрут по физическим ориентирам",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.интегратор.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.интегратор.050",
+      "name": "Один общий знак",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Интегратор",
+      "level_gate": 50,
+      "effect": "сообщает готовый простой сигнал группе совместимых механизмов",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.интегратор.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.интегратор.075",
+      "name": "Запасной контур",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Интегратор",
+      "level_gate": 75,
+      "effect": "переключает на физически существующую резервную линию",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.интегратор.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.mechanist.интегратор.100",
+      "name": "Работающий участок",
+      "faction": "protocol",
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Интегратор",
+      "level_gate": 100,
+      "effect": "объединяет подготовленных автоматонов и стационарную механику с реальной бригадой",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "исправный автоматон, конечное питание и реальный канал сигналов"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.mechanist.интегратор.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "обрыв сигнала, износ, неверная механическая программа",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.core.001",
+      "name": "Подход к пациенту",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": null,
+      "level_gate": 1,
+      "effect": "выбирает безопасный доступ под известной угрозой",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.core.005",
+      "name": "Полевая фиксация",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": null,
+      "level_gate": 5,
+      "effect": "оказывает простую помощь в пределах медицинской подготовки",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.core.001"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.core.010",
+      "name": "Очередность жизни",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": null,
+      "level_gate": 10,
+      "effect": "определяет срочность помощи по наблюдаемым признакам",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.core.005"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.core.015",
+      "name": "Передача врача",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": null,
+      "level_gate": 15,
+      "effect": "сохраняет сведения о состоянии пациента для специалиста",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.core.010"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.спасатель.020",
+      "name": "Маршрут к раненому",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Спасатель",
+      "level_gate": 20,
+      "effect": "выбирает достижимую безопасную дорогу",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.спасатель.030",
+      "name": "Бережное извлечение",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Спасатель",
+      "level_gate": 30,
+      "effect": "переносит человека с учётом известной травмы",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.спасатель.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.спасатель.050",
+      "name": "Помощь в пути",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Спасатель",
+      "level_gate": 50,
+      "effect": "поддерживает базовую помощь при эвакуации",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.спасатель.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.спасатель.075",
+      "name": "Вторые руки",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Спасатель",
+      "level_gate": 75,
+      "effect": "организует согласованную работу подготовленной пары спасателей",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.спасатель.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.спасатель.100",
+      "name": "Вывести людей",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Спасатель",
+      "level_gate": 100,
+      "effect": "проводит комплексную эвакуацию группы пострадавших в пределах имеющихся ресурсов",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.спасатель.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.стабилизатор.020",
+      "name": "Первый триаж",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Стабилизатор",
+      "level_gate": 20,
+      "effect": "выделяет немедленную угрозу среди нескольких пострадавших",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.core.015"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.стабилизатор.030",
+      "name": "Материалы по нужде",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Стабилизатор",
+      "level_gate": 30,
+      "effect": "распределяет конечные перевязочные средства",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.стабилизатор.020"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.стабилизатор.050",
+      "name": "Точки ухода",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Стабилизатор",
+      "level_gate": 50,
+      "effect": "организует несколько реальных пунктов помощи",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.стабилизатор.030"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.стабилизатор.075",
+      "name": "Цепь передачи",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Стабилизатор",
+      "level_gate": 75,
+      "effect": "передаёт сведения следующему медицинскому звену",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.стабилизатор.050"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    },
+    {
+      "id": "eidos.v14.protocol.combat_medic.стабилизатор.100",
+      "name": "Большая сортировка",
+      "faction": "protocol",
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Стабилизатор",
+      "level_gate": 100,
+      "effect": "руководит трудным спасением многих, не отменяя смертность и дефицит ресурсов",
+      "energy": "NO_TECHNOMANA",
+      "resource": {
+        "kind": "physical",
+        "requirements": "подготовка, медицинские материалы, доступный пациент и время"
+      },
+      "prerequisites": [
+        "eidos.v14.protocol.combat_medic.стабилизатор.075"
+      ],
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "automatic_unlock": false,
+      "training_evidence": "У наставника или через подтверждённую самостоятельную практику с реальной проверкой",
+      "countermeasures": "критические необратимые травмы, нехватка материалов или времени",
+      "limitations": [
+        "никаких бесплатных устройств и техноманы",
+        "не выдан никому автоматически",
+        "не отменяет реальные травмы и последствия"
+      ]
+    }
+  ]
+}

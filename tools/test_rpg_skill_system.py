@@ -81,6 +81,20 @@ class NewRPGAbilities(unittest.TestCase):
         self.assertEqual(len([x for x in builds if x["faction"]=="protocol"]),24)
         self.assertTrue(all(x["learned_skill_ids"]==[] for x in builds))
 
+    def test_fixture_skill_options_are_eligible_and_unlearned(self):
+        for actor in self.fixtures["builds"]:
+            self.assertEqual(actor["learned_skill_ids"],[])
+            options=actor["eligible_new_skill_ids"]
+            self.assertEqual(len(options),len(set(options)))
+            self.assertTrue(options)
+            for sid in options:
+                self.assertIn(sid,self.data["new"])
+                skill=self.data["new"][sid]
+                self.assertEqual(skill["faction"],actor["faction"])
+                self.assertEqual(skill["class_id"],actor["class_id"])
+                self.assertLessEqual(skill["level_gate"],actor["level"])
+                self.assertIn(skill["specialization"],(None,actor["specialization"]))
+
     def test_character_rejects_untrained_high_level_skill(self):
         profile=self.fixtures["builds"][0]
         skill=next(s for s in self.new if s["class_id"]=="druid" and s["level_gate"]==100)

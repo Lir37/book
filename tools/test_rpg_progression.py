@@ -5,9 +5,9 @@ import re
 import unittest
 from pathlib import Path
 from fractions import Fraction
-from rpg_transition_contract import HUMAN, NotEnoughMana, transition_cost, mana_after, proportional_entry_cost
+from rpg_transition_contract import HUMAN, NotEnoughMana, transition_cost, mana_after, proportional_entry_cost, canonical_paid_entry_cost, paid_transition_cost
 from rpg_mana_scenarios import trace_mana, compare_percentage_scenarios, FormActionUnavailable
-from rpg_resource_model import (BEAST_REGEN_DIVISOR, proposed_mana_cap,
+from rpg_resource_model import (BEAST_REGEN_DIVISOR, APPROVED_FULL_HUMAN_REFILL_SECONDS, canonical_mana_cap, canonical_human_regen_rate, canonical_beast_regen_rate, proposed_mana_cap,
     candidate_human_regen_rate, effective_regen_rate, regenerated_mana,
     rounded_entry_cost, unassisted_entries_at_full_cap)
 
@@ -148,16 +148,16 @@ class RPGRegression(unittest.TestCase):
 
     def test_no_upkeep_even_after_long_beast_hold(self):
         before = trace_mana(125, 125, (('form', 'fellur'), ('hold', 30),
-                                       ('form', HUMAN)), 20, True)
+                                       ('form', HUMAN)), 20, True, human_regen_per_second=0)
         later = trace_mana(125, 125, (('form', 'fellur'), ('hold', 3600),
-                                        ('form', HUMAN)), 20, True)
+                                        ('form', HUMAN)), 20, True, human_regen_per_second=0)
         self.assertEqual(before[1], later[1])
         self.assertEqual(before[0], HUMAN)
 
     def test_empty_mana_return_is_possible(self):
         form, amount, _ = trace_mana(125, 25, (('form', 'fellur'),
                                                 ('hold', 3600),
-                                                ('form', HUMAN)), 25)
+                                                ('form', HUMAN)), 25, human_regen_per_second=0)
         self.assertEqual((form, amount), (HUMAN, Fraction(0)))
 
     def test_free_intermediary_cannot_bypass_second_entry(self):
@@ -179,7 +179,8 @@ class RPGRegression(unittest.TestCase):
     def test_spells_consume_mana_without_drain_from_waiting(self):
         body, mana, _ = trace_mana(
             125, 125, (('form', 'fellur'), ('hold', 1000),
-                       ('form', HUMAN), ('cast', 10)), 20)
+                       ('form', HUMAN), ('cast', 10)), 20,
+            human_regen_per_second=0)
         # Return to human is mandatory before general druid spellcasting.
         self.assertEqual((body, mana), (HUMAN, Fraction(95)))
 
@@ -232,7 +233,7 @@ class RPGRegression(unittest.TestCase):
         beast, mana, _ = trace_mana(
             125, 125, (('form', 'fellur'), ('form', HUMAN),
                        ('form', 'fellur')), balance_of_chimeras=True)
-        self.assertEqual((beast, mana), ('fellur', Fraction(90)))
+        self.assertEqual((beast, mana), ('fellur', Fraction(89))) # 2 × ceil(125×0.14)
 
     def test_historical_fifteen_versus_approved_twenty(self):
         cap = Fraction(125)
@@ -269,11 +270,16 @@ class RPGRegression(unittest.TestCase):
                       ('restore', 30), ('form', 'fellur')))
         self.assertEqual((body, mana), ('fellur', Fraction(5)))
 
-    def test_regeneration_must_be_supplied_not_assumed(self):
-        _, original, _ = trace_mana(100, 100, (('form', 'fellur'), ('hold', 9999)))
-        _, hypothetical, _ = trace_mana(
-            100, 100, (('form', 'fellur'), ('regen', 7), ('hold', 9999)))
-        self.assertEqual((original, hypothetical), (Fraction(80), Fraction(87)))
+    def test_canonical_regeneration_is_on_by_default(self):
+        _, natural, _ = trace_mana(100, 100, (('form', 'fellur'), ('hold', 9999)))
+        _, explicit_none, _ = trace_mana(
+            100, 100, (('form', 'fellur'), ('hold', 9999)),
+            human_regen_per_second=0)
+        self.assertEqual((natural, explicit_none), (Fraction(100), Fraction(80)))
+        _, test_potion, _ = trace_mana(
+            100, 100, (('form', 'fellur'), ('regen', 7), ('hold', 9999)),
+            human_regen_per_second=0)
+        self.assertEqual(test_potion, Fraction(87))
 
     def test_latest_author_decision_document_exists(self):
         p = ROOT / 'RPG_ЭЙДОС_РЕШЕНИЕ_20_ПРОЦЕНТОВ_И_ДОСТУП_В_ФОРМЕ_v0.6_2026-10-21.md'
@@ -344,9 +350,10 @@ class RPGRegression(unittest.TestCase):
         self.assertEqual(regenerated_mana(cap, 0, 600, rate, 'fellur'), cap / 4)
         self.assertEqual(regenerated_mana(cap, 0, 2400, rate, 'fellur'), cap)
         # Regenerate a 14%-of-cap entry in human vs beast
-        price = rounded_entry_cost(cap, True)
-        self.assertEqual(regenerated_mana(cap, 0, 84, rate, HUMAN), price)
-        self.assertEqual(regenerated_mana(cap, 0, 336, rate, 'fellur'), price)
+        price_without_rounding = rounded_entry_cost(cap, True, 'exact')
+        self.assertEqual(regenerated_mana(cap, 0, 84, rate, HUMAN), price_without_rounding)
+        self.assertEqual(regenerated_mana(cap, 0, 336, rate, 'fellur'), price_without_rounding)
+        self.assertEqual(rounded_entry_cost(cap, True), 18)
 
     def test_rounding_is_applied_once_to_discounted_cost(self):
         self.assertEqual(rounded_entry_cost(125, True, 'exact'), Fraction(35, 2))
@@ -355,7 +362,7 @@ class RPGRegression(unittest.TestCase):
         self.assertEqual(rounded_entry_cost(106, True, 'ceil'), 15)
         self.assertEqual(rounded_entry_cost(106, False, 'ceil'), 22)
         self.assertEqual(unassisted_entries_at_full_cap(125, False), 5)
-        self.assertEqual(unassisted_entries_at_full_cap(125, True), 7)
+        self.assertEqual(unassisted_entries_at_full_cap(125, True), 6)
         with self.assertRaises(ValueError):
             rounded_entry_cost(125, True, 'bankers')
 
@@ -385,6 +392,117 @@ class RPGRegression(unittest.TestCase):
         document = (ROOT / 'RPG_ЭЙДОС_РЕГЕНЕРАЦИЯ_v0.7_2026-10-21.md').read_text('utf8')
         self.assertIn('в четыре раза медленнее', document)
         self.assertIn('ПРОЕКТ', document)
+
+
+    def test_v08_canonical_base_mana_caps_early_lir(self):
+        self.assertEqual(APPROVED_FULL_HUMAN_REFILL_SECONDS, 600)
+        for spirit, level, mana, normal_cost, discounted_cost in (
+            (15, 1, 125, 25, 18), (16, 2, 132, 27, 19),
+            (17, 3, 139, 28, 20),
+        ):
+            self.assertEqual(canonical_mana_cap(spirit, level), mana)
+            self.assertEqual(canonical_paid_entry_cost(mana), normal_cost)
+            self.assertEqual(canonical_paid_entry_cost(mana, True), discounted_cost)
+        self.assertEqual(canonical_mana_cap(17, 100), 333)
+        self.assertEqual(canonical_mana_cap(60, 100), 548)
+
+    def test_v08_incremental_spirit_and_level_growth(self):
+        self.assertEqual(canonical_mana_cap(16, 10) -
+                         canonical_mana_cap(15, 10), 5)
+        self.assertEqual(canonical_mana_cap(16, 11) -
+                         canonical_mana_cap(16, 10), 2)
+
+    def test_v08_exact_human_and_beast_recovery_rates(self):
+        for cap in (125, 132, 139, 233, 548):
+            self.assertEqual(canonical_human_regen_rate(cap), Fraction(cap, 600))
+            self.assertEqual(canonical_beast_regen_rate(cap), Fraction(cap, 2400))
+            self.assertEqual(canonical_human_regen_rate(cap),
+                             canonical_beast_regen_rate(cap) * 4)
+
+    def test_v08_billed_direct_beast_to_beast_and_free_exit(self):
+        self.assertEqual(paid_transition_cost(HUMAN, "fellur", 139, True), 20)
+        self.assertEqual(paid_transition_cost("fellur", "ursalon", 139, True), 20)
+        self.assertEqual(paid_transition_cost("ursalon", HUMAN, 139, True), 0)
+        self.assertEqual(paid_transition_cost("fellur", "fellur", 139, True), 0)
+        body, mana, _ = trace_mana(139, 139, (
+            ("form", "fellur"), ("form", "ursalon"), ("form", HUMAN)
+        ), balance_of_chimeras=True)
+        self.assertEqual((body, mana), (HUMAN, 99))
+
+    def test_v08_level_three_temporary_trials_do_not_grant_forms(self):
+        # v0.8 charges paid direct changes, but unlock is an external event.
+        self.assertIn("Временный доступ испытания: Урсалон.", self.chapters[5])
+        self.assertIn("Временный доступ испытания: Скайрэйвен.", self.chapters[5])
+        self.assertIn("Урсалон и Скайрэйвен снова стали серыми значками", self.chapters[5])
+
+    def test_v08_seventh_entry_requires_wait_or_external_restoration(self):
+        self.assertEqual(unassisted_entries_at_full_cap(139, True), 6)
+        six = tuple(x for _ in range(6)
+                    for x in (("form", "fellur"), ("form", HUMAN)))
+        _, after, _ = trace_mana(139, 139, six,
+                                 balance_of_chimeras=True,
+                                 human_regen_per_second=0)
+        self.assertEqual(after, 19)
+        with self.assertRaises(NotEnoughMana):
+            trace_mana(139, 139, six + (("form", "fellur"),),
+                       balance_of_chimeras=True,
+                       human_regen_per_second=0)
+        with_time = six + (("hold", Fraction(600, 139)), ("form", "fellur"))
+        body, after_wait, _ = trace_mana(139, 139, with_time,
+                                       balance_of_chimeras=True)
+        self.assertEqual((body, after_wait), ("fellur", 0))
+
+    def test_v08_fractional_regen_is_accumulated_not_zeroed(self):
+        body, mana, _ = trace_mana(125, 125,
+                                  (("form", "fellur"), ("hold", 1)))
+        self.assertEqual((body, mana), ("fellur", Fraction(107) + Fraction(125, 2400)))
+        self.assertGreater(mana, 107)
+        self.assertLess(mana, 108)
+
+    def test_v08_ten_minute_human_forty_minute_beast(self):
+        for body in (HUMAN, "fellur"):
+            seconds = 600 if body == HUMAN else 2400
+            self.assertEqual(regenerated_mana(139, 0, seconds,
+                             canonical_human_regen_rate(139), body), 139)
+        body, mana, _ = trace_mana(
+            139, 139, (("form", "fellur"), ("hold", 2400)))
+        self.assertEqual((body, mana), ("fellur", 139))
+
+    def test_v08_velarion_buff_preserves_ratio_and_shortens_wait(self):
+        buff = Fraction(11, 10)
+        base = canonical_human_regen_rate(139)
+        boosted = base * buff
+        self.assertEqual(effective_regen_rate(boosted, HUMAN),
+                         4 * effective_regen_rate(boosted, 'fellur'))
+        _, current, _ = trace_mana(
+            139, 139, (("form", "fellur"), ("hold", 10)),
+            balance_of_chimeras=True, regen_multiplier=buff)
+        self.assertEqual(current, 119 + 10 * boosted / 4)
+
+    def test_v08_rounding_discount_once(self):
+        for maximum in (106, 125, 132, 139, 548):
+            self.assertEqual(canonical_paid_entry_cost(maximum, True),
+                             rounded_entry_cost(maximum, True, 'ceil'))
+        self.assertEqual(canonical_paid_entry_cost(125, True), 18)
+        self.assertNotEqual(Fraction(35, 2), canonical_paid_entry_cost(125, True))
+        self.assertEqual(canonical_paid_entry_cost(548, True), 77)
+        with self.assertRaises(ValueError):
+            trace_mana(125, 125, (("hold", 1),), rounding_mode="unknown")
+
+    def test_v08_text_preserves_dramatic_mana_constraints(self):
+        self.assertIn('Вход в звериную форму: 20% максимального запаса маны.', self.chapters[4])
+        self.assertIn('Восстановление маны в зверином облике: в четыре раза медленнее', self.chapters[4])
+        self.assertIn('Ману потратил на два превращения в Феллур', self.chapters[4])
+        self.assertIn('Я вернул человеческий облик', self.chapters[7])
+        self.assertIn('Я не знал, хватит ли маны на ещё одно превращение', self.chapters[7])
+        self.assertIn('Получен навык «Мягкая смена»', self.chapters[15])
+
+    def test_v08_author_approved_spec_is_present(self):
+        spec = (ROOT / 'RPG_ЭЙДОС_УТВЕРЖДЁННАЯ_ЭКОНОМИКА_МАНЫ_v0.8_2026-10-21.md').read_text('utf8')
+        self.assertIn('УТВЕРЖДЕНО автором', spec)
+        self.assertIn('600', spec)
+        self.assertIn('2400', spec)
+        self.assertIn('округлить ВВЕРХ', spec)
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

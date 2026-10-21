@@ -2,6 +2,7 @@
 """Canonical RPG regression tests for 26-chapter book and proposed levels 1..100."""
 from __future__ import annotations
 import re
+import json
 import unittest
 from pathlib import Path
 from fractions import Fraction
@@ -504,6 +505,44 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('600', spec)
         self.assertIn('2400', spec)
         self.assertIn('округлить ВВЕРХ', spec)
+
+
+    def test_v08_approved_candidate_catalog_has_140_entries(self):
+        catalog = json.loads((ROOT / 'RPG_ЭЙДОС_КАТАЛОГ_140_КАНДИДАТОВ_НАВЫКОВ_v0.8_2026-10-21.json').read_text('utf8'))
+        records = catalog['records']
+        self.assertEqual(catalog['version'], '0.8')
+        self.assertEqual(len(records), 140)
+        self.assertEqual(len({r['id'] for r in records}), 140)
+        branches = ('druid_form', 'druid_nature', 'druid_craft',
+                    'healer', 'tracker', 'fighter', 'engineer')
+        for branch in branches:
+            entries = [x for x in records if x['branch'] == branch]
+            self.assertEqual([x['level_gate'] for x in entries],
+                             list(range(5, 101, 5)))
+            self.assertTrue(all(x['name'] and x['automatic_unlock'] is False
+                                for x in entries))
+
+    def test_v08_catalog_does_not_grant_temporary_forms(self):
+        catalog = json.loads((ROOT / 'RPG_ЭЙДОС_КАТАЛОГ_140_КАНДИДАТОВ_НАВЫКОВ_v0.8_2026-10-21.json').read_text('utf8'))
+        by_id = {entry['id']: entry for entry in catalog['records']}
+        for code, name in (('druid_form_030', 'Урсалон'),
+                           ('druid_form_050', 'Скайрэйвен')):
+            self.assertEqual(by_id[code]['name'], name)
+            self.assertEqual(by_id[code]['category'], 'form_unlock_proposal')
+            self.assertFalse(by_id[code]['automatic_unlock'])
+        self.assertNotIn('Постоянное открытие формы предоставлено', self.book)
+
+    def test_v08_catalog_requires_human_druid_nature_and_craft(self):
+        catalog = json.loads((ROOT / 'RPG_ЭЙДОС_КАТАЛОГ_140_КАНДИДАТОВ_НАВЫКОВ_v0.8_2026-10-21.json').read_text('utf8'))
+        records = catalog['records']
+        for entry in records:
+            if entry['branch'] in ('druid_nature', 'druid_craft'):
+                self.assertEqual(entry['access'], 'human_only')
+            if entry['branch'] == 'druid_form':
+                self.assertEqual(entry['access'], 'beast_only_when_unlocked')
+            self.assertEqual(entry['design_status'],
+                             'author_accepted_candidate_not_granted')
+
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

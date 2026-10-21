@@ -652,5 +652,21 @@ class RPGRegression(unittest.TestCase):
             self.assertFalse(by[key]['automatic_unlock'])
             self.assertTrue(by[key]['requires_manual_unlock'])
 
+    def test_v11_all_140_working_skill_limits_are_individual_and_identifiable(self):
+        catalog = json.loads((ROOT / 'RPG_ЭЙДОС_УТВЕРЖДЁННЫЙ_КАТАЛОГ_140_НАВЫКОВ_v1.0_2026-10-21.json').read_text('utf8'))
+        limits = (ROOT / 'RPG_ЭЙДОС_140_ИНДИВИДУАЛЬНЫХ_ГРАНИЦ_УМЕНИЙ_v1.1_2026-10-21.md').read_text('utf8')
+        self.assertEqual(len(catalog['records']), 140)
+        ids = set()
+        descriptions = set()
+        for line in limits.splitlines():
+            if not line.startswith('- **') or ' (`' not in line:
+                continue
+            right = line.split(' (`', 1)[1]
+            skill_id, description = right.split('`): ', 1)
+            ids.add(skill_id)
+            descriptions.add(description)
+        self.assertEqual(ids, {r['id'] for r in catalog['records']})
+        self.assertEqual(len(descriptions), 140)
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

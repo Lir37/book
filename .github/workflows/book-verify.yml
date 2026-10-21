@@ -9,6 +9,7 @@ on:
       - 'tools/test_rpg_progression.py'
       - 'tools/rpg_mana_scenarios.py'
       - 'tools/rpg_transition_contract.py'
+      - 'tools/rpg_resource_model.py'
       - '.github/workflows/book-verify.yml'
   workflow_dispatch:
 permissions:

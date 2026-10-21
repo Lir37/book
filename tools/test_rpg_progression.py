@@ -736,12 +736,19 @@ class RPGRegression(unittest.TestCase):
             self.assertIn(required, ferron_battle)
         self.assertNotIn('техномана', ferron_battle.lower())
 
-    def test_integrated_eighth_level_before_unknown_death_penalty(self):
+    def test_integrated_eighth_level_allocation_and_loss_of_current_level_xp(self):
         chapter24 = self.chapters[23]
+        chapter25 = self.chapters[24]
         self.assertIn('Общий опыт: 5175. Уровень 8.', chapter24)
         self.assertIn('Шесть очков оставались свободными', chapter24)
-        self.assertIn('Я очнулся не на тропе', self.chapters[24])
-        self.assertNotIn('Штраф за смерть:', self.chapters[24] + self.chapters[25])
+        self.assertIn('Выносливость стала 17, живучесть 14, восприятие 15, дух 20.', chapter24)
+        self.assertIn('Сила осталась 8, ловкость 15.', chapter24)
+        self.assertIn('Свободных очков больше не было.', chapter24)
+        self.assertIn('Рука отозвалась прежней болью.', chapter24)
+        self.assertIn('Я очнулся не на тропе', chapter25)
+        self.assertIn('Накопленный на восьмом уровне опыт исчез', chapter25)
+        self.assertIn('сам восьмой уровень сохранился', chapter25)
+        self.assertNotIn('Общий опыт:', chapter25 + self.chapters[25])
 
 
 

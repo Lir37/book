@@ -1,0 +1,1262 @@
+{
+  "version": "1.3.0",
+  "date": "2026-10-21",
+  "status": "DRAFT_TEST_FIXTURES_NOT_CANONICAL_SKILLS_OR_STATS",
+  "origin": "Два исследования (первое с историческими 24 сборками; второе с шестью боевыми классами Протокола) и прямое решение автора об ограничении Арканума шестью классами и выводе некроманта из меню",
+  "class_roster_status": "AUTHOR_REQUESTED_SIX_EACH_WORKING_ROSTER",
+  "rule": "Уровень даёт доступ, не изучает навык. Все новые боевые приёмы в fixtures — проектные испытания, а не выданные умения. Значения характеристик исключительно искусственные профили нагрузки; официальная кривая статов после ранних уровней не установлена.",
+  "legend": {
+    "level": "профиль для проверки, не утверждённая прогрессия",
+    "attributes": "условные тестовые значения; НЕ стат-бюджет мира",
+    "learned_skill_ids": "пусто намеренно: нельзя автоматически выдать 140 утверждённых навыков",
+    "specialization": "не ранее 20; выбор фокуса не закрывает обучение другим друидским утверждённым ветвям"
+  },
+  "selectable_classes": {
+    "arcanum": {
+      "druid": {
+        "name": "Друид",
+        "main_attributes": [
+          "Восприятие",
+          "Дух"
+        ],
+        "specializations": [
+          "Звериные тела",
+          "Живая природа",
+          "Природное ремесло"
+        ],
+        "realm": "arcanum"
+      },
+      "paladin": {
+        "name": "Паладин",
+        "main_attributes": [
+          "Сила",
+          "Выносливость"
+        ],
+        "specializations": [
+          "Бастион",
+          "Хранитель обета",
+          "Страж чар"
+        ],
+        "realm": "arcanum"
+      },
+      "mage": {
+        "name": "Маг",
+        "main_attributes": [
+          "Восприятие",
+          "Дух"
+        ],
+        "specializations": [
+          "Стихийник",
+          "Узорник",
+          "Оградитель"
+        ],
+        "realm": "arcanum"
+      },
+      "priest": {
+        "name": "Жрец",
+        "main_attributes": [
+          "Восприятие",
+          "Дух"
+        ],
+        "specializations": [
+          "Целитель",
+          "Очиститель",
+          "Служитель общины"
+        ],
+        "realm": "arcanum"
+      },
+      "archer": {
+        "name": "Лучник",
+        "main_attributes": [
+          "Ловкость",
+          "Восприятие"
+        ],
+        "specializations": [
+          "Меткий стрелок",
+          "Застрельщик",
+          "Стрелковый вожак"
+        ],
+        "realm": "arcanum"
+      },
+      "rogue": {
+        "name": "Разбойник",
+        "main_attributes": [
+          "Ловкость",
+          "Восприятие"
+        ],
+        "specializations": [
+          "Проникатель",
+          "Дуэлянт",
+          "Делец"
+        ],
+        "realm": "arcanum"
+      }
+    },
+    "protocol": {
+      "assault": {
+        "name": "Штурмовик",
+        "main_attributes": [
+          "Сила",
+          "Выносливость"
+        ],
+        "specializations": [
+          "Бастион",
+          "Проломщик",
+          "Рейдер"
+        ],
+        "realm": "protocol"
+      },
+      "shooter": {
+        "name": "Стрелок",
+        "main_attributes": [
+          "Ловкость",
+          "Восприятие"
+        ],
+        "specializations": [
+          "Меткий стрелок",
+          "Подавитель",
+          "Осадник"
+        ],
+        "realm": "protocol"
+      },
+      "operative": {
+        "name": "Оперативник",
+        "main_attributes": [
+          "Ловкость",
+          "Восприятие"
+        ],
+        "specializations": [
+          "Разведчик",
+          "Диверсант",
+          "Охотник"
+        ],
+        "realm": "protocol"
+      },
+      "engineer": {
+        "name": "Инженер",
+        "main_attributes": [
+          "Восприятие",
+          "Ловкость"
+        ],
+        "specializations": [
+          "Фортификатор",
+          "Контрсистемы",
+          "Мобильные устройства"
+        ],
+        "realm": "protocol"
+      },
+      "mechanist": {
+        "name": "Механист",
+        "main_attributes": [
+          "Восприятие",
+          "Дух"
+        ],
+        "specializations": [
+          "Куратор",
+          "Звеньевой",
+          "Интегратор"
+        ],
+        "realm": "protocol"
+      },
+      "combat_medic": {
+        "name": "Боевой медик",
+        "main_attributes": [
+          "Восприятие",
+          "Дух"
+        ],
+        "specializations": [
+          "Спасатель",
+          "Стабилизатор"
+        ],
+        "realm": "protocol"
+      }
+    }
+  },
+  "excluded_from_player_classes": [
+    {
+      "name": "Некромант",
+      "role": "возможный отдельный враждебный NPC/элитный моб; магическая механика требует отдельного решения"
+    },
+    {
+      "name": "Монах",
+      "role": "школа телесной дисциплины/обучения, не отдельный интерфейсный класс"
+    }
+  ],
+  "resources": {
+    "arcanum": "утверждённые индивидуальные магические ресурсы, особенности друида остаются без изменений",
+    "protocol": "боеприпас, материалы, топливо, механический износ, канал команд; никакой техноманы"
+  },
+  "legacy_140": {
+    "status": "UNCHANGED_AUTHOR_APPROVED",
+    "branches": [
+      "druid_form",
+      "druid_nature",
+      "druid_craft",
+      "healer",
+      "tracker",
+      "fighter",
+      "engineer"
+    ],
+    "ids_reassigned": false,
+    "automatic_unlock": false
+  },
+  "builds": [
+    {
+      "id": "A01",
+      "faction": "arcanum",
+      "level": 10,
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": null,
+      "attributes": {
+        "Сила": 11,
+        "Ловкость": 12,
+        "Выносливость": 12,
+        "Живучесть": 12,
+        "Восприятие": 14,
+        "Дух": 16
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A02",
+      "faction": "arcanum",
+      "level": 20,
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Звериные тела",
+      "attributes": {
+        "Сила": 12,
+        "Ловкость": 13,
+        "Выносливость": 13,
+        "Живучесть": 13,
+        "Восприятие": 16,
+        "Дух": 18
+      },
+      "scenario": "Перейти к обходу завала после разведки",
+      "equipment": "Подходящая местность и выученная форма",
+      "tested_decision": "Переход только в реально освоенное тело; вход оплачивается маной, поддержание бесплатно",
+      "countermeasure": "Смена формы при недостаточной мане невозможна; телесная рана сохраняется",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A03",
+      "faction": "arcanum",
+      "level": 50,
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Живая природа",
+      "attributes": {
+        "Сила": 15,
+        "Ловкость": 16,
+        "Выносливость": 16,
+        "Живучесть": 16,
+        "Восприятие": 22,
+        "Дух": 24
+      },
+      "scenario": "Обезопасить участок лесной тропы",
+      "equipment": "Живые корни и место действия",
+      "tested_decision": "Работа с реальными растениями и природной средой без создания материи из пустоты",
+      "countermeasure": "Камень и сухое железо ограничивают область применения",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A04",
+      "faction": "arcanum",
+      "level": 75,
+      "class_id": "druid",
+      "class_name": "Друид",
+      "specialization": "Природное ремесло",
+      "attributes": {
+        "Сила": 18,
+        "Ловкость": 19,
+        "Выносливость": 19,
+        "Живучесть": 19,
+        "Восприятие": 28,
+        "Дух": 30
+      },
+      "scenario": "Подготовить средства помощи походной группе",
+      "equipment": "Собранные травы, котелок и чистая вода",
+      "tested_decision": "Предметный цикл сбора и приготовления по рецепту, без звериного колдовства",
+      "countermeasure": "Нет сырья или неверная дозировка",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A05",
+      "faction": "arcanum",
+      "level": 10,
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": null,
+      "attributes": {
+        "Сила": 16,
+        "Ловкость": 11,
+        "Выносливость": 15,
+        "Живучесть": 15,
+        "Восприятие": 11,
+        "Дух": 14
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A06",
+      "faction": "arcanum",
+      "level": 20,
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Бастион",
+      "attributes": {
+        "Сила": 18,
+        "Ловкость": 12,
+        "Выносливость": 17,
+        "Живучесть": 16,
+        "Восприятие": 12,
+        "Дух": 15
+      },
+      "scenario": "Прикрыть узкую лестницу",
+      "equipment": "Щит и защита",
+      "tested_decision": "Удерживает позицию щитом и взаимодействием со строем",
+      "countermeasure": "Обход по открытому флангу",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A07",
+      "faction": "arcanum",
+      "level": 50,
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Хранитель обета",
+      "attributes": {
+        "Сила": 24,
+        "Ловкость": 15,
+        "Выносливость": 23,
+        "Живучесть": 19,
+        "Восприятие": 15,
+        "Дух": 18
+      },
+      "scenario": "Вывести раненого товарища",
+      "equipment": "Подвижное прикрытие, договорённость",
+      "tested_decision": "Выделяет защищаемого союзника и принимает риск за него",
+      "countermeasure": "Защита одного оставляет другого без внимания",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A08",
+      "faction": "arcanum",
+      "level": 75,
+      "class_id": "paladin",
+      "class_name": "Паладин",
+      "specialization": "Страж чар",
+      "attributes": {
+        "Сила": 30,
+        "Ловкость": 18,
+        "Выносливость": 29,
+        "Живучесть": 22,
+        "Восприятие": 18,
+        "Дух": 21
+      },
+      "scenario": "Сдержать один магический натиск",
+      "equipment": "Изученная защитная техника",
+      "tested_decision": "Распознаёт и сдерживает конкретный известный магический эффект",
+      "countermeasure": "Неизвестная школа чар и отсутствие подготовки",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A09",
+      "faction": "arcanum",
+      "level": 10,
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": null,
+      "attributes": {
+        "Сила": 10,
+        "Ловкость": 12,
+        "Выносливость": 11,
+        "Живучесть": 11,
+        "Восприятие": 15,
+        "Дух": 17
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A10",
+      "faction": "arcanum",
+      "level": 20,
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Стихийник",
+      "attributes": {
+        "Сила": 11,
+        "Ловкость": 13,
+        "Выносливость": 12,
+        "Живучесть": 12,
+        "Восприятие": 17,
+        "Дух": 19
+      },
+      "scenario": "Остановить угрозу без повреждения союзников",
+      "equipment": "Выученное заклинание и линия воздействия",
+      "tested_decision": "Направленное воздействие с затратой маны и ограничениями среды",
+      "countermeasure": "Закрытое пространство и истощение",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A11",
+      "faction": "arcanum",
+      "level": 50,
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Узорник",
+      "attributes": {
+        "Сила": 14,
+        "Ловкость": 16,
+        "Выносливость": 15,
+        "Живучесть": 15,
+        "Восприятие": 23,
+        "Дух": 25
+      },
+      "scenario": "Перенаправить опасный поток",
+      "equipment": "Время, наблюдение, основа плетения",
+      "tested_decision": "Готовит взаимодействие нескольких заранее изученных эффектов",
+      "countermeasure": "Сорванная подготовка",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A12",
+      "faction": "arcanum",
+      "level": 75,
+      "class_id": "mage",
+      "class_name": "Маг",
+      "specialization": "Оградитель",
+      "attributes": {
+        "Сила": 17,
+        "Ловкость": 19,
+        "Выносливость": 18,
+        "Живучесть": 18,
+        "Восприятие": 29,
+        "Дух": 31
+      },
+      "scenario": "Выиграть время для отхода",
+      "equipment": "Поддерживаемая концентрация и мана",
+      "tested_decision": "Создаёт ограниченную защиту в конкретном секторе",
+      "countermeasure": "Обход барьера с другой стороны",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A13",
+      "faction": "arcanum",
+      "level": 10,
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": null,
+      "attributes": {
+        "Сила": 11,
+        "Ловкость": 12,
+        "Выносливость": 12,
+        "Живучесть": 13,
+        "Восприятие": 14,
+        "Дух": 17
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A14",
+      "faction": "arcanum",
+      "level": 20,
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Целитель",
+      "attributes": {
+        "Сила": 12,
+        "Ловкость": 13,
+        "Выносливость": 13,
+        "Живучесть": 14,
+        "Восприятие": 16,
+        "Дух": 19
+      },
+      "scenario": "Спасти пострадавшего до эвакуации",
+      "equipment": "Материалы, изученные методы",
+      "tested_decision": "Диагностирует и стабилизирует реальные травмы, не воскрешает",
+      "countermeasure": "Катастрофическая травма без инструментов",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A15",
+      "faction": "arcanum",
+      "level": 50,
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Очиститель",
+      "attributes": {
+        "Сила": 15,
+        "Ловкость": 16,
+        "Выносливость": 16,
+        "Живучесть": 17,
+        "Восприятие": 22,
+        "Дух": 25
+      },
+      "scenario": "Остановить распространение известной скверны",
+      "equipment": "Диагностика, ритуальный набор",
+      "tested_decision": "Работает с изученным видом скверны, без универсального очищения",
+      "countermeasure": "Неизвестная природа поражения",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A16",
+      "faction": "arcanum",
+      "level": 75,
+      "class_id": "priest",
+      "class_name": "Жрец",
+      "specialization": "Служитель общины",
+      "attributes": {
+        "Сила": 18,
+        "Ловкость": 19,
+        "Выносливость": 19,
+        "Живучесть": 20,
+        "Восприятие": 28,
+        "Дух": 31
+      },
+      "scenario": "Удержать безопасное убежище",
+      "equipment": "Участники и доверие",
+      "tested_decision": "Организует помощь и ритуал без автоматического контроля чужой воли",
+      "countermeasure": "Отказ участников",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A17",
+      "faction": "arcanum",
+      "level": 10,
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": null,
+      "attributes": {
+        "Сила": 11,
+        "Ловкость": 17,
+        "Выносливость": 13,
+        "Живучесть": 11,
+        "Восприятие": 16,
+        "Дух": 10
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A18",
+      "faction": "arcanum",
+      "level": 20,
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Меткий стрелок",
+      "attributes": {
+        "Сила": 12,
+        "Ловкость": 19,
+        "Выносливость": 14,
+        "Живучесть": 12,
+        "Восприятие": 18,
+        "Дух": 11
+      },
+      "scenario": "Остановить дальнюю угрозу одним шансом",
+      "equipment": "Лук, стрелы и обзор",
+      "tested_decision": "Один подготовленный точный выстрел с наблюдаемыми поправками",
+      "countermeasure": "Травма плеча, туман, потеря позиции",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A19",
+      "faction": "arcanum",
+      "level": 50,
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Застрельщик",
+      "attributes": {
+        "Сила": 15,
+        "Ловкость": 25,
+        "Выносливость": 17,
+        "Живучесть": 15,
+        "Восприятие": 24,
+        "Дух": 14
+      },
+      "scenario": "Отвести преследователей",
+      "equipment": "Лёгкий комплект и запас стрел",
+      "tested_decision": "Манёвр и стрельба при смене укрытий",
+      "countermeasure": "Закрытый проход и истощение",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A20",
+      "faction": "arcanum",
+      "level": 75,
+      "class_id": "archer",
+      "class_name": "Лучник",
+      "specialization": "Стрелковый вожак",
+      "attributes": {
+        "Сила": 18,
+        "Ловкость": 31,
+        "Выносливость": 20,
+        "Живучесть": 18,
+        "Восприятие": 30,
+        "Дух": 17
+      },
+      "scenario": "Открыть проход для группы",
+      "equipment": "Обзор, дисциплина группы",
+      "tested_decision": "Согласует обстрел с несколькими союзниками, не усиливая стрелы магически",
+      "countermeasure": "Разрыв связи и паника",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A21",
+      "faction": "arcanum",
+      "level": 10,
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": null,
+      "attributes": {
+        "Сила": 12,
+        "Ловкость": 16,
+        "Выносливость": 12,
+        "Живучесть": 11,
+        "Восприятие": 16,
+        "Дух": 11
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A22",
+      "faction": "arcanum",
+      "level": 20,
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Проникатель",
+      "attributes": {
+        "Сила": 13,
+        "Ловкость": 18,
+        "Выносливость": 13,
+        "Живучесть": 12,
+        "Восприятие": 18,
+        "Дух": 12
+      },
+      "scenario": "Войти без тревоги",
+      "equipment": "Отмычки и разведка",
+      "tested_decision": "Выбирает скрытый маршрут и использует реальную охрану против неё",
+      "countermeasure": "Свет, шум, сторожевые животные",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A23",
+      "faction": "arcanum",
+      "level": 50,
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Дуэлянт",
+      "attributes": {
+        "Сила": 16,
+        "Ловкость": 24,
+        "Выносливость": 16,
+        "Живучесть": 15,
+        "Восприятие": 24,
+        "Дух": 15
+      },
+      "scenario": "Защитить проход против одного бойца",
+      "equipment": "Лёгкое оружие и пространство",
+      "tested_decision": "Управляет короткой дистанцией и слабостями защиты противника",
+      "countermeasure": "Длинное древковое оружие врага",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "A24",
+      "faction": "arcanum",
+      "level": 75,
+      "class_id": "rogue",
+      "class_name": "Разбойник",
+      "specialization": "Делец",
+      "attributes": {
+        "Сила": 19,
+        "Ловкость": 30,
+        "Выносливость": 19,
+        "Живучесть": 18,
+        "Восприятие": 30,
+        "Дух": 18
+      },
+      "scenario": "Договориться о пропуске без драки",
+      "equipment": "Контакты и репутация",
+      "tested_decision": "Открывает доступ через связи и переговоры, не читая мысли",
+      "countermeasure": "Предательство или заведомая ложь",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P01",
+      "faction": "protocol",
+      "level": 10,
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": null,
+      "attributes": {
+        "Сила": 17,
+        "Ловкость": 12,
+        "Выносливость": 16,
+        "Живучесть": 14,
+        "Восприятие": 12,
+        "Дух": 11
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P02",
+      "faction": "protocol",
+      "level": 20,
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Бастион",
+      "attributes": {
+        "Сила": 19,
+        "Ловкость": 13,
+        "Выносливость": 18,
+        "Живучесть": 15,
+        "Восприятие": 13,
+        "Дух": 12
+      },
+      "scenario": "Сдержать проход",
+      "equipment": "Штатная защита и опорная точка",
+      "tested_decision": "Удерживает сектор тяжёлой защитой и положением тела",
+      "countermeasure": "Фланговый обход, повреждённый ремень",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P03",
+      "faction": "protocol",
+      "level": 50,
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Проломщик",
+      "attributes": {
+        "Сила": 25,
+        "Ловкость": 16,
+        "Выносливость": 24,
+        "Живучесть": 18,
+        "Восприятие": 16,
+        "Дух": 15
+      },
+      "scenario": "Открыть закрытый выход",
+      "equipment": "Подходящий инструмент и разведка",
+      "tested_decision": "За короткий момент вскрывает физическую преграду",
+      "countermeasure": "Нет безопасного пути назад",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P04",
+      "faction": "protocol",
+      "level": 75,
+      "class_id": "assault",
+      "class_name": "Штурмовик",
+      "specialization": "Рейдер",
+      "attributes": {
+        "Сила": 31,
+        "Ловкость": 19,
+        "Выносливость": 30,
+        "Живучесть": 21,
+        "Восприятие": 19,
+        "Дух": 18
+      },
+      "scenario": "Пресечь отход противника",
+      "equipment": "Лёгкое вооружение",
+      "tested_decision": "Быстро меняет направление давления ценой брони",
+      "countermeasure": "Сдавленный коридор и изнурение",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P05",
+      "faction": "protocol",
+      "level": 10,
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": null,
+      "attributes": {
+        "Сила": 11,
+        "Ловкость": 16,
+        "Выносливость": 12,
+        "Живучесть": 11,
+        "Восприятие": 17,
+        "Дух": 10
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P06",
+      "faction": "protocol",
+      "level": 20,
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Меткий стрелок",
+      "attributes": {
+        "Сила": 12,
+        "Ловкость": 18,
+        "Выносливость": 13,
+        "Живучесть": 12,
+        "Восприятие": 19,
+        "Дух": 11
+      },
+      "scenario": "Выключить одну угрозу",
+      "equipment": "Реальное оружие и боеприпас",
+      "tested_decision": "Прицельный подготовленный выстрел без автопопадания",
+      "countermeasure": "Нет обзора, осечка",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P07",
+      "faction": "protocol",
+      "level": 50,
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Подавитель",
+      "attributes": {
+        "Сила": 15,
+        "Ловкость": 24,
+        "Выносливость": 16,
+        "Живучесть": 15,
+        "Восприятие": 25,
+        "Дух": 14
+      },
+      "scenario": "Не допустить прохода",
+      "equipment": "Снаряжение, позиция",
+      "tested_decision": "Контролирует сектор через расход конечного боезапаса",
+      "countermeasure": "Нет патронов либо перегрев применимого оружия",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P08",
+      "faction": "protocol",
+      "level": 75,
+      "class_id": "shooter",
+      "class_name": "Стрелок",
+      "specialization": "Осадник",
+      "attributes": {
+        "Сила": 18,
+        "Ловкость": 30,
+        "Выносливость": 19,
+        "Живучесть": 18,
+        "Восприятие": 31,
+        "Дух": 17
+      },
+      "scenario": "Держать дальний проход",
+      "equipment": "Станина, масса, время",
+      "tested_decision": "Разворачивает тяжёлую позицию, жертвуя подвижностью",
+      "countermeasure": "Фланговая атака при развёртывании",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P09",
+      "faction": "protocol",
+      "level": 10,
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": null,
+      "attributes": {
+        "Сила": 11,
+        "Ловкость": 16,
+        "Выносливость": 12,
+        "Живучесть": 11,
+        "Восприятие": 17,
+        "Дух": 13
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P10",
+      "faction": "protocol",
+      "level": 20,
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Разведчик",
+      "attributes": {
+        "Сила": 12,
+        "Ловкость": 18,
+        "Выносливость": 13,
+        "Живучесть": 12,
+        "Восприятие": 19,
+        "Дух": 14
+      },
+      "scenario": "Узнать расположение охраны",
+      "equipment": "Карта, оптика",
+      "tested_decision": "Собирает и передаёт наблюдения по подготовленному маршруту",
+      "countermeasure": "Плохой обзор, ложные сведения",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P11",
+      "faction": "protocol",
+      "level": 50,
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Диверсант",
+      "attributes": {
+        "Сила": 15,
+        "Ловкость": 24,
+        "Выносливость": 16,
+        "Живучесть": 15,
+        "Восприятие": 25,
+        "Дух": 17
+      },
+      "scenario": "Остановить привод без гибели рабочих",
+      "equipment": "Инструменты, доступ, подготовка",
+      "tested_decision": "Вмешивается в доступный технический узел",
+      "countermeasure": "Отсутствие доступа и охрана",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P12",
+      "faction": "protocol",
+      "level": 75,
+      "class_id": "operative",
+      "class_name": "Оперативник",
+      "specialization": "Охотник",
+      "attributes": {
+        "Сила": 18,
+        "Ловкость": 30,
+        "Выносливость": 19,
+        "Живучесть": 18,
+        "Восприятие": 31,
+        "Дух": 20
+      },
+      "scenario": "Найти виновного в поломке",
+      "equipment": "Следы и прибор наблюдения",
+      "tested_decision": "Выявляет следы вмешательства и перекрывает отход",
+      "countermeasure": "Ложная цель",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P13",
+      "faction": "protocol",
+      "level": 10,
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": null,
+      "attributes": {
+        "Сила": 11,
+        "Ловкость": 14,
+        "Выносливость": 13,
+        "Живучесть": 11,
+        "Восприятие": 17,
+        "Дух": 14
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P14",
+      "faction": "protocol",
+      "level": 20,
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Фортификатор",
+      "attributes": {
+        "Сила": 12,
+        "Ловкость": 16,
+        "Выносливость": 14,
+        "Живучесть": 12,
+        "Восприятие": 19,
+        "Дух": 15
+      },
+      "scenario": "Удержать спасательный коридор",
+      "equipment": "Модули, крепёж, время",
+      "tested_decision": "Развёртывает заранее принесённые укрытия и опоры",
+      "countermeasure": "Нет материала, слабый грунт",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P15",
+      "faction": "protocol",
+      "level": 50,
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Контрсистемы",
+      "attributes": {
+        "Сила": 15,
+        "Ловкость": 22,
+        "Выносливость": 17,
+        "Живучесть": 15,
+        "Восприятие": 25,
+        "Дух": 18
+      },
+      "scenario": "Снять блокировку узла",
+      "equipment": "Проверочный инструмент",
+      "tested_decision": "Диагностирует и нейтрализует конкретное устройство при доступе",
+      "countermeasure": "Нет доступа, незнакомая схема",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P16",
+      "faction": "protocol",
+      "level": 75,
+      "class_id": "engineer",
+      "class_name": "Инженер",
+      "specialization": "Мобильные устройства",
+      "attributes": {
+        "Сила": 18,
+        "Ловкость": 28,
+        "Выносливость": 20,
+        "Живучесть": 18,
+        "Восприятие": 31,
+        "Дух": 21
+      },
+      "scenario": "Перенастроить временную защиту",
+      "equipment": "Компактный набор",
+      "tested_decision": "Переносит и комбинирует малые модули, уступая тяжёлой схеме в силе",
+      "countermeasure": "Слишком большая нагрузка",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P17",
+      "faction": "protocol",
+      "level": 10,
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": null,
+      "attributes": {
+        "Сила": 10,
+        "Ловкость": 13,
+        "Выносливость": 12,
+        "Живучесть": 11,
+        "Восприятие": 17,
+        "Дух": 16
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P18",
+      "faction": "protocol",
+      "level": 20,
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Куратор",
+      "attributes": {
+        "Сила": 11,
+        "Ловкость": 14,
+        "Выносливость": 13,
+        "Живучесть": 12,
+        "Восприятие": 19,
+        "Дух": 18
+      },
+      "scenario": "Достать груз из опасного места",
+      "equipment": "Исправная одна машина и канал команд",
+      "tested_decision": "Распределяет команды одному ценному автоматону",
+      "countermeasure": "Поломка автомата",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P19",
+      "faction": "protocol",
+      "level": 50,
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Звеньевой",
+      "attributes": {
+        "Сила": 14,
+        "Ловкость": 17,
+        "Выносливость": 16,
+        "Живучесть": 15,
+        "Восприятие": 25,
+        "Дух": 24
+      },
+      "scenario": "Вывести людей из опасной зоны",
+      "equipment": "Несколько машин, заряд/топливо",
+      "tested_decision": "Даёт разные задачи нескольким простым автоматонам",
+      "countermeasure": "Один потерянный канал разрывает схему",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P20",
+      "faction": "protocol",
+      "level": 75,
+      "class_id": "mechanist",
+      "class_name": "Механист",
+      "specialization": "Интегратор",
+      "attributes": {
+        "Сила": 17,
+        "Ловкость": 20,
+        "Выносливость": 19,
+        "Живучесть": 18,
+        "Восприятие": 31,
+        "Дух": 30
+      },
+      "scenario": "Удержать подготовленный участок",
+      "equipment": "Совместимые опорные устройства",
+      "tested_decision": "Связывает автоматонов с подготовленным местом",
+      "countermeasure": "Разрушение точки связи",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P21",
+      "faction": "protocol",
+      "level": 10,
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": null,
+      "attributes": {
+        "Сила": 10,
+        "Ловкость": 14,
+        "Выносливость": 13,
+        "Живучесть": 14,
+        "Восприятие": 17,
+        "Дух": 16
+      },
+      "scenario": "Первый сложный эпизод базового класса до выбора специализации",
+      "equipment": "Учебный штатный комплект класса; без недоказанной техники",
+      "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
+      "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P22",
+      "faction": "protocol",
+      "level": 20,
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Спасатель",
+      "attributes": {
+        "Сила": 11,
+        "Ловкость": 15,
+        "Выносливость": 14,
+        "Живучесть": 15,
+        "Восприятие": 19,
+        "Дух": 18
+      },
+      "scenario": "Вынести пострадавшего",
+      "equipment": "Носилки, повязки, защита",
+      "tested_decision": "Извлекает пациента из угрозы без полной хирургической операции",
+      "countermeasure": "Огонь перекрыл подход, нет расходников",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P23",
+      "faction": "protocol",
+      "level": 50,
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Стабилизатор",
+      "attributes": {
+        "Сила": 14,
+        "Ловкость": 18,
+        "Выносливость": 17,
+        "Живучесть": 18,
+        "Восприятие": 25,
+        "Дух": 24
+      },
+      "scenario": "Снизить число потерь",
+      "equipment": "Обучение, медикаменты, помощник",
+      "tested_decision": "Организует помощь нескольким пострадавшим и триаж",
+      "countermeasure": "Несовместимые тяжёлые раны, нехватка рук",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true
+    },
+    {
+      "id": "P24",
+      "faction": "protocol",
+      "level": 100,
+      "class_id": "combat_medic",
+      "class_name": "Боевой медик",
+      "specialization": "Стабилизатор",
+      "attributes": {
+        "Сила": 19,
+        "Ловкость": 23,
+        "Выносливость": 22,
+        "Живучесть": 23,
+        "Восприятие": 35,
+        "Дух": 34
+      },
+      "scenario": "Массовая травма в зоне без снабжения",
+      "equipment": "Уцелевший ограниченный полевой комплект",
+      "tested_decision": "Выбирать, кому и чем реально можно помочь; 100-й уровень не отменяет смертность",
+      "countermeasure": "Неустранимая рана, недостаток препаратов, потеря эвакуации",
+      "learned_skill_ids": [],
+      "tested_skills_are_proposals": true,
+      "stress_test": true
+    }
+  ]
+}

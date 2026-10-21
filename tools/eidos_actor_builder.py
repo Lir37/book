@@ -102,8 +102,11 @@ def usable_now(actor: dict[str, Any], skill_id: str, data: dict[str, Any]) -> tu
             return False, "Druid magic is human-only"
         if actor.get("mana_current", 0) < needed:
             return False, f"Insufficient mana (requires {needed})"
-    if res["kind"] == "physiology" and not actor.get("known_beast_form"):
-        return False, "Requires a separately learned real beast form"
+    if res["kind"] == "physiology":
+        current_form = actor.get("form", "human")
+        mastered = actor.get("known_beast_forms", [])
+        if current_form == "human" or current_form not in mastered:
+            return False, "Requires being in a separately learned, currently active beast form"
     if res["kind"] in ("physical", "materials", "physiology") and not actor.get("physical_conditions_ready", False):
         return False, "Physical requirements not yet confirmed"
     return True, "Eligible for attempt, not guaranteed success"

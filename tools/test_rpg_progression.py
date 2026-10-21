@@ -212,6 +212,19 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('Шесть очков оставались свободными', self.chapters[23])
         self.assertIn('дух стал 19', self.chapters[21])
 
+    def test_uber_combat_scenes_with_material_costs(self):
+        chapter21 = self.chapters[20]
+        chapter23 = self.chapters[22]
+        self.assertIn('первичной стабилизации', chapter21)
+        self.assertIn('Волк дёрнулся', chapter21)
+        self.assertIn('На экране появилась системная отметка', chapter21)
+        self.assertIn('редкий резонансный элемент', chapter21)
+        self.assertIn('человек с пистолетом', chapter23)
+        self.assertIn('пневматический монтажный захват', chapter23)
+        self.assertIn('повреждённой тарой', chapter23)
+        self.assertIn('без аварий', chapter23)
+        self.assertIn('Общий опыт: 5175. Уровень 8', self.chapters[23])
+
     def test_death_stays_final(self):
         self.assertIn('сообщение о возрождении', self.chapters[24])
         self.assertIn('В игре погиб. Первый раз.', self.chapters[25])

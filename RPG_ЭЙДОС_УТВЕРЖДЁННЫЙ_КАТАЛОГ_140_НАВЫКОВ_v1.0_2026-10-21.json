@@ -1,0 +1,3944 @@
+{
+  "version": "1.0",
+  "date": "2026-10-21",
+  "status": "ALL_140_SKILL_DESIGNS_AUTHOR_APPROVED_TRAINING_PRICES_COOLDOWNS_NOT_APPROVED",
+  "note": "Author expressly approved all 140 named skill designs on 2026-10-21. Entries are part of the world-design catalog, NOT automatically granted to any character. Existing training_proposal and balance_proposal fields remain design options unless separately accepted.",
+  "sources": [
+    "RPG_ЭЙДОС_МАТРИЦА_ДОСТУПА_К_НАВЫКАМ_1-100_v0.6_2026-10-21.md",
+    "RPG_ЭЙДОС_ПОЛНЫЕ_ПАРАЛЛЕЛЬНЫЕ_ВЕТВИ_КЛАССОВ_1-100_v0.7_2026-10-21.md"
+  ],
+  "records": [
+    {
+      "id": "druid_form_005",
+      "level_gate": 5,
+      "branch": "druid_form",
+      "name": "Чуткий след",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "естественный нюх зверя не даёт знание всех растений",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Чуткий след»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_005",
+      "level_gate": 5,
+      "branch": "druid_nature",
+      "name": "Слушать кору",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "естественный нюх зверя не даёт знание всех растений",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Слушать кору»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_005",
+      "level_gate": 5,
+      "branch": "druid_craft",
+      "name": "Верный сбор",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "естественный нюх зверя не даёт знание всех растений",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Верный сбор»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_010",
+      "level_gate": 10,
+      "branch": "druid_form",
+      "name": "Короткий рывок",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "зверь не создаёт корни заклинанием",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Короткий рывок»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_010",
+      "level_gate": 10,
+      "branch": "druid_nature",
+      "name": "Цепкий корень",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "зверь не создаёт корни заклинанием",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Цепкий корень»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_010",
+      "level_gate": 10,
+      "branch": "druid_craft",
+      "name": "Сохрани сок",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "зверь не создаёт корни заклинанием",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Сохрани сок»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_015",
+      "level_gate": 15,
+      "branch": "druid_form",
+      "name": "Тихая лапа",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "алхимия в лапах невозможна",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Тихая лапа»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_015",
+      "level_gate": 15,
+      "branch": "druid_nature",
+      "name": "Зелёная метка",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "алхимия в лапах невозможна",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Зелёная метка»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_015",
+      "level_gate": 15,
+      "branch": "druid_craft",
+      "name": "Чистая ступка",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "алхимия в лапах невозможна",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Чистая ступка»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_020",
+      "level_gate": 20,
+      "branch": "druid_form",
+      "name": "Быстрая стойка",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "повязка человеком, защита без отмены травмы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Быстрая стойка»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_020",
+      "level_gate": 20,
+      "branch": "druid_nature",
+      "name": "Листовой экран",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "повязка человеком, защита без отмены травмы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Листовой экран»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_020",
+      "level_gate": 20,
+      "branch": "druid_craft",
+      "name": "Природная повязка",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "повязка человеком, защита без отмены травмы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Природная повязка»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_025",
+      "level_gate": 25,
+      "branch": "druid_form",
+      "name": "Шерсть щетиной",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "зверь не управляет ростом растений",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Шерсть щетиной»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_025",
+      "level_gate": 25,
+      "branch": "druid_nature",
+      "name": "Рост вдоль опоры",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "зверь не управляет ростом растений",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Рост вдоль опоры»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_025",
+      "level_gate": 25,
+      "branch": "druid_craft",
+      "name": "Точное дозирование",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "зверь не управляет ростом растений",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Точное дозирование»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_030",
+      "level_gate": 30,
+      "branch": "druid_form",
+      "name": "Урсалон",
+      "category": "form_unlock_proposal",
+      "access": "beast_only_when_unlocked",
+      "limitation": "один уровень сам по себе не открывает Урсалон",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Урсалон»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": "САМО ПОЛУЧЕНИЕ УРОВНЯ НЕ ОТКРЫВАЕТ форму; требуется отдельная сюжетная практика"
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_030",
+      "level_gate": 30,
+      "branch": "druid_nature",
+      "name": "Корневая хватка",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "один уровень сам по себе не открывает Урсалон",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Корневая хватка»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_030",
+      "level_gate": 30,
+      "branch": "druid_craft",
+      "name": "Проверка настоя",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "один уровень сам по себе не открывает Урсалон",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Проверка настоя»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_035",
+      "level_gate": 35,
+      "branch": "druid_form",
+      "name": "Тяжёлый разворот",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "нужен реально освоенный Урсалон",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Тяжёлый разворот»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_035",
+      "level_gate": 35,
+      "branch": "druid_nature",
+      "name": "Зелёная преграда",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "нужен реально освоенный Урсалон",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Зелёная преграда»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_035",
+      "level_gate": 35,
+      "branch": "druid_craft",
+      "name": "Сушка без потерь",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "нужен реально освоенный Урсалон",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Сушка без потерь»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_040",
+      "level_gate": 40,
+      "branch": "druid_form",
+      "name": "Острое ухо",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "запах и слух не делают чары доступными",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Острое ухо»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_040",
+      "level_gate": 40,
+      "branch": "druid_nature",
+      "name": "Влажная ложбина",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "запах и слух не делают чары доступными",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Влажная ложбина»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_040",
+      "level_gate": 40,
+      "branch": "druid_craft",
+      "name": "Запас настоя",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "запах и слух не делают чары доступными",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Запас настоя»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_045",
+      "level_gate": 45,
+      "branch": "druid_form",
+      "name": "Осторожный прыжок",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "нельзя мазать рану в лапах",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Осторожный прыжок»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_045",
+      "level_gate": 45,
+      "branch": "druid_nature",
+      "name": "Густая поросль",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "нельзя мазать рану в лапах",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Густая поросль»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_045",
+      "level_gate": 45,
+      "branch": "druid_craft",
+      "name": "Травяная мазь",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "нельзя мазать рану в лапах",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Травяная мазь»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_050",
+      "level_gate": 50,
+      "branch": "druid_form",
+      "name": "Скайрэйвен",
+      "category": "form_unlock_proposal",
+      "access": "beast_only_when_unlocked",
+      "limitation": "уровень не даёт автоматический полёт",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Скайрэйвен»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": "САМО ПОЛУЧЕНИЕ УРОВНЯ НЕ ОТКРЫВАЕТ форму; требуется отдельная сюжетная практика"
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_050",
+      "level_gate": 50,
+      "branch": "druid_nature",
+      "name": "Живой склон",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "уровень не даёт автоматический полёт",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Живой склон»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_050",
+      "level_gate": 50,
+      "branch": "druid_craft",
+      "name": "Алхимическая партия",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "уровень не даёт автоматический полёт",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Алхимическая партия»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_055",
+      "level_gate": 55,
+      "branch": "druid_form",
+      "name": "Плавный заход",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "собственный полёт только в открытом теле",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Плавный заход»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_055",
+      "level_gate": 55,
+      "branch": "druid_nature",
+      "name": "Сеть ветвей",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "собственный полёт только в открытом теле",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Сеть ветвей»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_055",
+      "level_gate": 55,
+      "branch": "druid_craft",
+      "name": "Чистый набор",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "собственный полёт только в открытом теле",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Чистый набор»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_060",
+      "level_gate": 60,
+      "branch": "druid_form",
+      "name": "Поворот в потоке",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "не управление погодой",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Поворот в потоке»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_060",
+      "level_gate": 60,
+      "branch": "druid_nature",
+      "name": "Отвод влаги",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "не управление погодой",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Отвод влаги»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_060",
+      "level_gate": 60,
+      "branch": "druid_craft",
+      "name": "Живая кладовая",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "не управление погодой",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Живая кладовая»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_065",
+      "level_gate": 65,
+      "branch": "druid_form",
+      "name": "Память мышц",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "память освоения не новая форма/телепорт",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Память мышц»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_065",
+      "level_gate": 65,
+      "branch": "druid_nature",
+      "name": "Роща на зов",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "память освоения не новая форма/телепорт",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Роща на зов»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_065",
+      "level_gate": 65,
+      "branch": "druid_craft",
+      "name": "Второе брожение",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "память освоения не новая форма/телепорт",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Второе брожение»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_070",
+      "level_gate": 70,
+      "branch": "druid_form",
+      "name": "Рывок в тени",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "лечение человеком, не при смертельном разрыве",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Рывок в тени»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_070",
+      "level_gate": 70,
+      "branch": "druid_nature",
+      "name": "Удержать почву",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "лечение человеком, не при смертельном разрыве",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Удержать почву»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_070",
+      "level_gate": 70,
+      "branch": "druid_craft",
+      "name": "Запечатать порез",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "лечение человеком, не при смертельном разрыве",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Запечатать порез»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_075",
+      "level_gate": 75,
+      "branch": "druid_form",
+      "name": "Обход боли",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "не блокировать сигнал критической травмы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Обход боли»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_075",
+      "level_gate": 75,
+      "branch": "druid_nature",
+      "name": "След весны",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "не блокировать сигнал критической травмы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «След весны»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_075",
+      "level_gate": 75,
+      "branch": "druid_craft",
+      "name": "Дорогая эссенция",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "не блокировать сигнал критической травмы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Дорогая эссенция»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_080",
+      "level_gate": 80,
+      "branch": "druid_form",
+      "name": "Групповое движение",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "природа не заменяет инженера",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Групповое движение»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_080",
+      "level_gate": 80,
+      "branch": "druid_nature",
+      "name": "Лесной заслон",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "природа не заменяет инженера",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Лесной заслон»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_080",
+      "level_gate": 80,
+      "branch": "druid_craft",
+      "name": "Зелёная лаборатория",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "природа не заменяет инженера",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Зелёная лаборатория»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_085",
+      "level_gate": 85,
+      "branch": "druid_form",
+      "name": "Возврат опоры",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "нет мгновенного универсального противоядия",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Возврат опоры»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_085",
+      "level_gate": 85,
+      "branch": "druid_nature",
+      "name": "Разорвать лозу",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "нет мгновенного универсального противоядия",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Разорвать лозу»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_085",
+      "level_gate": 85,
+      "branch": "druid_craft",
+      "name": "Противоядие-заготовка",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "нет мгновенного универсального противоядия",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Противоядие-заготовка»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_090",
+      "level_gate": 90,
+      "branch": "druid_form",
+      "name": "Единство движения",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "не телепатия и не бесплатный обход 14%",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Единство движения»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_090",
+      "level_gate": 90,
+      "branch": "druid_nature",
+      "name": "Отзвук леса",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "не телепатия и не бесплатный обход 14%",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Отзвук леса»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_090",
+      "level_gate": 90,
+      "branch": "druid_craft",
+      "name": "Запасной сбор",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "не телепатия и не бесплатный обход 14%",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Запасной сбор»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_095",
+      "level_gate": 95,
+      "branch": "druid_form",
+      "name": "Предельная выдержка",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "не бессмертие и не бесконечные расходники",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Предельная выдержка»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_095",
+      "level_gate": 95,
+      "branch": "druid_nature",
+      "name": "Живая завеса",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "не бессмертие и не бесконечные расходники",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Живая завеса»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_095",
+      "level_gate": 95,
+      "branch": "druid_craft",
+      "name": "Большой настой",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "не бессмертие и не бесконечные расходники",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Большой настой»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_form_100",
+      "level_gate": 100,
+      "branch": "druid_form",
+      "name": "Мастер тел",
+      "category": "beast_form_candidate",
+      "access": "beast_only_when_unlocked",
+      "limitation": "восстановление экологии требует среды и времени",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник форм либо подтверждённая практика в изученном теле",
+        "exercise": "Подтвердить приём «Мастер тел»: отработка конкретного движения и ошибки анатомии",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "реальная травма или истощение",
+        "class_boundary": "не делает зверя универсальным магом и не открывает новую форму",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_nature_100",
+      "level_gate": 100,
+      "branch": "druid_nature",
+      "name": "Роща-прибежище",
+      "category": "human_spell_candidate",
+      "access": "human_only",
+      "limitation": "восстановление экологии требует среды и времени",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "наставник природной магии и контакт с окружающей средой",
+        "exercise": "Подтвердить приём «Роща-прибежище»: безопасная проба применения на ограниченном участке",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "перерасход маны или ущерб живой среде",
+        "class_boundary": "не заменяет полевую хирургию и следопыта",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "druid_craft_100",
+      "level_gate": 100,
+      "branch": "druid_craft",
+      "name": "Сердце сада",
+      "category": "human_craft_candidate",
+      "access": "human_only",
+      "limitation": "восстановление экологии требует среды и времени",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "алхимик и подлинное сырьё",
+        "exercise": "Подтвердить приём «Сердце сада»: проверенная партия с концентрацией и чистотой",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "отравление или испорченные ингредиенты",
+        "class_boundary": "не заменяет специализированную медицину",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_005",
+      "level_gate": 5,
+      "branch": "healer",
+      "name": "Чистая рана",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "только знакомые условия",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Чистая рана»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_005",
+      "level_gate": 5,
+      "branch": "tracker",
+      "name": "Читаю след",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "только знакомые условия",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Читаю след»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_005",
+      "level_gate": 5,
+      "branch": "fighter",
+      "name": "Верная опора",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "только знакомые условия",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Верная опора»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_005",
+      "level_gate": 5,
+      "branch": "engineer",
+      "name": "Знакомый инструмент",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "только знакомые условия",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Знакомый инструмент»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_010",
+      "level_gate": 10,
+      "branch": "healer",
+      "name": "Прижать кровь",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "расходники, время, руки",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Прижать кровь»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_010",
+      "level_gate": 10,
+      "branch": "tracker",
+      "name": "Тихий выход",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "расходники, время, руки",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Тихий выход»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_010",
+      "level_gate": 10,
+      "branch": "fighter",
+      "name": "Закрыть линию",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "расходники, время, руки",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Закрыть линию»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_010",
+      "level_gate": 10,
+      "branch": "engineer",
+      "name": "Полевое крепление",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "расходники, время, руки",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Полевое крепление»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_015",
+      "level_gate": 15,
+      "branch": "healer",
+      "name": "Угроза инфекции",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не диагноз всего, не предвидение",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Угроза инфекции»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_015",
+      "level_gate": 15,
+      "branch": "tracker",
+      "name": "Направление ветра",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не диагноз всего, не предвидение",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Направление ветра»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_015",
+      "level_gate": 15,
+      "branch": "fighter",
+      "name": "Чувство дистанции",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не диагноз всего, не предвидение",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Чувство дистанции»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_015",
+      "level_gate": 15,
+      "branch": "engineer",
+      "name": "Глаз на перекос",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не диагноз всего, не предвидение",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Глаз на перекос»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_020",
+      "level_gate": 20,
+      "branch": "healer",
+      "name": "Короткая стабилизация",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "нельзя исправить раздавленный орган, атаку сзади, отсутствие детали",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Короткая стабилизация»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_020",
+      "level_gate": 20,
+      "branch": "tracker",
+      "name": "Контроль отхода",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "нельзя исправить раздавленный орган, атаку сзади, отсутствие детали",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Контроль отхода»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_020",
+      "level_gate": 20,
+      "branch": "fighter",
+      "name": "Прикрыть союзника",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "нельзя исправить раздавленный орган, атаку сзади, отсутствие детали",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Прикрыть союзника»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_020",
+      "level_gate": 20,
+      "branch": "engineer",
+      "name": "Модульная замена",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "нельзя исправить раздавленный орган, атаку сзади, отсутствие детали",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Модульная замена»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_025",
+      "level_gate": 25,
+      "branch": "healer",
+      "name": "Перевязь без лишней боли",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "нужен опыт, память не GPS",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Перевязь без лишней боли»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_025",
+      "level_gate": 25,
+      "branch": "tracker",
+      "name": "Путь назад",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "нужен опыт, память не GPS",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Путь назад»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_025",
+      "level_gate": 25,
+      "branch": "fighter",
+      "name": "Не терять строй",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "нужен опыт, память не GPS",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Не терять строй»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_025",
+      "level_gate": 25,
+      "branch": "engineer",
+      "name": "Чертёж под рукой",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "нужен опыт, память не GPS",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Чертёж под рукой»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: подтвердить обучение",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_030",
+      "level_gate": 30,
+      "branch": "healer",
+      "name": "Снять шок",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "мана/усталость, стрелы, масса, инструменты",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Снять шок»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_030",
+      "level_gate": 30,
+      "branch": "tracker",
+      "name": "Стрела по открытой цели",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "мана/усталость, стрелы, масса, инструменты",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Стрела по открытой цели»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_030",
+      "level_gate": 30,
+      "branch": "fighter",
+      "name": "Удержать натиск",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "мана/усталость, стрелы, масса, инструменты",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Удержать натиск»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_030",
+      "level_gate": 30,
+      "branch": "engineer",
+      "name": "Точный калибр",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "мана/усталость, стрелы, масса, инструменты",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Точный калибр»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_035",
+      "level_gate": 35,
+      "branch": "healer",
+      "name": "Две раны",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не лечение без рук, не обзор за стеной",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Две раны»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_035",
+      "level_gate": 35,
+      "branch": "tracker",
+      "name": "Дальняя ошибка",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не лечение без рук, не обзор за стеной",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Дальняя ошибка»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_035",
+      "level_gate": 35,
+      "branch": "fighter",
+      "name": "Трещина защиты",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не лечение без рук, не обзор за стеной",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Трещина защиты»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_035",
+      "level_gate": 35,
+      "branch": "engineer",
+      "name": "Учёт брака",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не лечение без рук, не обзор за стеной",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Учёт брака»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_040",
+      "level_gate": 40,
+      "branch": "healer",
+      "name": "Срастить мышцу",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "требуется время, материалы, свободная линия",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Срастить мышцу»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_040",
+      "level_gate": 40,
+      "branch": "tracker",
+      "name": "Скрытый наблюдатель",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "требуется время, материалы, свободная линия",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Скрытый наблюдатель»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_040",
+      "level_gate": 40,
+      "branch": "fighter",
+      "name": "Контрудар по открытию",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "требуется время, материалы, свободная линия",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Контрудар по открытию»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_040",
+      "level_gate": 40,
+      "branch": "engineer",
+      "name": "Временная опора",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "требуется время, материалы, свободная линия",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Временная опора»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_045",
+      "level_gate": 45,
+      "branch": "healer",
+      "name": "Шина по форме",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "усталость и освещение сохраняются",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Шина по форме»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_045",
+      "level_gate": 45,
+      "branch": "tracker",
+      "name": "Дозор ночью",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "усталость и освещение сохраняются",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Дозор ночью»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_045",
+      "level_gate": 45,
+      "branch": "fighter",
+      "name": "Ровный шаг в броне",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "усталость и освещение сохраняются",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Ровный шаг в броне»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_045",
+      "level_gate": 45,
+      "branch": "engineer",
+      "name": "Документация смены",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "усталость и освещение сохраняются",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Документация смены»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_050",
+      "level_gate": 50,
+      "branch": "healer",
+      "name": "Сохранить дыхание",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "не воскрешает погибших и не создаёт материалы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Сохранить дыхание»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_050",
+      "level_gate": 50,
+      "branch": "tracker",
+      "name": "Прицельный сбой",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "не воскрешает погибших и не создаёт материалы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Прицельный сбой»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_050",
+      "level_gate": 50,
+      "branch": "fighter",
+      "name": "Перехват прохода",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "не воскрешает погибших и не создаёт материалы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Перехват прохода»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_050",
+      "level_gate": 50,
+      "branch": "engineer",
+      "name": "Модуль автомата",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "не воскрешает погибших и не создаёт материалы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Модуль автомата»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_055",
+      "level_gate": 55,
+      "branch": "healer",
+      "name": "Заметить повторное кровотечение",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "требует данных и времени",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Заметить повторное кровотечение»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_055",
+      "level_gate": 55,
+      "branch": "tracker",
+      "name": "Старый след",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "требует данных и времени",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Старый след»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_055",
+      "level_gate": 55,
+      "branch": "fighter",
+      "name": "Смена стойки",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "требует данных и времени",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Смена стойки»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_055",
+      "level_gate": 55,
+      "branch": "engineer",
+      "name": "История поломок",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "требует данных и времени",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «История поломок»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_060",
+      "level_gate": 60,
+      "branch": "healer",
+      "name": "Сложное восстановление",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "группа, расстояние и ресурсы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Сложное восстановление»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_060",
+      "level_gate": 60,
+      "branch": "tracker",
+      "name": "Провести группу",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "группа, расстояние и ресурсы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Провести группу»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_060",
+      "level_gate": 60,
+      "branch": "fighter",
+      "name": "Сдержать двоих",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "группа, расстояние и ресурсы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Сдержать двоих»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_060",
+      "level_gate": 60,
+      "branch": "engineer",
+      "name": "Ремонт линии",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "группа, расстояние и ресурсы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Ремонт линии»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_065",
+      "level_gate": 65,
+      "branch": "healer",
+      "name": "Совместимость реагента",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не безошибочная диагностика",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Совместимость реагента»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_065",
+      "level_gate": 65,
+      "branch": "tracker",
+      "name": "Звуковая карта",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не безошибочная диагностика",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Звуковая карта»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_065",
+      "level_gate": 65,
+      "branch": "fighter",
+      "name": "Оценка усталости союзника",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не безошибочная диагностика",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Оценка усталости союзника»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_065",
+      "level_gate": 65,
+      "branch": "engineer",
+      "name": "Запас деталей",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "не безошибочная диагностика",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Запас деталей»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_070",
+      "level_gate": 70,
+      "branch": "healer",
+      "name": "Специальное противоядие",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "неизвестный яд, следы ловушки, пространство, наличие детали",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Специальное противоядие»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_070",
+      "level_gate": 70,
+      "branch": "tracker",
+      "name": "Задержать погоню",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "неизвестный яд, следы ловушки, пространство, наличие детали",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Задержать погоню»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_070",
+      "level_gate": 70,
+      "branch": "fighter",
+      "name": "Отступить строем",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "неизвестный яд, следы ловушки, пространство, наличие детали",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Отступить строем»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_070",
+      "level_gate": 70,
+      "branch": "engineer",
+      "name": "Проточный ремонт",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "неизвестный яд, следы ловушки, пространство, наличие детали",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Проточный ремонт»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_075",
+      "level_gate": 75,
+      "branch": "healer",
+      "name": "Реабилитация",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "рана реально болит и не исчезает",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Реабилитация»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_075",
+      "level_gate": 75,
+      "branch": "tracker",
+      "name": "Ложный маршрут",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "рана реально болит и не исчезает",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Ложный маршрут»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_075",
+      "level_gate": 75,
+      "branch": "fighter",
+      "name": "Держать раненую сторону",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "рана реально болит и не исчезает",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Держать раненую сторону»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_075",
+      "level_gate": 75,
+      "branch": "engineer",
+      "name": "Обучить бригаду",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "рана реально болит и не исчезает",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Обучить бригаду»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_080",
+      "level_gate": 80,
+      "branch": "healer",
+      "name": "Полевая бригада",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "опыт, люди, срок, боеприпасы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Полевая бригада»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_080",
+      "level_gate": 80,
+      "branch": "tracker",
+      "name": "Пересечь обзор",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "опыт, люди, срок, боеприпасы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Пересечь обзор»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_080",
+      "level_gate": 80,
+      "branch": "fighter",
+      "name": "Удержание выхода",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "опыт, люди, срок, боеприпасы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Удержание выхода»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_080",
+      "level_gate": 80,
+      "branch": "engineer",
+      "name": "Автономный узел",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "опыт, люди, срок, боеприпасы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Автономный узел»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_085",
+      "level_gate": 85,
+      "branch": "healer",
+      "name": "Ведение осложнений",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "возможны ошибки и неожиданности",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Ведение осложнений»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_085",
+      "level_gate": 85,
+      "branch": "tracker",
+      "name": "Погода по признакам",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "возможны ошибки и неожиданности",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Погода по признакам»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_085",
+      "level_gate": 85,
+      "branch": "fighter",
+      "name": "Распознавание финта",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "возможны ошибки и неожиданности",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Распознавание финта»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_085",
+      "level_gate": 85,
+      "branch": "engineer",
+      "name": "Диагностика сети",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "возможны ошибки и неожиданности",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Диагностика сети»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_090",
+      "level_gate": 90,
+      "branch": "healer",
+      "name": "Долгая поддержка",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "не переносит людей мгновенно, не создаёт ресурсы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Долгая поддержка»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_090",
+      "level_gate": 90,
+      "branch": "tracker",
+      "name": "Точка эвакуации",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "не переносит людей мгновенно, не создаёт ресурсы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Точка эвакуации»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_090",
+      "level_gate": 90,
+      "branch": "fighter",
+      "name": "Общий заслон",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "не переносит людей мгновенно, не создаёт ресурсы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Общий заслон»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_090",
+      "level_gate": 90,
+      "branch": "engineer",
+      "name": "Перестроить производство",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "не переносит людей мгновенно, не создаёт ресурсы",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Перестроить производство»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_095",
+      "level_gate": 95,
+      "branch": "healer",
+      "name": "Компетенция редких травм",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "усталость, страх, ошибка никуда не исчезают",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Компетенция редких травм»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_095",
+      "level_gate": 95,
+      "branch": "tracker",
+      "name": "Дальняя разведка",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "усталость, страх, ошибка никуда не исчезают",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Дальняя разведка»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_095",
+      "level_gate": 95,
+      "branch": "fighter",
+      "name": "Бой после износа",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "усталость, страх, ошибка никуда не исчезают",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Бой после износа»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_095",
+      "level_gate": 95,
+      "branch": "engineer",
+      "name": "Наследуемый проект",
+      "category": "passive_candidate",
+      "access": "class_specialization",
+      "limitation": "усталость, страх, ошибка никуда не исчезают",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Наследуемый проект»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "healer_100",
+      "level_gate": 100,
+      "branch": "healer",
+      "name": "Мастерская помощь",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "даже максимум не даёт неуязвимости или всемогущества",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "опытный лекарь и практика под наблюдением",
+        "exercise": "Подтвердить приём «Мастерская помощь»: диагностика, остановка осложнений и безопасное лечение",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "задержка помощи или побочное осложнение",
+        "class_boundary": "ведущий специалист по сложной анатомической травме",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "tracker_100",
+      "level_gate": 100,
+      "branch": "tracker",
+      "name": "Маршрут через войну",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "даже максимум не даёт неуязвимости или всемогущества",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "следопыт и наблюдение в реальных условиях",
+        "exercise": "Подтвердить приём «Маршрут через войну»: маршрут с ложными следами и разведка без подсказки системы",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря маршрута или раскрытие местонахождения",
+        "class_boundary": "маршрутная и прицельная разведка лучше друидского нюха",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "fighter_100",
+      "level_gate": 100,
+      "branch": "fighter",
+      "name": "Страж последнего рубежа",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "даже максимум не даёт неуязвимости или всемогущества",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "боевой инструктор и тренировки с союзниками",
+        "exercise": "Подтвердить приём «Страж последнего рубежа»: удержание позиции под давлением без непобедимости",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "потеря линии, травма или риск для союзника",
+        "class_boundary": "защита строя и перехват атак",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    },
+    {
+      "id": "engineer_100",
+      "level_gate": 100,
+      "branch": "engineer",
+      "name": "Региональная сеть",
+      "category": "active_candidate",
+      "access": "class_specialization",
+      "limitation": "даже максимум не даёт неуязвимости или всемогущества",
+      "design_status": "author_approved_skill_design_not_granted",
+      "automatic_unlock": false,
+      "requires_training": true,
+      "requires_manual_unlock": true,
+      "training_proposal": {
+        "mentor_or_context": "технический мастер и доступ к реальному оборудованию",
+        "exercise": "Подтвердить приём «Региональная сеть»: работа с поломкой и нагрузочный тест исправления",
+        "evidence": "Освоение в соответствующей среде; демонстрация независимому наставнику, без автоматической выдачи",
+        "specialization": "ПРОЕКТ: дополнительно подтвердить направление и сюжетное событие",
+        "form_exception": null
+      },
+      "balance_proposal": {
+        "failure_risk": "авария, расход деталей или новый отказ",
+        "class_boundary": "техника, производство, снабжение и системный ремонт",
+        "resource": "НЕ УТВЕРЖДЕНО: определить ресурс, расходник или физиологическую цену конкретного действия",
+        "cooldown": "НЕ УТВЕРЖДЕНО: определить длительность и лимит применения в сцене",
+        "injury": "не отменяет анатомических травм"
+      },
+      "status": "APPROVED_DESIGN_NOT_LEARNED"
+    }
+  ],
+  "approval": {
+    "date": "2026-10-21",
+    "scope": "All 140 skill names, class/branch structure, level gates and functional limitations approved as DESIGN catalog, not individual actor unlocks",
+    "not_approved": [
+      "training_proposal details",
+      "balance_proposal numerical costs",
+      "balance_proposal cooldowns",
+      "unseen narrative unlocking events",
+      "posthumous XP effects",
+      "new beast form unlocks without dedicated event"
+    ]
+  }
+}

@@ -4,6 +4,8 @@ from __future__ import annotations
 import re
 import unittest
 from pathlib import Path
+from fractions import Fraction
+from rpg_transition_contract import HUMAN, NotEnoughMana, transition_cost, mana_after
 
 ROOT = Path(__file__).resolve().parents[1]
 BOOK = ROOT / 'Книга про всякое, попытка 90123... (2).txt'
@@ -104,6 +106,32 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('В игре погиб. Первый раз.', self.chapters[25])
         self.assertIn('выносливость 11, живучесть 11, дух 17', self.chapters[7])
         self.assertIn('Я вернулся в человеческий облик', self.chapters[12])
+
+    def test_symbolic_free_return_at_any_mana(self):
+        """Zero-mana return must work without retroactively choosing entry prices."""
+        for balance in (False, True):
+            for mana in (0, 1, 42):
+                self.assertEqual(transition_cost('fellur', HUMAN, 17, balance), 0)
+                self.assertEqual(mana_after('fellur', HUMAN, mana, 17, balance), mana)
+        self.assertEqual(transition_cost('fellur', 'fellur', 17), 0)
+
+    def test_symbolic_paid_entry_and_skill_discount(self):
+        """Illustrative input 17 is NOT an author-approved mana price."""
+        self.assertEqual(transition_cost(HUMAN, 'fellur', 17), Fraction(17))
+        self.assertEqual(transition_cost(HUMAN, 'fellur', 17, True), Fraction(119, 10))
+        self.assertEqual(transition_cost('fellur', 'ursalon', 17), Fraction(17))
+        self.assertEqual(mana_after(HUMAN, 'fellur', 17, 17), 0)
+        with self.assertRaises(NotEnoughMana):
+            mana_after(HUMAN, 'fellur', 0, 17)
+
+    def test_free_human_intermediary_cannot_make_beast_entry_free(self):
+        """Returning free at zero mana does not fund entry to another form."""
+        self.assertEqual(mana_after('fellur', HUMAN, 0, 17), 0)
+        with self.assertRaises(NotEnoughMana):
+            mana_after(HUMAN, 'skyraven', 0, 17)
+        # A different beast target still requires an independently priced entry.
+        with self.assertRaises(NotEnoughMana):
+            mana_after('fellur', 'skyraven', 0, 17)
 
     def test_xp_in_book_not_recalculated(self):
         for token in ('150 / 300', '300/600', '450/600', '550/600',

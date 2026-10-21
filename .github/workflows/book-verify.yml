@@ -7,6 +7,7 @@ on:
       - 'Фон эпоса.fb2'
       - 'tools/verify_book.py'
       - 'tools/test_rpg_progression.py'
+      - 'tools/rpg_transition_contract.py'
       - '.github/workflows/book-verify.yml'
   workflow_dispatch:
 permissions:

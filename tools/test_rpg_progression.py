@@ -237,10 +237,10 @@ class RPGRegression(unittest.TestCase):
         self.assertNotIn('Общий опыт: 2525.', self.chapters[24])
         self.assertNotIn('Общий опыт: 2525.', self.chapters[25])
         self.assertIn('но не открыл инвентарь.', self.chapters[25])
-        self.assertIn('не дочитав', self.chapters[24])
+        self.assertIn('Я закрыл уведомление, не проверяя, какие вещи пропали.', self.chapters[24])
 
     def test_lost_knife_is_borrowed(self):
-        self.assertIn('Запасного ножа не было', self.chapters[24])
+        self.assertIn('Запасного ножа в них не оказалось', self.chapters[24])
         self.assertIn('Эльвира дала мне нож для зелени', self.chapters[25])
 
     def test_unapproved_mana_cap_not_in_book(self):

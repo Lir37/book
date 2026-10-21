@@ -15,8 +15,8 @@
       "level_gate": 1,
       "effect": "узнаёт физический предел уже освоенной формы",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [],
       "requires_training": true,
@@ -40,8 +40,8 @@
       "level_gate": 5,
       "effect": "выбирает проход по доступной местности",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.core.001"
@@ -67,8 +67,8 @@
       "level_gate": 10,
       "effect": "после возврата адаптируется к прежнему телу, не леча травмы",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.core.005"
@@ -94,8 +94,8 @@
       "level_gate": 15,
       "effect": "учитывает канонический остаток маны перед переходом",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.core.010"
@@ -122,7 +122,7 @@
       "effect": "выбирает безопасную дистанцию в изученном теле",
       "resource": {
         "kind": "physiology",
-        "rule": "только освоенное тело, вход по v0.8; поддержание/выход бесплатны; не новая форма"
+        "rule": "Only previously learned beast forms. Entry cost from approved v0.8, no upkeep, free return. Injuries persist."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.core.015"
@@ -149,7 +149,7 @@
       "effect": "меняет направление без потери равновесия",
       "resource": {
         "kind": "physiology",
-        "rule": "только освоенное тело, вход по v0.8; поддержание/выход бесплатны; не новая форма"
+        "rule": "Only previously learned beast forms. Entry cost from approved v0.8, no upkeep, free return. Injuries persist."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.звериные_тела.020"
@@ -176,7 +176,7 @@
       "effect": "выполняет сложный обход доступным зверем",
       "resource": {
         "kind": "physiology",
-        "rule": "только освоенное тело, вход по v0.8; поддержание/выход бесплатны; не новая форма"
+        "rule": "Only previously learned beast forms. Entry cost from approved v0.8, no upkeep, free return. Injuries persist."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.звериные_тела.030"
@@ -203,7 +203,7 @@
       "effect": "помогает группе следовать за наблюдаемой формой без телепатии",
       "resource": {
         "kind": "physiology",
-        "rule": "только освоенное тело, вход по v0.8; поддержание/выход бесплатны; не новая форма"
+        "rule": "Only previously learned beast forms. Entry cost from approved v0.8, no upkeep, free return. Injuries persist."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.звериные_тела.050"
@@ -230,7 +230,7 @@
       "effect": "применяет все освоенные ограничения конкретного тела, не получая новых форм",
       "resource": {
         "kind": "physiology",
-        "rule": "только освоенное тело, вход по v0.8; поддержание/выход бесплатны; не новая форма"
+        "rule": "Only previously learned beast forms. Entry cost from approved v0.8, no upkeep, free return. Injuries persist."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.звериные_тела.075"
@@ -256,11 +256,8 @@
       "level_gate": 20,
       "effect": "находит реально живую основу для природных чар",
       "resource": {
-        "kind": "mana",
-        "percent_max": 4,
-        "formula": "ceil(M*4/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": true
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.core.015"
@@ -288,7 +285,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 7,
-        "formula": "ceil(M*7/100)",
+        "formula": "ceil(M×7/100)",
         "applies_only_to_new_skill": true,
         "human_only": true
       },
@@ -318,7 +315,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 10,
-        "formula": "ceil(M*10/100)",
+        "formula": "ceil(M×10/100)",
         "applies_only_to_new_skill": true,
         "human_only": true
       },
@@ -348,7 +345,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 15,
-        "formula": "ceil(M*15/100)",
+        "formula": "ceil(M×15/100)",
         "applies_only_to_new_skill": true,
         "human_only": true
       },
@@ -378,7 +375,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 22,
-        "formula": "ceil(M*22/100)",
+        "formula": "ceil(M×22/100)",
         "applies_only_to_new_skill": true,
         "human_only": true
       },
@@ -406,8 +403,8 @@
       "level_gate": 20,
       "effect": "распознаёт несовместимые ингредиенты по изученному рецепту",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "materials",
+        "rule": "Real ingredients, preparation time, tools. Human shape only."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.core.015"
@@ -433,8 +430,8 @@
       "level_gate": 30,
       "effect": "снижает порчу ограниченной партии",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "materials",
+        "rule": "Real ingredients, preparation time, tools. Human shape only."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.природное_ремесло.020"
@@ -460,8 +457,8 @@
       "level_gate": 50,
       "effect": "выбирает, на какой состав уйдёт дефицитный ингредиент",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "materials",
+        "rule": "Real ingredients, preparation time, tools. Human shape only."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.природное_ремесло.030"
@@ -487,8 +484,8 @@
       "level_gate": 75,
       "effect": "организует переносную обработку реального сырья",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "materials",
+        "rule": "Real ingredients, preparation time, tools. Human shape only."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.природное_ремесло.050"
@@ -514,8 +511,8 @@
       "level_gate": 100,
       "effect": "налаживает воспроизводимое ремесло при поддержке поселения",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "materials",
+        "rule": "Real ingredients, preparation time, tools. Human shape only."
       },
       "prerequisites": [
         "eidos.v14.arcanum.druid.природное_ремесло.075"
@@ -541,8 +538,8 @@
       "level_gate": 1,
       "effect": "прикрывает союзника от одного видимого направления",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [],
       "requires_training": true,
@@ -566,8 +563,8 @@
       "level_gate": 5,
       "effect": "удерживает равновесие в доспехе",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.core.001"
@@ -593,8 +590,8 @@
       "level_gate": 10,
       "effect": "передаёт прикрытие подготовленному товарищу",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.core.005"
@@ -620,8 +617,8 @@
       "level_gate": 15,
       "effect": "удерживает конкретный участок ценой усталости",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.core.010"
@@ -647,8 +644,8 @@
       "level_gate": 20,
       "effect": "занимает позицию, защищающую проход",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.core.015"
@@ -674,8 +671,8 @@
       "level_gate": 30,
       "effect": "перестраивает линию щитов с обученными союзниками",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.бастион.020"
@@ -701,8 +698,8 @@
       "level_gate": 50,
       "effect": "принимает короткое силовое давление на исправную броню",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.бастион.030"
@@ -728,8 +725,8 @@
       "level_gate": 75,
       "effect": "поддерживает защиту группы при отступлении",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.бастион.050"
@@ -755,8 +752,8 @@
       "level_gate": 100,
       "effect": "держит подготовленную оборону ценой опасного износа защиты",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.бастион.075"
@@ -782,8 +779,8 @@
       "level_gate": 20,
       "effect": "привязывает защитную задачу к конкретному человеку",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.core.015"
@@ -809,8 +806,8 @@
       "level_gate": 30,
       "effect": "своевременно занимает защитное положение",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.хранитель_обета.020"
@@ -836,8 +833,8 @@
       "level_gate": 50,
       "effect": "выбирает безопасный путь сопровождения",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.хранитель_обета.030"
@@ -863,8 +860,8 @@
       "level_gate": 75,
       "effect": "организует взаимное прикрытие небольшой группы",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.хранитель_обета.050"
@@ -890,8 +887,8 @@
       "level_gate": 100,
       "effect": "завершает эвакуацию ценой личного безопасного выхода",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.хранитель_обета.075"
@@ -917,11 +914,8 @@
       "level_gate": 20,
       "effect": "различает изученный вид защитных или атакующих чар",
       "resource": {
-        "kind": "mana",
-        "percent_max": 4,
-        "formula": "ceil(M*4/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.core.015"
@@ -949,7 +943,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 7,
-        "formula": "ceil(M*7/100)",
+        "formula": "ceil(M×7/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -977,11 +971,8 @@
       "level_gate": 50,
       "effect": "распознаёт предел конкретного известного эффекта",
       "resource": {
-        "kind": "mana",
-        "percent_max": 10,
-        "formula": "ceil(M*10/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.paladin.страж_чар.030"
@@ -1009,7 +1000,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 15,
-        "formula": "ceil(M*15/100)",
+        "formula": "ceil(M×15/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1039,7 +1030,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 22,
-        "formula": "ceil(M*22/100)",
+        "formula": "ceil(M×22/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1069,7 +1060,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 1,
-        "formula": "ceil(M*1/100)",
+        "formula": "ceil(M×1/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1095,11 +1086,8 @@
       "level_gate": 5,
       "effect": "сверяет линию действия со своими союзниками",
       "resource": {
-        "kind": "mana",
-        "percent_max": 2,
-        "formula": "ceil(M*2/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.mage.core.001"
@@ -1125,11 +1113,8 @@
       "level_gate": 10,
       "effect": "прекращает неудачный собственный приём с потерей ресурса",
       "resource": {
-        "kind": "mana",
-        "percent_max": 3,
-        "formula": "ceil(M*3/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.mage.core.005"
@@ -1155,11 +1140,8 @@
       "level_gate": 15,
       "effect": "удерживает одну освоенную технику под умеренной помехой",
       "resource": {
-        "kind": "mana",
-        "percent_max": 3,
-        "formula": "ceil(M*3/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.mage.core.010"
@@ -1187,7 +1169,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 4,
-        "formula": "ceil(M*4/100)",
+        "formula": "ceil(M×4/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1217,7 +1199,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 7,
-        "formula": "ceil(M*7/100)",
+        "formula": "ceil(M×7/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1247,7 +1229,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 10,
-        "formula": "ceil(M*10/100)",
+        "formula": "ceil(M×10/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1277,7 +1259,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 15,
-        "formula": "ceil(M*15/100)",
+        "formula": "ceil(M×15/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1307,7 +1289,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 22,
-        "formula": "ceil(M*22/100)",
+        "formula": "ceil(M×22/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1335,11 +1317,8 @@
       "level_gate": 20,
       "effect": "распознаёт пересечение знакомых магических структур",
       "resource": {
-        "kind": "mana",
-        "percent_max": 4,
-        "formula": "ceil(M*4/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.mage.core.015"
@@ -1367,7 +1346,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 7,
-        "formula": "ceil(M*7/100)",
+        "formula": "ceil(M×7/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1397,7 +1376,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 10,
-        "formula": "ceil(M*10/100)",
+        "formula": "ceil(M×10/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1427,7 +1406,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 15,
-        "formula": "ceil(M*15/100)",
+        "formula": "ceil(M×15/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1457,7 +1436,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 22,
-        "formula": "ceil(M*22/100)",
+        "formula": "ceil(M×22/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1487,7 +1466,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 4,
-        "formula": "ceil(M*4/100)",
+        "formula": "ceil(M×4/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1517,7 +1496,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 7,
-        "formula": "ceil(M*7/100)",
+        "formula": "ceil(M×7/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1547,7 +1526,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 10,
-        "formula": "ceil(M*10/100)",
+        "formula": "ceil(M×10/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1577,7 +1556,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 15,
-        "formula": "ceil(M*15/100)",
+        "formula": "ceil(M×15/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1607,7 +1586,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 22,
-        "formula": "ceil(M*22/100)",
+        "formula": "ceil(M×22/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1635,11 +1614,8 @@
       "level_gate": 1,
       "effect": "отличает видимую травму от безопасного повреждения",
       "resource": {
-        "kind": "mana",
-        "percent_max": 1,
-        "formula": "ceil(M*1/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [],
       "requires_training": true,
@@ -1663,11 +1639,8 @@
       "level_gate": 5,
       "effect": "готовит материалы первой помощи",
       "resource": {
-        "kind": "mana",
-        "percent_max": 2,
-        "formula": "ceil(M*2/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.priest.core.001"
@@ -1693,11 +1666,8 @@
       "level_gate": 10,
       "effect": "поддерживает пострадавшего при наличии времени",
       "resource": {
-        "kind": "mana",
-        "percent_max": 3,
-        "formula": "ceil(M*3/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.priest.core.005"
@@ -1723,11 +1693,8 @@
       "level_gate": 15,
       "effect": "узнаёт ситуацию, требующую специалиста",
       "resource": {
-        "kind": "mana",
-        "percent_max": 3,
-        "formula": "ceil(M*3/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.priest.core.010"
@@ -1753,11 +1720,8 @@
       "level_gate": 20,
       "effect": "распознаёт один изученный признак ухудшения",
       "resource": {
-        "kind": "mana",
-        "percent_max": 4,
-        "formula": "ceil(M*4/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.priest.core.015"
@@ -1783,11 +1747,8 @@
       "level_gate": 30,
       "effect": "стабилизирует известный тип травмы в пределах подготовки",
       "resource": {
-        "kind": "mana",
-        "percent_max": 7,
-        "formula": "ceil(M*7/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.priest.целитель.020"
@@ -1813,11 +1774,8 @@
       "level_gate": 50,
       "effect": "распределяет ограниченную помощь между двумя людьми",
       "resource": {
-        "kind": "mana",
-        "percent_max": 10,
-        "formula": "ceil(M*10/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.priest.целитель.030"
@@ -1845,7 +1803,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 15,
-        "formula": "ceil(M*15/100)",
+        "formula": "ceil(M×15/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1875,7 +1833,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 22,
-        "formula": "ceil(M*22/100)",
+        "formula": "ceil(M×22/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1903,11 +1861,8 @@
       "level_gate": 20,
       "effect": "распознаёт изученный вид скверны",
       "resource": {
-        "kind": "mana",
-        "percent_max": 4,
-        "formula": "ceil(M*4/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.priest.core.015"
@@ -1935,7 +1890,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 7,
-        "formula": "ceil(M*7/100)",
+        "formula": "ceil(M×7/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1965,7 +1920,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 10,
-        "formula": "ceil(M*10/100)",
+        "formula": "ceil(M×10/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -1993,11 +1948,8 @@
       "level_gate": 75,
       "effect": "отслеживает известный путь распространения после исследования",
       "resource": {
-        "kind": "mana",
-        "percent_max": 15,
-        "formula": "ceil(M*15/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.priest.очиститель.050"
@@ -2025,7 +1977,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 22,
-        "formula": "ceil(M*22/100)",
+        "formula": "ceil(M×22/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -2053,11 +2005,8 @@
       "level_gate": 20,
       "effect": "готовит точку добровольной помощи",
       "resource": {
-        "kind": "mana",
-        "percent_max": 4,
-        "formula": "ceil(M*4/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.priest.core.015"
@@ -2085,7 +2034,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 7,
-        "formula": "ceil(M*7/100)",
+        "formula": "ceil(M×7/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -2113,11 +2062,8 @@
       "level_gate": 50,
       "effect": "распределяет уход и дежурства внутри группы",
       "resource": {
-        "kind": "mana",
-        "percent_max": 10,
-        "formula": "ceil(M*10/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.priest.служитель_общины.030"
@@ -2143,11 +2089,8 @@
       "level_gate": 75,
       "effect": "поддерживает человеческое доверие через знакомую традицию",
       "resource": {
-        "kind": "mana",
-        "percent_max": 15,
-        "formula": "ceil(M*15/100)",
-        "applies_only_to_new_skill": true,
-        "human_only": false
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.priest.служитель_общины.050"
@@ -2175,7 +2118,7 @@
       "resource": {
         "kind": "mana",
         "percent_max": 22,
-        "formula": "ceil(M*22/100)",
+        "formula": "ceil(M×22/100)",
         "applies_only_to_new_skill": true,
         "human_only": false
       },
@@ -2203,8 +2146,8 @@
       "level_gate": 1,
       "effect": "оценивает видимый сектор с учётом своих",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [],
       "requires_training": true,
@@ -2228,8 +2171,8 @@
       "level_gate": 5,
       "effect": "соотносит стрелы с будущими задачами",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.core.001"
@@ -2255,8 +2198,8 @@
       "level_gate": 10,
       "effect": "заранее выбирает маршрут ухода",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.core.005"
@@ -2282,8 +2225,8 @@
       "level_gate": 15,
       "effect": "умеет вовремя изменить укрытие",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.core.010"
@@ -2309,8 +2252,8 @@
       "level_gate": 20,
       "effect": "учитывает проверенную дистанцию",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.core.015"
@@ -2336,8 +2279,8 @@
       "level_gate": 30,
       "effect": "ждёт открывшуюся видимую цель",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.меткий_стрелок.020"
@@ -2363,8 +2306,8 @@
       "level_gate": 50,
       "effect": "использует заранее изученную траекторию",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.меткий_стрелок.030"
@@ -2390,8 +2333,8 @@
       "level_gate": 75,
       "effect": "выполняет подготовленную редкую дальнюю попытку",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.меткий_стрелок.050"
@@ -2417,8 +2360,8 @@
       "level_gate": 100,
       "effect": "использует трудный прицельный момент без гарантии успеха",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.меткий_стрелок.075"
@@ -2444,8 +2387,8 @@
       "level_gate": 20,
       "effect": "меняет укрытие после выстрела",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.core.015"
@@ -2471,8 +2414,8 @@
       "level_gate": 30,
       "effect": "использует выгодную пересечённую местность",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.застрельщик.020"
@@ -2498,8 +2441,8 @@
       "level_gate": 50,
       "effect": "поддерживает товарищей во время движения",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.застрельщик.030"
@@ -2525,8 +2468,8 @@
       "level_gate": 75,
       "effect": "ведёт преследование с конечным запасом стрел",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.застрельщик.050"
@@ -2552,8 +2495,8 @@
       "level_gate": 100,
       "effect": "организует подвижный отход малой группы через известную местность",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.застрельщик.075"
@@ -2579,8 +2522,8 @@
       "level_gate": 20,
       "effect": "согласует направление внимания группы",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.core.015"
@@ -2606,8 +2549,8 @@
       "level_gate": 30,
       "effect": "распределяет линии огня без помех союзникам",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.стрелковый_вожак.020"
@@ -2633,8 +2576,8 @@
       "level_gate": 50,
       "effect": "передаёт понятный сигнал согласованного действия",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.стрелковый_вожак.030"
@@ -2660,8 +2603,8 @@
       "level_gate": 75,
       "effect": "согласует последовательную работу двух групп",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.стрелковый_вожак.050"
@@ -2687,8 +2630,8 @@
       "level_gate": 100,
       "effect": "подготавливает общее действие опытных стрелков, зависящее от дисциплины",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.archer.стрелковый_вожак.075"
@@ -2714,8 +2657,8 @@
       "level_gate": 1,
       "effect": "замечает предсказуемые повторы наблюдения",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [],
       "requires_training": true,
@@ -2739,8 +2682,8 @@
       "level_gate": 5,
       "effect": "пользуется заранее проверенной поверхностью",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.core.001"
@@ -2766,8 +2709,8 @@
       "level_gate": 10,
       "effect": "кратко отвлекает одного соперника",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.core.005"
@@ -2793,8 +2736,8 @@
       "level_gate": 15,
       "effect": "заранее отмечает выход",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.core.010"
@@ -2820,8 +2763,8 @@
       "level_gate": 20,
       "effect": "выбирает подходящий момент движения",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.core.015"
@@ -2847,8 +2790,8 @@
       "level_gate": 30,
       "effect": "работает с изученным видом простого механизма",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.проникатель.020"
@@ -2874,8 +2817,8 @@
       "level_gate": 50,
       "effect": "сохраняет доступный путь назад",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.проникатель.030"
@@ -2901,8 +2844,8 @@
       "level_gate": 75,
       "effect": "координирует обученных спутников в обходе",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.проникатель.050"
@@ -2928,8 +2871,8 @@
       "level_gate": 100,
       "effect": "планирует многоэтапное проникновение на основе фактической разведки",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.проникатель.075"
@@ -2955,8 +2898,8 @@
       "level_gate": 20,
       "effect": "предлагает противнику ложный момент для решения",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.core.015"
@@ -2982,8 +2925,8 @@
       "level_gate": 30,
       "effect": "использует ошибку соперника в движении",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.дуэлянт.020"
@@ -3009,8 +2952,8 @@
       "level_gate": 50,
       "effect": "применяет освоенный ответ на известный приём",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.дуэлянт.030"
@@ -3036,8 +2979,8 @@
       "level_gate": 75,
       "effect": "освобождает место для движения среди нескольких угроз",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.дуэлянт.050"
@@ -3063,8 +3006,8 @@
       "level_gate": 100,
       "effect": "соединяет несколько освоенных движений в короткую последовательность с реальным риском травмы",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.дуэлянт.075"
@@ -3090,8 +3033,8 @@
       "level_gate": 20,
       "effect": "выявляет реальную потребность собеседника",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.core.015"
@@ -3117,8 +3060,8 @@
       "level_gate": 30,
       "effect": "получает возможность встречи благодаря репутации",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.делец.020"
@@ -3144,8 +3087,8 @@
       "level_gate": 50,
       "effect": "меняет условия сделки по взаимному согласию",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.делец.030"
@@ -3171,8 +3114,8 @@
       "level_gate": 75,
       "effect": "организует устойчивые контакты",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.делец.050"
@@ -3198,8 +3141,8 @@
       "level_gate": 100,
       "effect": "обеспечивает доступ через длительную организационную работу без магического подчинения",
       "resource": {
-        "kind": "physical_or_material",
-        "rule": "доступные материалы, усталость и время; магическое действие требует отдельно изученной техники и маны"
+        "kind": "physical",
+        "rule": "Normal fatigue, physical materials or observation; no mana cost for nonmagical action."
       },
       "prerequisites": [
         "eidos.v14.arcanum.rogue.делец.075"

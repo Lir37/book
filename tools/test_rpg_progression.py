@@ -187,9 +187,20 @@ class RPGRegression(unittest.TestCase):
 
     def test_xp_in_book_not_recalculated(self):
         for token in ('150 / 300', '300/600', '450/600', '550/600',
-                      '825/1200', '925/1200', '975/1200', '1075/1200'):
+                      '975/1200', '1275', '2225', '2275', '2525', '2775'):
             self.assertIn(token, self.book)
         self.assertNotIn('2 803 300', self.book)  # full curve stays behind the scenes
+
+    def test_novice_ubers_and_lir_level_six_continuity(self):
+        self.assertIn('Феррон сам начал играть недавно', self.chapters[9])
+        self.assertIn('Велариона обсуждали', self.chapters[10])
+        self.assertIn('Опыт: 975/1200', self.chapters[8])
+        self.assertIn('Общий опыт: 1275. Уровень 4', self.chapters[11])
+        self.assertIn('Общий опыт: 2225. Уровень 5', self.chapters[12])
+        self.assertIn('Общий опыт достиг 2275', self.chapters[13])
+        self.assertIn('Общий опыт: 2525. Уровень 5', self.chapters[15])
+        self.assertIn('Общий опыт: 2775. Уровень 6', self.chapters[16])
+        self.assertIn('Три свободных очка характеристик', self.chapters[16])
 
     def test_death_stays_final(self):
         self.assertIn('сообщение о возрождении', self.chapters[24])
@@ -197,11 +208,11 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('целыми', self.chapters[24] + self.chapters[25])
 
     def test_post_death_experience_is_not_shown(self):
-        # 1075/1200 is the last observed number (chapter 16), not a verified
+        # 2525 is the observed chapter-16 milestone, not a verified
         # value after the first death and unread penalty window in 25-26.
-        self.assertIn('1075/1200', self.chapters[15])
-        self.assertNotIn('1075/1200', self.chapters[24])
-        self.assertNotIn('1075/1200', self.chapters[25])
+        self.assertIn('Общий опыт: 2525.', self.chapters[15])
+        self.assertNotIn('Общий опыт: 2525.', self.chapters[24])
+        self.assertNotIn('Общий опыт: 2525.', self.chapters[25])
         self.assertIn('Я не стал этого делать.', self.chapters[25])
         self.assertIn('не дочитав', self.chapters[24])
 

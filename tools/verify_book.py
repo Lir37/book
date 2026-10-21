@@ -36,7 +36,7 @@ def run(root: Path, xsd_dir: Path | None) -> None:
             raise ValueError(f'TXT/FB2 mismatch in chapter {i+1}, near normalized offset {j}')
     if re.search(r'\b(?:Интеллект|Удача)\s*[—:]|\bЗдоровье:\s*\d+', txt):
         raise ValueError('old stats or numeric HP remain')
-    for required in ['Живучесть — 10.', 'Восприятие — 13.', '1075/1200',
+    for required in ['Живучесть — 10.', 'Восприятие — 13.', '2525',
                      'выносливость 11, живучесть 11, дух 17']:
         if required not in txt:
             raise ValueError(f'canonical marker missing: {required}')

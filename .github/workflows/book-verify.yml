@@ -8,6 +8,10 @@ on:
       - 'tools/verify_book.py'
       - 'tools/test_rpg_progression.py'
       - 'tools/test_rpg_class_roster.py'
+      - 'tools/test_rpg_skill_system.py'
+      - 'tools/eidos_actor_builder.py'
+      - 'RPG_ЭЙДОС_АРКАНУМ_114_НАВЫКОВ_v1.4_2026-10-21.json'
+      - 'RPG_ЭЙДОС_ПРОТОКОЛ_109_НАВЫКОВ_v1.4_2026-10-21.json'
       - 'RPG_ЭЙДОС_ТЕСТОВЫЕ_СБОРКИ_48_6x6_v1.3_2026-10-21.json'
       - 'tools/rpg_mana_scenarios.py'
       - 'tools/rpg_transition_contract.py'
@@ -41,3 +45,5 @@ jobs:
         run: python tools/test_rpg_progression.py
       - name: Check 6x6 classes and 48 synthetic NPC builds
         run: python tools/test_rpg_class_roster.py
+      - name: Check 223 class abilities and NPC validation
+        run: python tools/test_rpg_skill_system.py

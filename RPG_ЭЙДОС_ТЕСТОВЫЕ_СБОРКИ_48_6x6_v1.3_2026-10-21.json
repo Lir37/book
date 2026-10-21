@@ -1,10 +1,10 @@
 {
-  "version": "1.3.0",
+  "version": "1.4-fixture-extension",
   "date": "2026-10-21",
   "status": "DRAFT_TEST_FIXTURES_NOT_CANONICAL_SKILLS_OR_STATS",
   "origin": "Два исследования (первое с историческими 24 сборками; второе с шестью боевыми классами Протокола) и прямое решение автора об ограничении Арканума шестью классами и выводе некроманта из меню",
   "class_roster_status": "AUTHOR_REQUESTED_SIX_EACH_WORKING_ROSTER",
-  "rule": "Уровень даёт доступ, не изучает навык. Все новые боевые приёмы в fixtures — проектные испытания, а не выданные умения. Значения характеристик исключительно искусственные профили нагрузки; официальная кривая статов после ранних уровней не установлена.",
+  "rule": "Уровень даёт доступ, не изучает навык. Все новые боевые приёмы в fixtures — проектные испытания, а не выданные умения. Значения характеристик исключительно искусственные профили нагрузки; официальная кривая статов после ранних уровней не установлена. В каждом профиле eligible_new_skill_ids — список доступных к обучению новых навыков без автоматической выдачи.",
   "legend": {
     "level": "профиль для проверки, не утверждённая прогрессия",
     "attributes": "условные тестовые значения; НЕ стат-бюджет мира",
@@ -221,7 +221,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.druid.core.001",
+        "eidos.v14.arcanum.druid.core.005",
+        "eidos.v14.arcanum.druid.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A02",
@@ -243,7 +249,15 @@
       "tested_decision": "Переход только в реально освоенное тело; вход оплачивается маной, поддержание бесплатно",
       "countermeasure": "Смена формы при недостаточной мане невозможна; телесная рана сохраняется",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.druid.core.001",
+        "eidos.v14.arcanum.druid.core.005",
+        "eidos.v14.arcanum.druid.core.010",
+        "eidos.v14.arcanum.druid.core.015",
+        "eidos.v14.arcanum.druid.звериные_тела.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A03",
@@ -265,7 +279,17 @@
       "tested_decision": "Работа с реальными растениями и природной средой без создания материи из пустоты",
       "countermeasure": "Камень и сухое железо ограничивают область применения",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.druid.core.001",
+        "eidos.v14.arcanum.druid.core.005",
+        "eidos.v14.arcanum.druid.core.010",
+        "eidos.v14.arcanum.druid.core.015",
+        "eidos.v14.arcanum.druid.живая_природа.020",
+        "eidos.v14.arcanum.druid.живая_природа.030",
+        "eidos.v14.arcanum.druid.живая_природа.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A04",
@@ -287,7 +311,18 @@
       "tested_decision": "Предметный цикл сбора и приготовления по рецепту, без звериного колдовства",
       "countermeasure": "Нет сырья или неверная дозировка",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.druid.core.001",
+        "eidos.v14.arcanum.druid.core.005",
+        "eidos.v14.arcanum.druid.core.010",
+        "eidos.v14.arcanum.druid.core.015",
+        "eidos.v14.arcanum.druid.природное_ремесло.020",
+        "eidos.v14.arcanum.druid.природное_ремесло.030",
+        "eidos.v14.arcanum.druid.природное_ремесло.050",
+        "eidos.v14.arcanum.druid.природное_ремесло.075"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A05",
@@ -309,7 +344,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.paladin.core.001",
+        "eidos.v14.arcanum.paladin.core.005",
+        "eidos.v14.arcanum.paladin.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A06",
@@ -331,7 +372,15 @@
       "tested_decision": "Удерживает позицию щитом и взаимодействием со строем",
       "countermeasure": "Обход по открытому флангу",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.paladin.core.001",
+        "eidos.v14.arcanum.paladin.core.005",
+        "eidos.v14.arcanum.paladin.core.010",
+        "eidos.v14.arcanum.paladin.core.015",
+        "eidos.v14.arcanum.paladin.бастион.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A07",
@@ -353,7 +402,17 @@
       "tested_decision": "Выделяет защищаемого союзника и принимает риск за него",
       "countermeasure": "Защита одного оставляет другого без внимания",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.paladin.core.001",
+        "eidos.v14.arcanum.paladin.core.005",
+        "eidos.v14.arcanum.paladin.core.010",
+        "eidos.v14.arcanum.paladin.core.015",
+        "eidos.v14.arcanum.paladin.хранитель_обета.020",
+        "eidos.v14.arcanum.paladin.хранитель_обета.030",
+        "eidos.v14.arcanum.paladin.хранитель_обета.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A08",
@@ -375,7 +434,18 @@
       "tested_decision": "Распознаёт и сдерживает конкретный известный магический эффект",
       "countermeasure": "Неизвестная школа чар и отсутствие подготовки",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.paladin.core.001",
+        "eidos.v14.arcanum.paladin.core.005",
+        "eidos.v14.arcanum.paladin.core.010",
+        "eidos.v14.arcanum.paladin.core.015",
+        "eidos.v14.arcanum.paladin.страж_чар.020",
+        "eidos.v14.arcanum.paladin.страж_чар.030",
+        "eidos.v14.arcanum.paladin.страж_чар.050",
+        "eidos.v14.arcanum.paladin.страж_чар.075"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A09",
@@ -397,7 +467,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.mage.core.001",
+        "eidos.v14.arcanum.mage.core.005",
+        "eidos.v14.arcanum.mage.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A10",
@@ -419,7 +495,15 @@
       "tested_decision": "Направленное воздействие с затратой маны и ограничениями среды",
       "countermeasure": "Закрытое пространство и истощение",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.mage.core.001",
+        "eidos.v14.arcanum.mage.core.005",
+        "eidos.v14.arcanum.mage.core.010",
+        "eidos.v14.arcanum.mage.core.015",
+        "eidos.v14.arcanum.mage.стихийник.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A11",
@@ -441,7 +525,17 @@
       "tested_decision": "Готовит взаимодействие нескольких заранее изученных эффектов",
       "countermeasure": "Сорванная подготовка",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.mage.core.001",
+        "eidos.v14.arcanum.mage.core.005",
+        "eidos.v14.arcanum.mage.core.010",
+        "eidos.v14.arcanum.mage.core.015",
+        "eidos.v14.arcanum.mage.узорник.020",
+        "eidos.v14.arcanum.mage.узорник.030",
+        "eidos.v14.arcanum.mage.узорник.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A12",
@@ -463,7 +557,18 @@
       "tested_decision": "Создаёт ограниченную защиту в конкретном секторе",
       "countermeasure": "Обход барьера с другой стороны",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.mage.core.001",
+        "eidos.v14.arcanum.mage.core.005",
+        "eidos.v14.arcanum.mage.core.010",
+        "eidos.v14.arcanum.mage.core.015",
+        "eidos.v14.arcanum.mage.оградитель.020",
+        "eidos.v14.arcanum.mage.оградитель.030",
+        "eidos.v14.arcanum.mage.оградитель.050",
+        "eidos.v14.arcanum.mage.оградитель.075"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A13",
@@ -485,7 +590,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.priest.core.001",
+        "eidos.v14.arcanum.priest.core.005",
+        "eidos.v14.arcanum.priest.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A14",
@@ -507,7 +618,15 @@
       "tested_decision": "Диагностирует и стабилизирует реальные травмы, не воскрешает",
       "countermeasure": "Катастрофическая травма без инструментов",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.priest.core.001",
+        "eidos.v14.arcanum.priest.core.005",
+        "eidos.v14.arcanum.priest.core.010",
+        "eidos.v14.arcanum.priest.core.015",
+        "eidos.v14.arcanum.priest.целитель.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A15",
@@ -529,7 +648,17 @@
       "tested_decision": "Работает с изученным видом скверны, без универсального очищения",
       "countermeasure": "Неизвестная природа поражения",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.priest.core.001",
+        "eidos.v14.arcanum.priest.core.005",
+        "eidos.v14.arcanum.priest.core.010",
+        "eidos.v14.arcanum.priest.core.015",
+        "eidos.v14.arcanum.priest.очиститель.020",
+        "eidos.v14.arcanum.priest.очиститель.030",
+        "eidos.v14.arcanum.priest.очиститель.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A16",
@@ -551,7 +680,18 @@
       "tested_decision": "Организует помощь и ритуал без автоматического контроля чужой воли",
       "countermeasure": "Отказ участников",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.priest.core.001",
+        "eidos.v14.arcanum.priest.core.005",
+        "eidos.v14.arcanum.priest.core.010",
+        "eidos.v14.arcanum.priest.core.015",
+        "eidos.v14.arcanum.priest.служитель_общины.020",
+        "eidos.v14.arcanum.priest.служитель_общины.030",
+        "eidos.v14.arcanum.priest.служитель_общины.050",
+        "eidos.v14.arcanum.priest.служитель_общины.075"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A17",
@@ -573,7 +713,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.archer.core.001",
+        "eidos.v14.arcanum.archer.core.005",
+        "eidos.v14.arcanum.archer.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A18",
@@ -595,7 +741,15 @@
       "tested_decision": "Один подготовленный точный выстрел с наблюдаемыми поправками",
       "countermeasure": "Травма плеча, туман, потеря позиции",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.archer.core.001",
+        "eidos.v14.arcanum.archer.core.005",
+        "eidos.v14.arcanum.archer.core.010",
+        "eidos.v14.arcanum.archer.core.015",
+        "eidos.v14.arcanum.archer.меткий_стрелок.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A19",
@@ -617,7 +771,17 @@
       "tested_decision": "Манёвр и стрельба при смене укрытий",
       "countermeasure": "Закрытый проход и истощение",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.archer.core.001",
+        "eidos.v14.arcanum.archer.core.005",
+        "eidos.v14.arcanum.archer.core.010",
+        "eidos.v14.arcanum.archer.core.015",
+        "eidos.v14.arcanum.archer.застрельщик.020",
+        "eidos.v14.arcanum.archer.застрельщик.030",
+        "eidos.v14.arcanum.archer.застрельщик.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A20",
@@ -639,7 +803,18 @@
       "tested_decision": "Согласует обстрел с несколькими союзниками, не усиливая стрелы магически",
       "countermeasure": "Разрыв связи и паника",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.archer.core.001",
+        "eidos.v14.arcanum.archer.core.005",
+        "eidos.v14.arcanum.archer.core.010",
+        "eidos.v14.arcanum.archer.core.015",
+        "eidos.v14.arcanum.archer.стрелковый_вожак.020",
+        "eidos.v14.arcanum.archer.стрелковый_вожак.030",
+        "eidos.v14.arcanum.archer.стрелковый_вожак.050",
+        "eidos.v14.arcanum.archer.стрелковый_вожак.075"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A21",
@@ -661,7 +836,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.rogue.core.001",
+        "eidos.v14.arcanum.rogue.core.005",
+        "eidos.v14.arcanum.rogue.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A22",
@@ -683,7 +864,15 @@
       "tested_decision": "Выбирает скрытый маршрут и использует реальную охрану против неё",
       "countermeasure": "Свет, шум, сторожевые животные",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.rogue.core.001",
+        "eidos.v14.arcanum.rogue.core.005",
+        "eidos.v14.arcanum.rogue.core.010",
+        "eidos.v14.arcanum.rogue.core.015",
+        "eidos.v14.arcanum.rogue.проникатель.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A23",
@@ -705,7 +894,17 @@
       "tested_decision": "Управляет короткой дистанцией и слабостями защиты противника",
       "countermeasure": "Длинное древковое оружие врага",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.rogue.core.001",
+        "eidos.v14.arcanum.rogue.core.005",
+        "eidos.v14.arcanum.rogue.core.010",
+        "eidos.v14.arcanum.rogue.core.015",
+        "eidos.v14.arcanum.rogue.дуэлянт.020",
+        "eidos.v14.arcanum.rogue.дуэлянт.030",
+        "eidos.v14.arcanum.rogue.дуэлянт.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "A24",
@@ -727,7 +926,18 @@
       "tested_decision": "Открывает доступ через связи и переговоры, не читая мысли",
       "countermeasure": "Предательство или заведомая ложь",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.arcanum.rogue.core.001",
+        "eidos.v14.arcanum.rogue.core.005",
+        "eidos.v14.arcanum.rogue.core.010",
+        "eidos.v14.arcanum.rogue.core.015",
+        "eidos.v14.arcanum.rogue.делец.020",
+        "eidos.v14.arcanum.rogue.делец.030",
+        "eidos.v14.arcanum.rogue.делец.050",
+        "eidos.v14.arcanum.rogue.делец.075"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P01",
@@ -749,7 +959,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.assault.core.001",
+        "eidos.v14.protocol.assault.core.005",
+        "eidos.v14.protocol.assault.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P02",
@@ -771,7 +987,15 @@
       "tested_decision": "Удерживает сектор тяжёлой защитой и положением тела",
       "countermeasure": "Фланговый обход, повреждённый ремень",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.assault.core.001",
+        "eidos.v14.protocol.assault.core.005",
+        "eidos.v14.protocol.assault.core.010",
+        "eidos.v14.protocol.assault.core.015",
+        "eidos.v14.protocol.assault.бастион.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P03",
@@ -793,7 +1017,17 @@
       "tested_decision": "За короткий момент вскрывает физическую преграду",
       "countermeasure": "Нет безопасного пути назад",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.assault.core.001",
+        "eidos.v14.protocol.assault.core.005",
+        "eidos.v14.protocol.assault.core.010",
+        "eidos.v14.protocol.assault.core.015",
+        "eidos.v14.protocol.assault.проломщик.020",
+        "eidos.v14.protocol.assault.проломщик.030",
+        "eidos.v14.protocol.assault.проломщик.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P04",
@@ -815,7 +1049,18 @@
       "tested_decision": "Быстро меняет направление давления ценой брони",
       "countermeasure": "Сдавленный коридор и изнурение",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.assault.core.001",
+        "eidos.v14.protocol.assault.core.005",
+        "eidos.v14.protocol.assault.core.010",
+        "eidos.v14.protocol.assault.core.015",
+        "eidos.v14.protocol.assault.рейдер.020",
+        "eidos.v14.protocol.assault.рейдер.030",
+        "eidos.v14.protocol.assault.рейдер.050",
+        "eidos.v14.protocol.assault.рейдер.075"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P05",
@@ -837,7 +1082,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.shooter.core.001",
+        "eidos.v14.protocol.shooter.core.005",
+        "eidos.v14.protocol.shooter.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P06",
@@ -859,7 +1110,15 @@
       "tested_decision": "Прицельный подготовленный выстрел без автопопадания",
       "countermeasure": "Нет обзора, осечка",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.shooter.core.001",
+        "eidos.v14.protocol.shooter.core.005",
+        "eidos.v14.protocol.shooter.core.010",
+        "eidos.v14.protocol.shooter.core.015",
+        "eidos.v14.protocol.shooter.меткий_стрелок.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P07",
@@ -881,7 +1140,17 @@
       "tested_decision": "Контролирует сектор через расход конечного боезапаса",
       "countermeasure": "Нет патронов либо перегрев применимого оружия",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.shooter.core.001",
+        "eidos.v14.protocol.shooter.core.005",
+        "eidos.v14.protocol.shooter.core.010",
+        "eidos.v14.protocol.shooter.core.015",
+        "eidos.v14.protocol.shooter.подавитель.020",
+        "eidos.v14.protocol.shooter.подавитель.030",
+        "eidos.v14.protocol.shooter.подавитель.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P08",
@@ -903,7 +1172,18 @@
       "tested_decision": "Разворачивает тяжёлую позицию, жертвуя подвижностью",
       "countermeasure": "Фланговая атака при развёртывании",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.shooter.core.001",
+        "eidos.v14.protocol.shooter.core.005",
+        "eidos.v14.protocol.shooter.core.010",
+        "eidos.v14.protocol.shooter.core.015",
+        "eidos.v14.protocol.shooter.осадник.020",
+        "eidos.v14.protocol.shooter.осадник.030",
+        "eidos.v14.protocol.shooter.осадник.050",
+        "eidos.v14.protocol.shooter.осадник.075"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P09",
@@ -925,7 +1205,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.operative.core.001",
+        "eidos.v14.protocol.operative.core.005",
+        "eidos.v14.protocol.operative.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P10",
@@ -947,7 +1233,15 @@
       "tested_decision": "Собирает и передаёт наблюдения по подготовленному маршруту",
       "countermeasure": "Плохой обзор, ложные сведения",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.operative.core.001",
+        "eidos.v14.protocol.operative.core.005",
+        "eidos.v14.protocol.operative.core.010",
+        "eidos.v14.protocol.operative.core.015",
+        "eidos.v14.protocol.operative.разведчик.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P11",
@@ -969,7 +1263,17 @@
       "tested_decision": "Вмешивается в доступный технический узел",
       "countermeasure": "Отсутствие доступа и охрана",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.operative.core.001",
+        "eidos.v14.protocol.operative.core.005",
+        "eidos.v14.protocol.operative.core.010",
+        "eidos.v14.protocol.operative.core.015",
+        "eidos.v14.protocol.operative.диверсант.020",
+        "eidos.v14.protocol.operative.диверсант.030",
+        "eidos.v14.protocol.operative.диверсант.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P12",
@@ -991,7 +1295,18 @@
       "tested_decision": "Выявляет следы вмешательства и перекрывает отход",
       "countermeasure": "Ложная цель",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.operative.core.001",
+        "eidos.v14.protocol.operative.core.005",
+        "eidos.v14.protocol.operative.core.010",
+        "eidos.v14.protocol.operative.core.015",
+        "eidos.v14.protocol.operative.охотник.020",
+        "eidos.v14.protocol.operative.охотник.030",
+        "eidos.v14.protocol.operative.охотник.050",
+        "eidos.v14.protocol.operative.охотник.075"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P13",
@@ -1013,7 +1328,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.engineer.core.001",
+        "eidos.v14.protocol.engineer.core.005",
+        "eidos.v14.protocol.engineer.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P14",
@@ -1035,7 +1356,15 @@
       "tested_decision": "Развёртывает заранее принесённые укрытия и опоры",
       "countermeasure": "Нет материала, слабый грунт",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.engineer.core.001",
+        "eidos.v14.protocol.engineer.core.005",
+        "eidos.v14.protocol.engineer.core.010",
+        "eidos.v14.protocol.engineer.core.015",
+        "eidos.v14.protocol.engineer.фортификатор.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P15",
@@ -1057,7 +1386,17 @@
       "tested_decision": "Диагностирует и нейтрализует конкретное устройство при доступе",
       "countermeasure": "Нет доступа, незнакомая схема",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.engineer.core.001",
+        "eidos.v14.protocol.engineer.core.005",
+        "eidos.v14.protocol.engineer.core.010",
+        "eidos.v14.protocol.engineer.core.015",
+        "eidos.v14.protocol.engineer.контрсистемы.020",
+        "eidos.v14.protocol.engineer.контрсистемы.030",
+        "eidos.v14.protocol.engineer.контрсистемы.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P16",
@@ -1079,7 +1418,18 @@
       "tested_decision": "Переносит и комбинирует малые модули, уступая тяжёлой схеме в силе",
       "countermeasure": "Слишком большая нагрузка",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.engineer.core.001",
+        "eidos.v14.protocol.engineer.core.005",
+        "eidos.v14.protocol.engineer.core.010",
+        "eidos.v14.protocol.engineer.core.015",
+        "eidos.v14.protocol.engineer.мобильные_устройства.020",
+        "eidos.v14.protocol.engineer.мобильные_устройства.030",
+        "eidos.v14.protocol.engineer.мобильные_устройства.050",
+        "eidos.v14.protocol.engineer.мобильные_устройства.075"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P17",
@@ -1101,7 +1451,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.mechanist.core.001",
+        "eidos.v14.protocol.mechanist.core.005",
+        "eidos.v14.protocol.mechanist.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P18",
@@ -1123,7 +1479,15 @@
       "tested_decision": "Распределяет команды одному ценному автоматону",
       "countermeasure": "Поломка автомата",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.mechanist.core.001",
+        "eidos.v14.protocol.mechanist.core.005",
+        "eidos.v14.protocol.mechanist.core.010",
+        "eidos.v14.protocol.mechanist.core.015",
+        "eidos.v14.protocol.mechanist.куратор.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P19",
@@ -1145,7 +1509,17 @@
       "tested_decision": "Даёт разные задачи нескольким простым автоматонам",
       "countermeasure": "Один потерянный канал разрывает схему",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.mechanist.core.001",
+        "eidos.v14.protocol.mechanist.core.005",
+        "eidos.v14.protocol.mechanist.core.010",
+        "eidos.v14.protocol.mechanist.core.015",
+        "eidos.v14.protocol.mechanist.звеньевой.020",
+        "eidos.v14.protocol.mechanist.звеньевой.030",
+        "eidos.v14.protocol.mechanist.звеньевой.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P20",
@@ -1167,7 +1541,18 @@
       "tested_decision": "Связывает автоматонов с подготовленным местом",
       "countermeasure": "Разрушение точки связи",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.mechanist.core.001",
+        "eidos.v14.protocol.mechanist.core.005",
+        "eidos.v14.protocol.mechanist.core.010",
+        "eidos.v14.protocol.mechanist.core.015",
+        "eidos.v14.protocol.mechanist.интегратор.020",
+        "eidos.v14.protocol.mechanist.интегратор.030",
+        "eidos.v14.protocol.mechanist.интегратор.050",
+        "eidos.v14.protocol.mechanist.интегратор.075"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P21",
@@ -1189,7 +1574,13 @@
       "tested_decision": "Самостоятельно решить рискованную задачу базовыми средствами",
       "countermeasure": "Неосвоенный приём или утрата комплекта не компенсируются уровнем",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.combat_medic.core.001",
+        "eidos.v14.protocol.combat_medic.core.005",
+        "eidos.v14.protocol.combat_medic.core.010"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P22",
@@ -1211,7 +1602,15 @@
       "tested_decision": "Извлекает пациента из угрозы без полной хирургической операции",
       "countermeasure": "Огонь перекрыл подход, нет расходников",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.combat_medic.core.001",
+        "eidos.v14.protocol.combat_medic.core.005",
+        "eidos.v14.protocol.combat_medic.core.010",
+        "eidos.v14.protocol.combat_medic.core.015",
+        "eidos.v14.protocol.combat_medic.спасатель.020"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P23",
@@ -1233,7 +1632,17 @@
       "tested_decision": "Организует помощь нескольким пострадавшим и триаж",
       "countermeasure": "Несовместимые тяжёлые раны, нехватка рук",
       "learned_skill_ids": [],
-      "tested_skills_are_proposals": true
+      "tested_skills_are_proposals": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.combat_medic.core.001",
+        "eidos.v14.protocol.combat_medic.core.005",
+        "eidos.v14.protocol.combat_medic.core.010",
+        "eidos.v14.protocol.combat_medic.core.015",
+        "eidos.v14.protocol.combat_medic.стабилизатор.020",
+        "eidos.v14.protocol.combat_medic.стабилизатор.030",
+        "eidos.v14.protocol.combat_medic.стабилизатор.050"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     },
     {
       "id": "P24",
@@ -1256,7 +1665,23 @@
       "countermeasure": "Неустранимая рана, недостаток препаратов, потеря эвакуации",
       "learned_skill_ids": [],
       "tested_skills_are_proposals": true,
-      "stress_test": true
+      "stress_test": true,
+      "eligible_new_skill_ids": [
+        "eidos.v14.protocol.combat_medic.core.001",
+        "eidos.v14.protocol.combat_medic.core.005",
+        "eidos.v14.protocol.combat_medic.core.010",
+        "eidos.v14.protocol.combat_medic.core.015",
+        "eidos.v14.protocol.combat_medic.стабилизатор.020",
+        "eidos.v14.protocol.combat_medic.стабилизатор.030",
+        "eidos.v14.protocol.combat_medic.стабилизатор.050",
+        "eidos.v14.protocol.combat_medic.стабилизатор.075",
+        "eidos.v14.protocol.combat_medic.стабилизатор.100"
+      ],
+      "skill_access_note": "Только допустимые кандидаты для изучения; не выданы. Для фактического learned_skill_ids нужны наставник/практика, все prerequisites и фактическое обучение."
     }
+  ],
+  "skill_reference_sources": [
+    "RPG_ЭЙДОС_АРКАНУМ_114_НАВЫКОВ_v1.4_2026-10-21.json",
+    "RPG_ЭЙДОС_ПРОТОКОЛ_109_НАВЫКОВ_v1.4_2026-10-21.json"
   ]
 }

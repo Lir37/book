@@ -703,5 +703,46 @@ class RPGRegression(unittest.TestCase):
         self.assertEqual(ids, {r['id'] for r in catalog['records']})
         self.assertEqual(len(descriptions), 140)
 
+
+    def test_integrated_fellur_reentry_and_drink(self):
+        chapter = self.chapters[7]
+        potion = chapter.index('сорвал пробку с полученного вчера зелья маны')
+        return_to_beast = chapter.index('снова принял Феллур')
+        attack = chapter.index('вцепился когтями в мягкое место')
+        self.assertLess(potion, return_to_beast)
+        self.assertLess(return_to_beast, attack)
+        self.assertIn('повреждённый бок', chapter)
+
+    def test_integrated_train_before_spell_and_practical_druid(self):
+        self.assertIn('Учился снимать учебное оглушение', self.chapters[7])
+        self.assertIn('Привычка тела', self.chapters[15])
+        self.assertIn('Тарвек', self.chapters[15])
+        self.assertIn('Мягкая смена', self.chapters[15])
+        self.assertIn('моё удобство', self.chapters[16].lower())
+
+    def test_integrated_uber_personal_skill_and_technical_injury(self):
+        ferron_intro = self.chapters[9]
+        self.assertIn('Инженер', ferron_intro)
+        self.assertIn('Первый модуль', ferron_intro)
+        self.assertIn('Механистом я бы не стал', ferron_intro)
+        velarion = self.chapters[20]
+        self.assertIn('Малое плетение', velarion)
+        self.assertIn('Наставница', velarion)
+        self.assertIn('может разрушиться от перегрузки', velarion)
+        ferron_battle = self.chapters[22]
+        for required in ('пневматический монтажный захват',
+                         'У Феррона рану зашили',
+                         'охранники', 'Мира отвечает за запуск'):
+            self.assertIn(required, ferron_battle)
+        self.assertNotIn('техномана', ferron_battle.lower())
+
+    def test_integrated_eighth_level_before_unknown_death_penalty(self):
+        chapter24 = self.chapters[23]
+        self.assertIn('Общий опыт: 5175. Уровень 8.', chapter24)
+        self.assertIn('Шесть очков оставались свободными', chapter24)
+        self.assertIn('Я очнулся не на тропе', self.chapters[24])
+        self.assertNotIn('Штраф за смерть:', self.chapters[24] + self.chapters[25])
+
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

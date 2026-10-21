@@ -70,7 +70,7 @@ class RPGRegression(unittest.TestCase):
         self.assertEqual(sum([8, 14, 11, 11, 13, 17]), 74)
 
     def test_form_costs_and_mastery(self):
-        self.assertIn('Расход маны: при принятии звериной формы.', self.chapters[4])
+        self.assertIn('Вход в звериную форму: 20% максимального запаса маны.', self.chapters[4])
         self.assertIn('Поддержание формы и возврат в человеческий облик бесплатны.', self.chapters[4])
         self.assertNotIn('5 единиц в секунду', self.book)
         self.assertIn('1,00 → 1,05', self.chapters[4])
@@ -367,6 +367,15 @@ class RPGRegression(unittest.TestCase):
         for rate in (Fraction(1, 10), 1, 100):
             self.assertEqual(effective_regen_rate(rate, HUMAN),
                              4 * effective_regen_rate(rate, 'fellur'))
+
+    def test_velarion_faction_regeneration_buff_keeps_four_to_one(self):
+        # The 24h +10% faction bonus is already part of chapter 5 canon.
+        self.assertIn('скорость восстановления маны повышена на 10% на 24 часа',
+                      self.chapters[4])
+        for base in (Fraction(1, 10), Fraction(125, 600), Fraction(9, 7)):
+            boosted = base * Fraction(11, 10)
+            self.assertEqual(effective_regen_rate(boosted, HUMAN),
+                             4 * effective_regen_rate(boosted, 'fellur'))
 
     def test_new_regen_rule_is_in_book_and_project_docs(self):
         chapter = self.chapters[4]

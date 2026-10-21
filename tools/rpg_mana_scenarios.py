@@ -1,44 +1,51 @@
 #!/usr/bin/env python3
 """What-if Eidos mana ledger. NOT a source of canonical RPG prices.
 
-Canon: beast entry costs a positive amount, beast upkeep and voluntary return
-to human cost ZERO, and Balance of Chimeras reduces paid transitions by 30%.
-Mana cap, actual entry prices, rounding, regeneration, spell availability and
-potion restoration values are UNKNOWN. Supply them as explicit scenario inputs.
-This ledger deliberately assumes *no* regeneration unless a scenario inserts
-an explicit 'restore' event. The assumption belongs to the test, not the book.
+Canon: 20% of calculated max mana on paid entry, minus 30% when unlocked;
+no charge for holding a form or returning to human, including at zero mana.
+General druid spells and active items require human anatomy. Only an
+explicitly form-specific skill can be activated in an animal body.
+Mana-cap formula, integer rounding, restoration and natural regeneration
+are unapproved. No automatic regeneration is simulated.
 """
 from __future__ import annotations
 from fractions import Fraction
 from typing import Iterable
-from rpg_transition_contract import HUMAN, NotEnoughMana, transition_cost
+from rpg_transition_contract import HUMAN, NotEnoughMana, transition_cost, proportional_entry_cost
+
+
+class FormActionUnavailable(ValueError):
+    """A druid spell or active item is unavailable in the current anatomy."""
 
 def trace_mana(max_mana: int | Fraction, initial_mana: int | Fraction,
                actions: Iterable[tuple[str, object]],
-               entry_cost: int | Fraction,
+               entry_cost: int | Fraction | None = None,
                balance_of_chimeras: bool = False) -> tuple[str, Fraction, tuple[tuple[str, Fraction], ...]]:
     """Run actions, preserving exact fractional mana for project comparisons.
 
-    Actions: ('form', 'fellur'/'human'/other open form), ('cast', positive mana),
-    ('restore', positive mana as from an external potion), or ('hold', duration).
-    Hold never spends mana; this makes the zero-upkeep rule executable. 
-    Injury, anatomy, ability availability, cooldowns and consciousness are
-    intentionally outside this mana-only ledger.
+    Actions: form (unlocked beast or human), cast (human druid spell),
+    restore (human item/potion), form_skill (beast-specific action),
+    regen (hypothetical explicitly supplied mana gain), hold (duration).
+    No automatic regeneration or upkeep. Skill unlocks, physical injuries,
+    cooldowns and consciousness remain outside this mana-only ledger.
     """
     ceiling, mana = Fraction(max_mana), Fraction(initial_mana)
     if ceiling <= 0 or not 0 <= mana <= ceiling:
         raise ValueError("Mana cap must be positive; starting mana must be within cap")
+    base_entry = proportional_entry_cost(ceiling) if entry_cost is None else Fraction(entry_cost)
     body, ledger = HUMAN, []
     for action, arg in actions:
         if action == "form":
             if not isinstance(arg, str):
                 raise ValueError("Target form must be a name")
-            price = transition_cost(body, arg, entry_cost, balance_of_chimeras)
+            price = transition_cost(body, arg, base_entry, balance_of_chimeras)
             if mana < price:
                 raise NotEnoughMana(f"Target {arg} costs {price} with only {mana} available")
             mana -= price
             body = arg
         elif action == "cast":
+            if body != HUMAN:
+                raise FormActionUnavailable("General druid magic requires a human body")
             price = Fraction(arg)
             if price <= 0:
                 raise ValueError("Spell price must be positive")
@@ -46,9 +53,26 @@ def trace_mana(max_mana: int | Fraction, initial_mana: int | Fraction,
                 raise NotEnoughMana(f"Spell costs {price} with only {mana} available")
             mana -= price
         elif action == "restore":
+            if body != HUMAN:
+                raise FormActionUnavailable("Items and potions require human hands")
             amount = Fraction(arg)
             if amount <= 0:
                 raise ValueError("Restore amount must be positive")
+            mana = min(ceiling, mana + amount)
+        elif action == "form_skill":
+            if body == HUMAN:
+                raise FormActionUnavailable("Form-specific skills require the beast body")
+            price = Fraction(arg)
+            if price < 0:
+                raise ValueError("Form skill cost cannot be negative")
+            if mana < price:
+                raise NotEnoughMana(f"Form skill costs {price} with only {mana} available")
+            mana -= price
+        elif action == "regen":
+            # Explicit hypothetical restoration, NOT automatic canon regeneration.
+            amount = Fraction(arg)
+            if amount <= 0:
+                raise ValueError("Regeneration scenario amount must be positive")
             mana = min(ceiling, mana + amount)
         elif action == "hold":
             duration = Fraction(arg)
@@ -62,7 +86,7 @@ def trace_mana(max_mana: int | Fraction, initial_mana: int | Fraction,
 
 
 def compare_percentage_scenarios(cap: int | Fraction = 125) -> tuple[dict, ...]:
-    """Four author-UNAPPROVED entry-price what-ifs at fully charged reserve."""
+    """Historical 5/10/15% counterfactuals plus approved 20%, no rounding."""
     reserve = Fraction(cap)
     scenarios = []
     for fraction in (Fraction(1, 20), Fraction(1, 10),

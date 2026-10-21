@@ -612,7 +612,8 @@ class RPGRegression(unittest.TestCase):
 
     def test_v09_chapter_2_line_is_human_not_abstract(self):
         self.assertNotIn('Я оставил себе запас для развития', self.book)
-        self.assertIn('Я и не рассчитывал поумнеть. Мне бы игру запустить.', self.chapters[1])
+        self.assertIn('Я и не рассчитывал поумнеть. Мне бы игру запустить».', self.chapters[1])
+        self.assertNotIn('Мне бы игру запустить.».', self.chapters[1])
 
 
     def test_v10_all_140_skill_designs_are_author_approved(self):

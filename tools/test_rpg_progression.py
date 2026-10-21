@@ -763,5 +763,27 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('Опыт достался не одному', self.chapters[22])
         self.assertIn('малому плетению', self.chapters[10])
 
+
+    def test_uber_mage_class_without_high_tier_assumptions(self):
+        chapter = self.chapters[20]
+        self.assertIn('обозначенный магом Ордена', chapter)
+        self.assertIn('Ни уровень, ни выбор будущей ветви', chapter)
+        self.assertIn('здоровой рукой подобрал свой посох', chapter)
+        self.assertIn('здоровой ладонью прижал', chapter)
+
+    def test_uber_recording_waits_until_evacuating_group_is_ready(self):
+        chapter = self.chapters[22]
+        self.assertIn('носилки приготовили', chapter)
+        self.assertIn('монтаж коротких записей', chapter)
+        self.assertIn('защёлку закусило', chapter)
+        self.assertNotIn('кривой палец зацепился', chapter)
+        self.assertIn('охрану и Феррон', chapter)
+
+    def test_uber_rare_component_does_not_turn_into_universal_weapon(self):
+        epilogue = self.chapters[25]
+        self.assertIn('закрепили в знакомом каменном контуре', epilogue)
+        self.assertIn('вместо Феррона', epilogue)
+        self.assertIn('не сделал раненого мага неуязвимым', epilogue)
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)

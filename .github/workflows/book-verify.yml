@@ -7,6 +7,8 @@ on:
       - 'Фон эпоса.fb2'
       - 'tools/verify_book.py'
       - 'tools/test_rpg_progression.py'
+      - 'tools/test_rpg_class_roster.py'
+      - 'RPG_ЭЙДОС_ТЕСТОВЫЕ_СБОРКИ_48_6x6_v1.3_2026-10-21.json'
       - 'tools/rpg_mana_scenarios.py'
       - 'tools/rpg_transition_contract.py'
       - 'tools/rpg_resource_model.py'
@@ -37,3 +39,5 @@ jobs:
         run: python tools/verify_book.py --xsd-dir /tmp/fb2xsd
       - name: Check RPG curve and continuity
         run: python tools/test_rpg_progression.py
+      - name: Check 6x6 classes and 48 synthetic NPC builds
+        run: python tools/test_rpg_class_roster.py

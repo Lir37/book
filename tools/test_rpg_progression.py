@@ -795,5 +795,20 @@ class RPGRegression(unittest.TestCase):
         self.assertIn('«Чувство природы» указывало на живые растения', later)
         self.assertIn('Остальные стебли я перебрал сам', later)
 
+
+    def test_ferron_clamp_engagement_and_medical_limits(self):
+        chapter = self.chapters[22]
+        self.assertLess(chapter.index('Металлические губки стиснули'),
+                        chapter.index('защёлку закусило'))
+        self.assertLess(chapter.index('защёлку закусило'),
+                        chapter.index('освобождая руку первого нападавшего'))
+        self.assertIn('Платформы встанут на подъёме', chapter)
+        self.assertIn('Тот сидел у стены путевого поста', chapter)
+
+    def test_herd_practice_and_shared_maintenance(self):
+        self.assertIn('Одна шарахнулась к камням', self.chapters[8])
+        self.assertIn('когда Феррона рядом не будет', self.chapters[9])
+        self.assertIn('другой рабочий искал нужный щелчок', self.chapters[16])
+
 if __name__ == '__main__':
     unittest.main(verbosity=2)
